@@ -1,24 +1,29 @@
 ---
 layout: page
-title: Elements
+# title: Elements
 permalink: /elements/
-image: '/images/11.jpg'
+image: "/images/11.jpg"
 ---
 
 A paragraph looks like this — In omni enim arte vel studio vel quavis scientia vel in ipsa virtute optimum quidque rarissimum est. Quod est, ut dixi, habere ea, quae secundum naturam sint, vel omnia vel plurima et maxima. Quodsi ipsam honestatem undique pertectam atque absolutam. Tecum optime, deinde etiam cum mediocri amico. Neque enim disputari sine reprehensione nec cum iracundia aut pertinacia recte disputari potest. Partus ancillae sitne in fructu.
 
-***
+---
 
 ## Headings by default:
 
 # H1 Default styles for headings
+
 ## H2 Default styles for headings
+
 ### H3 Default styles for headings
+
 #### H4 Default styles for headings
+
 ##### H5 Default styles for headings
+
 ###### H6 Default styles for headings
 
-***
+---
 
 ## Lists
 
@@ -30,17 +35,17 @@ A paragraph looks like this — In omni enim arte vel studio vel quavis scientia
 4. Jean shorts shaman listicle pickled portland.
 5. Salvia mumblecore brunch iPhone migas.
 
-***
+---
 
 ### Unordered list example:
 
-* Bitters semiotics vice thundercats synth.
-* Literally cred narwhal bitters wayfarers.
-* Kale chips chartreuse paleo tbh street art marfa.
-* Mlkshk polaroid sriracha brooklyn.
-* Pug you probably haven't heard of them air plant man bun.
+- Bitters semiotics vice thundercats synth.
+- Literally cred narwhal bitters wayfarers.
+- Kale chips chartreuse paleo tbh street art marfa.
+- Mlkshk polaroid sriracha brooklyn.
+- Pug you probably haven't heard of them air plant man bun.
 
-***
+---
 
 ## Table
 
@@ -56,7 +61,7 @@ A paragraph looks like this — In omni enim arte vel studio vel quavis scientia
   </table>
 </div>
 
-***
+---
 
 ## Quotes
 
@@ -66,47 +71,45 @@ A paragraph looks like this — In omni enim arte vel studio vel quavis scientia
 >
 > <cite>George Bernard Shaw</cite>
 
-***
-
-
+---
 
 ## Syntax Highlighter
 
 {% highlight css %}
 body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #1c2021;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100vw;
+background-color: #1c2021;
 }
 
 li {
-  width: 200px;
-  min-height: 250px;
-  border: 1px solid #000;
-  display: inline-block;
-  vertical-align: top;
-  margin: 5px;
+width: 200px;
+min-height: 250px;
+border: 1px solid #000;
+display: inline-block;
+vertical-align: top;
+margin: 5px;
 }
 {% endhighlight %}
 
 {% highlight js %}
-  $('.top').click(function () {
+$('.top').click(function () {
     $('html, body').stop().animate({ scrollTop: 0 }, 'slow', 'swing');
   });
   $(window).scroll(function () {
     if ($(this).scrollTop() > $(window).height()) {
-      $('.top').addClass("top-active");
-    } else {
-      $('.top').removeClass("top-active");
-    };
-  });
+$('.top').addClass("top-active");
+} else {
+$('.top').removeClass("top-active");
+};
+});
 {% endhighlight %}
 
-***
+---
 
 ## Images
 
@@ -123,15 +126,15 @@ li {
 </div>
 
 ![Graffiti]({{site.baseurl}}/images/07.jpg)
-*Photo by [Alex Kotliarskyi](https://unsplash.com/photos/ourQHRTE2IM) on [Unsplash](https://unsplash.com/)*
+_Photo by [Alex Kotliarskyi](https://unsplash.com/photos/ourQHRTE2IM) on [Unsplash](https://unsplash.com/)_
 
-***
+---
 
 ## Youtube Embed
 
 <p><iframe src="https://www.youtube.com/embed/QyQ85DEVpbc" frameborder="0" allowfullscreen></iframe></p>
 
-***
+---
 
 ## Vimeo Embed
 
