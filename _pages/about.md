@@ -28,4 +28,4 @@ This blog is an attempt towards archiving my thoughts regarding life, technology
 
 I believe in:
 
-> Do what you can, where you can with you have.
+> Do what you can, where you can with what you have.
