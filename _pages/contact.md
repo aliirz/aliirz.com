@@ -5,11 +5,8 @@ permalink: /contact/
 image: "/images/nazim-laghari-W4sPCYimFYs-unsplash.jpg"
 ---
 
-I am currently working with <a href="https://www.codeforpakistan.org" target="_blank">Code for Pakistan</a> as Director of Technology as well as the Tech. Lead for <a href="https://www.applicationinformatics.com" target="_blank">Application Informatics</a>. Always open for new opportunities to collaborate. Send me an email at <a href="mailto:dejavu87@gmail.com">dejavu87@gmail.com</a>. Best.
+I am currently working with <a href="https://www.codeforpakistan.org" target="_blank">Code for Pakistan</a> as Director of Technology as well as the Tech. Lead for <a href="https://www.applicationinformatics.com" target="_blank">Application Informatics</a>. Always open for new opportunities to collaborate.
 
-| Name     | Designation         | Email              |
-| -------- | ------------------- | ------------------ |
-| Ali Raza | Technical Architect | dejavu87@gmail.com |
 
 _Photo by [Nazim Leghari](https://unsplash.com/@nazimlaghari) on Unsplash_
 

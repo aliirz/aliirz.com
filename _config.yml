@@ -30,11 +30,11 @@ social:
       label: Facebook,
       link: "https://facebook.com/aliirz",
     }
-  # - {
-  #     icon: "ion-logo-pinterest",
-  #     label: Pinterest,
-  #     link: "https://pinterest.com",
-  #   }
+  - {
+      icon: "ion-logo-youtube",
+      label: Youtube,
+      link: "https://www.youtube.com/channel/UCc5gunCRatvlC1CD_3an1tw",
+    }
   # - { icon: "ion-logo-dribbble", label: Dribbble, link: "https://dribbble.com" }
   - {
       icon: "ion-logo-instagram",
