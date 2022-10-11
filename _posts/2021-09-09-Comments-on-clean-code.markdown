@@ -4,7 +4,7 @@ title: Comments on clean code
 description: Whoever edited uncle bob's clean code videos deserves a darwin award
 date: 2021-09-09 15:01:35 +0300
 image: "https://svbtleusercontent.com/bKUUewg3nNqwuTF4biKe2v0xspap_small.png"
-tags: [coding, humor, best practices]
+tags: [coding, best practices]
 ---
 
 So Recently at [Code for Pakistan](https://codeforpakistan.org) our VP Tech. made it abundantly clear that we ought to watch Uncle Bob's [clean code](https://www.youtube.com/playlist?list=PLmmYSbUCWJ4x1GO839azG_BBw8rkh-zOj) video lectures. It's a really good series of videos that make you think about the code you write everyday.
