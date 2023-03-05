@@ -11,7 +11,7 @@ url: "https://aliirz.com" # the base hostname & protocol for your site, e.g. htt
 # Author Settings
 author:
   name: Ali Raza
-  bio: A thorough technical architect with a passion for producing uber cool software. Tends to occasionally blog about building software and can't seem to make up his mind on which programming language to use next.
+  bio: As a thorough software architect, I bring precision and passion to every software project I tackle. My goal is to always produce innovative and high-quality software that pushes the boundaries of what's possible. I have a love for experimenting with new programming languages, and you can catch me blogging about my experience and insights in the software development world. Join me in my journey as I explore the ever-evolving world of technology and programming.
   avatar: "/images/743962.jpeg"
 
 social:
@@ -35,6 +35,11 @@ social:
       label: Youtube,
       link: "https://www.youtube.com/channel/UCc5gunCRatvlC1CD_3an1tw",
     }
+  - {
+      icon: "ion-logo-twitch",
+      label: Twitch,
+      link: "https://twitch.com/aliirz",
+    }
   # - { icon: "ion-logo-dribbble", label: Dribbble, link: "https://dribbble.com" }
   - {
       icon: "ion-logo-instagram",
@@ -50,7 +55,7 @@ social:
 # Hero Settings
 hero:
   hero__title: Hey, I am Ali! Builder of stuff.
-  hero__description: A detail oriented software architect with a passion for building uber cool projects. I occasionally blog about building software, civic tech, gaming and 3D printing.
+  hero__description: As a detail-oriented software architect, I bring precision and passion to every project I tackle. From building cutting-edge software to exploring the latest trends in civic tech, gaming, and 3D printing, I am always pushing the boundaries of what's possible. In my free time, I enjoy sharing my insights and experiences through my blog, giving readers a glimpse into the exciting world of tech and innovation. Let's build something cool together!
   hero__image: "/images/743962.jpeg"
 
 #-------------------------------
@@ -87,6 +92,7 @@ plugins:
   - jekyll-sitemap
   - jekyll/tagging
   - jekyll-feed
+  - jekyll-seo-tag
 
 paginate: 5
 paginate_path: "/page/:num"
@@ -109,3 +115,7 @@ tag_permalink_style: /:title
 sass:
   sass_dir: _sass
   style: compressed
+
+twitter:
+  username: aliirz
+  card: summary
