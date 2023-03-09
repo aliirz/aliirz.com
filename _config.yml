@@ -42,6 +42,7 @@ social:
     }
   # - { icon: "ion-logo-dribbble", label: Dribbble, link: "https://dribbble.com" }
   - {
+    
       icon: "ion-logo-instagram",
       label: Instagram,
       link: "https://instagram.com/aliirz",

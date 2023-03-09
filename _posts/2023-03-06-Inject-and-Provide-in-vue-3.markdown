@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using inject and provide in vue 3
-description: Recently learnt how to do dependency the vue 3 way
+description: I recently learned how to do dependency injection in vue 3. Here's how you can use it in your projects.
 date: 2023-03-06 00:19:00 +0500
 tags: [vue3, javascript]
 image: "images/araza_vue_js_logo_disney_like_art_style_c455cfcb-7fb1-44ea-9d35-1beafb11c720.png"
