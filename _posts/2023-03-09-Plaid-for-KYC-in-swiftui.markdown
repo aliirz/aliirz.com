@@ -11,7 +11,7 @@ I am working on something very cool these days. I am not ready to make it public
 
 Going back to my roots as an iOS engineer I took a deep dive into SwiftUI. I am in love with its imperative style and the fact that it's so easy to use. I am also a big fan of Combine and the fact that it's built into SwiftUI makes it even better.
 
-We have to use plaid for a key function of the app to do KYC. I was a bit worried about how to do it in SwiftUI. But it turned out to be pretty easy. Here's how you can do it in your SwiftUI app.
+We have to use Plaid for a key function of the app to do KYC. I was a bit worried about how to do it in SwiftUI. But it turned out to be pretty easy. Here's how you can do it in your SwiftUI app.
 
 ## Prerequisites
 
@@ -135,4 +135,4 @@ In this example, we create a `PlaidLinkView` and present it. When the user succe
 
 You can modify this example to retrieve other types of personal information using the Identity API, such as date of birth and social security number, depending on your KYC requirements. Be sure to review Plaid's documentation and comply with their requirements and regulations for handling user data.
 
-Hope this helps.
+You can checkout Plaid's documentation [here](https://plaid.com/docs/)
