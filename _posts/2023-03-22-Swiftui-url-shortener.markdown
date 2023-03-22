@@ -18,6 +18,8 @@ As I began my SwiftUI journey, I found Apple's official SwiftUI tutorials to be 
 ## Building a URL Shortener iOS App
 After familiarizing myself with SwiftUI concepts and syntax, I decided to create a [URL shortener iOS app](https://github.com/aliirz/Swift-Url-Shortener). This project would serve as a practical way to solidify my understanding and apply the knowledge I had acquired.
 
+![image of the app running on simulator](images/url-shorten-app.png "Default UI but its honest work").
+
 The app I built is straightforward: users enter a long URL into a text field, tap a button to generate a short URL using the Bitly API, and the resulting short URL is copied to the user's clipboard. To ensure smooth interactions with the Bitly API, I chose to integrate the Alamofire library, which simplifies the process of making network requests.
 
 During the development of the app, I encountered several challenges that deepened my understanding of SwiftUI. First, I learned about the @State, @ObservedObject, and @Published property wrappers, which are crucial for managing data flow and state changes in SwiftUI. Second, I explored how to present alerts based on state changes and handle user input validation. Overall, this project served as an excellent hands-on introduction to SwiftUI.
