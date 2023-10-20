@@ -4,7 +4,7 @@ title: The Importance of HTTP Status Codes in Microservice and API Development
 description: Had a discussion with a colleague about HTTP status codes and thought I'd share my thoughts on the topic.
 date: 2023-10-20 9:33:35 +0500
 image: "images/aliirz_http_status_codes_ce4348d4-bc9f-41cc-bdf7-8f307b45f638.png"
-tags: [tutorials, bestpractices]
+tags: [tutorials, best practices]
 ---
 Recently, I had a small argument with a colleague who suggested that one of our developers should determine whether a request failed or succeeded based on the returned string—specifically, whether it was empty or not. While this might seem like a straightforward approach, I strongly believe that decisions should be based on HTTP status codes, not the content of the response string. Here's why.
 
