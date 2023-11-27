@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code for All Summit 2023
-description: Had a discussion with a colleague about HTTP status codes and thought I'd share my thoughts on the topic.
+description: The one about the 10th Anniversary of Code for All.
 date: 2023-10-20 9:33:35 +0500
 image: "images/Code-for-All-Summit-Website.jpg"
 tags: [tutorials, best practices]
