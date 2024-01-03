@@ -3,7 +3,7 @@
 # General Site Settings
 title: Ali Raza
 logo: # You can add own logo. For example '/images/logo.png'.
-description: Super Dev, Software Architect, Coffee Extraiordinare
+description: Passionate Software Architect, Entrepreneur, and Coffee Enthusiast
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://aliirz.com" # the base hostname & protocol for your site, e.g. http://example.com
 
