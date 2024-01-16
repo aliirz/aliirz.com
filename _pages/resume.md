@@ -28,7 +28,7 @@ As a seasoned technology leader with more than 13 years of experience, I bring a
   - Spearheading technology initiatives, focusing on the development of data-driven applications for social impact.
   - Mentoring and fostering a culture of innovation among tech talent.
 
-- **Technical Lead, Application Informatics (March 2020 - Present, North Carolina, United States)**
+- **Director of Marketing Technologies, Application Informatics (March 2020 - Present, North Carolina, United States)**
   - Overseeing the development of advanced analytics solutions in a part-time capacity.
   - Implementing data science methodologies across diverse projects.
 
