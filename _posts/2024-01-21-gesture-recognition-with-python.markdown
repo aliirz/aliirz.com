@@ -12,7 +12,7 @@ We promise big, but we deliver small. It has been part of a norm here in Pakista
 
 ![Gesture Recognition in action](images/gesturerecog.png)
 
-The only dependencies are ```opencv-python``` and ```numpy```. You can install them using pip:
+The only dependencies are ```opencv-python``` and ```mediapipe```. You can install them using pip:
 
 ```bash
 pip install opencv-python mediapipe
@@ -22,4 +22,4 @@ Here is the code:
 
 <script src="https://gist.github.com/aliirz/9a235a3973a511c13e04b0ff452b600b.js"></script>
 
-Enjoy
+Enjoy!
