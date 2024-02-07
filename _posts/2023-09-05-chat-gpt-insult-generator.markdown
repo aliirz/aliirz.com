@@ -3,7 +3,7 @@ layout: post
 title: insults.dev, an LLM based Insult Generator for devs
 description: Learning Prompt Engineering with GPT-3
 date: 2023-09-05 00:45:00 +0500
-tags: [gpt-3, prompt-engineering, LLM, vue, python]
+tags: [gpt-3, prompt-engineering, vue, python]
 image: "images/aliirz_two_software_developers_shouting_at_each_other_while_hol_068209cd-1bc4-4d02-92cb-cff624119ea7.png"
 ---
 In the grand tradition of friendly banter among developers, I embarked on a journey to create a tool that could generate light-hearted, non-offensive insults for programmers. Why, you ask? Well, because who doesn't love a good-natured jest about their favorite (or not-so-favorite) programming language? And thus, insults.dev was born.

@@ -4,7 +4,7 @@ title: Code Roaster GPT
 description: The one about the time I made a GPT that roasts your code (and you)
 date: 2024-01-03 00:19:35 +0500
 image: "images/roasty.png"
-tags: [chatgpt, llm]
+tags: [chatgpt]
 ---
 While experimenting with building my own GPTs, I stumbled upon a fascinating idea. What if we could train a GPT on code and utilize it to roast code? Intrigued by the concept, I decided to give it a shot. As a result Roasty was born. Roasty is a fiesty little GPT that roasts your code (and you). While its a novel idea, its the prompt that matters and the results. So far Roasty has roasted my code and me pretty well. It has also roasted some of my friends and their code.
 
