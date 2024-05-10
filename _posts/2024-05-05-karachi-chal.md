@@ -4,7 +4,7 @@ title: Using Google Gemini to build Karachi Chal
 description: The one time I built something for Karachi, the city of lights. A labor of love for my mother's city. Also how to use Google Gemini to build an AI-powered city guide.
 date: 2024-05-05 19:03:00 +0500
 image: "images/arfat-jabbar-RtIVw8BGMWc-unsplash.jpg"
-tags: [karachi, ai, city-guide, open-source, civic-tech, llm]
+tags: [karachi, ai, city-guide, open-source, llm]
 ---
 
 ## The Inspiration Spark
