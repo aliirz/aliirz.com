@@ -8,10 +8,10 @@ permalink: /resume/
 ### Startup Veteran | Director of Technology | Building Smart Solutions | Prompt Engineering | Data Science
 
 
-* **Email:** [alirz.uet@gmail.com](mailto:alirz.uet@gmail.com)
+* **Email:** [ali@boostpanda.ai](mailto:ali@boostpanda.ai)
 * **LinkedIn:** [www.linkedin.com/in/aliirz](https://www.linkedin.com/in/aliirz)  
-* **Personal Website:** [www.aliirz.com](http://www.aliirz.com)
-* **Github:** [github.com/aliirz](github.com/aliirz)
+* **Personal Website:** [www.aliirz.com](https://www.aliirz.com)
+* **Github:** [github.com/aliirz](https://github.com/aliirz)
 
 
 ## Summary
@@ -19,7 +19,7 @@ As a seasoned technology leader with more than 13 years of experience, I bring a
 
 ## Skills
 - **Languages:** Urdu, Pushto, English (Full Professional), Punjabi
-- **Technical:** Large Language Models (LLM), Python, Javascript, Full Stack Development, Serverless Architecture, AWS, Azure
+- **Technical:** Large Language Models (LLMs), Python, Javascript, Full Stack Development, Serverless Architecture, AWS, Azure, Google Cloud
 - **Certifications:** edX Verified Certificate in Large Language Models: Application through Production
 - **Education:** [Currently Enrolled] MIT Micromasters in Data Science and Statistics
 
@@ -27,6 +27,9 @@ As a seasoned technology leader with more than 13 years of experience, I bring a
 - **Director of Technology, Code for Pakistan (April 2020 - Present, Islamabad, Pakistan)**
   - Spearheading technology initiatives, focusing on the development of data-driven applications for social impact.
   - Mentoring and fostering a culture of innovation among tech talent.
+
+- **CEO and Co-Founder, BoostPanda, (November 2023 - Present, Islamabad, Pakistan)**
+  - Building the next-gen AI based tool for Engineering and Project Managers
 
 - **Director of Marketing Technologies, Application Informatics (March 2020 - Present, North Carolina, United States)**
   - Overseeing the development of advanced analytics solutions in a part-time capacity.
