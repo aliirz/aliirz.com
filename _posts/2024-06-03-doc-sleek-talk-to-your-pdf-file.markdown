@@ -2,8 +2,9 @@
 layout: post
 title: Building a PDF Chatbot
 description: The one time I built a chatbot that lets you talk to a PDF file. A fun project combining GPT-4, Bun, Next.js, and ShadCN/Tailwind part of my commitment to 100 days of AI.
-image: "images/sleekdoc.webp"
+image: "images/docseek.jpg"
 tags: [chatbot, gpt-4, bun, next.js, tailwind, 100-days-of-ai]
+date: 2024-06-03 14:03:00 +0500
 ---
 I've been quietly working on a personal challenge: 100 days of AI. As part of this journey, I built a chatbot that lets you chat with a PDF file. Using GPT-4 and the Assistants API, my bot can help you interact with the content of any PDF you upload.
 
