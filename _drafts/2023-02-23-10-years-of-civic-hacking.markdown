@@ -1,1 +1,0 @@
-It is September 24, 2014. Code for Pakistan has made some serious strides with our fellowship program. We are a small team but we are good at what we do. We are all attending the Code for America summit here in San Francisco, what we've accomplished is the talk of the town. This is my first time in the USA and i've made so many new friends. 
