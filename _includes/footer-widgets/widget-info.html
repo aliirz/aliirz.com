@@ -1,0 +1,18 @@
+<div class="col col-4 col-d-6 col-t-12">
+  <div class="widget widget-info">
+    <div class="widget__head">
+      <div class="footer-logo">
+        <div class="footer-logo__link">
+          {% if site.logo %}
+          <img class="logo__image" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}">
+          {% else %}
+            {{ site.title }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <p class="footer-text">{{ site.hero.hero__description }}</p>
+    {% include social-links.html %}
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="aliirz" data-description="Support me on Buy me a coffee!" data-message="" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  </div>
+</div>
