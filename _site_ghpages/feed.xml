@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-14T01:22:15+05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ali Raza</title><subtitle>Passionate Software Architect, Entrepreneur, and Coffee Enthusiast</subtitle><author><name>Ali Raza</name></author><entry><title type="html">Mastering Markdown; A Cheatsheet from a Dev Who Loves Markdown (But Keeps Googling It)</title><link href="http://localhost:4000/markdown-cheatsheet" rel="alternate" type="text/html" title="Mastering Markdown; A Cheatsheet from a Dev Who Loves Markdown (But Keeps Googling It)" /><published>2024-06-26T20:54:00+05:00</published><updated>2024-06-26T20:54:00+05:00</updated><id>http://localhost:4000/markdown-cheatsheet</id><content type="html" xml:base="http://localhost:4000/markdown-cheatsheet">&lt;p&gt;I have a deep love for Markdown .It’s the magical tool that turns plain text into beautifully formatted documents. But here’s a little secret: even with over 10 years in tech, I still find myself googling how to format Markdown. So, I decided to write this cheatsheet to end my relentless web searches&lt;/p&gt;
+
+&lt;h2 id=&quot;headers&quot;&gt;Headers&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;Use &lt;span class=&quot;sb&quot;&gt;`#`&lt;/span&gt; for headers. The number of &lt;span class=&quot;sb&quot;&gt;`#`&lt;/span&gt; symbols at the beginning of the line indicates whether it&apos;s a heading 1, 2, 3, etc.
+
+&lt;span class=&quot;gh&quot;&gt;# H1&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;## H2&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;### H3&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;#### H4&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;##### H5&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;###### H6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_ &lt;/code&gt;for emphasis.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;ge&quot;&gt;*italic*&lt;/span&gt; or _italic_
+&lt;span class=&quot;gs&quot;&gt;**bold**&lt;/span&gt; or __bold__
+&lt;span class=&quot;gs&quot;&gt;***bold and italic**&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;*&lt;/span&gt; or ___bold and italic___&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
+
+&lt;h3 id=&quot;unordered-list&quot;&gt;Unordered List&lt;/h3&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;+&lt;/code&gt; for unordered lists.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; Item 1
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; Item 2
+&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; Item 2a
+&lt;span class=&quot;p&quot;&gt;  -&lt;/span&gt; Item 2b&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;ordered-list&quot;&gt;Ordered List&lt;/h2&gt;
+
+&lt;p&gt;Use numbers for ordered lists.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;1.&lt;/span&gt; Item 1
+&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; Item 2
+&lt;span class=&quot;p&quot;&gt;   1.&lt;/span&gt; Item 2a
+&lt;span class=&quot;p&quot;&gt;   2.&lt;/span&gt; Item 2b&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[text](URL)&lt;/code&gt; for links.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Ali Raza&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://www.aliirz.com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;images&quot;&gt;Images&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;![alt text](URL)&lt;/code&gt; for images.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;![&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Markdown Logo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;https://markdown-here.com/img/icon256.png&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; for blockquotes.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;gt&quot;&gt;&amp;gt; This is a blockquote.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;code&quot;&gt;Code&lt;/h2&gt;
+
+&lt;h3 id=&quot;inline-code&quot;&gt;Inline Code&lt;/h3&gt;
+
+&lt;p&gt;Use backticks for inline code.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;sb&quot;&gt;`code`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;code-blocks&quot;&gt;Code Blocks&lt;/h3&gt;
+
+&lt;p&gt;Use triple backticks for code blocks.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;javascript
+&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helloWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Hello, world!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;```&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;horizontal-rules&quot;&gt;Horizontal Rules&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;---&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;***&lt;/code&gt;, or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;___&lt;/code&gt; for horizontal rules.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;***&lt;/span&gt;
+&lt;span class=&quot;ge&quot;&gt;__&lt;/span&gt;_&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;| &lt;/code&gt;to create tables.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;| Header 1 | Header 2 |
+|----------|----------|
+| Cell 1   | Cell 2   |
+| Cell 3   | Cell 4   |&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;strikethrough&quot;&gt;Strikethrough&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~~&lt;/code&gt; to strikethrough text.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;~~This was a mistake.~~&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;task-lists&quot;&gt;Task Lists&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- [ ]&lt;/code&gt; for task lists.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; [x] Completed task
+&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; [ ] Incomplete task&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[^1]&lt;/code&gt; for footnotes.&lt;/p&gt;
+
+&lt;p&gt;Here is a footnote reference[^1].&lt;/p&gt;
+
+&lt;h2 id=&quot;emoji&quot;&gt;Emoji&lt;/h2&gt;
+
+&lt;p&gt;Use colons to include emoji.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;:smile: :+1: :heart:&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Ali Raza</name></author><category term="cheat-sheet" /><category term="markdown" /><summary type="html">I have a deep love for Markdown .It’s the magical tool that turns plain text into beautifully formatted documents. But here’s a little secret: even with over 10 years in tech, I still find myself googling how to format Markdown. So, I decided to write this cheatsheet to end my relentless web searches</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/md.png" /><media:content medium="image" url="http://localhost:4000/images/md.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Building a PDF Chatbot</title><link href="http://localhost:4000/doc-sleek-talk-to-your-pdf-file" rel="alternate" type="text/html" title="Building a PDF Chatbot" /><published>2024-06-03T14:03:00+05:00</published><updated>2024-06-03T14:03:00+05:00</updated><id>http://localhost:4000/doc-sleek-talk-to-your-pdf-file</id><content type="html" xml:base="http://localhost:4000/doc-sleek-talk-to-your-pdf-file">&lt;p&gt;I’ve been quietly working on a personal challenge: 100 days of AI. As part of this journey, I built a chatbot that lets you chat with a PDF file. Using GPT-4 and the Assistants API, my bot can help you interact with the content of any PDF you upload.&lt;/p&gt;
+
+&lt;p&gt;I used Bun, Next.js, GPT-4o, and ShadCN/Tailwind. It’s been a fun and rewarding experience combining these technologies to create something I’ve always wanted to.&lt;/p&gt;
+
+&lt;p&gt;Here is a demo:&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/FxCOL_uIzc4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;Feel free to explore the code on GitHub!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Boost-Panda/sleek-doc-api&quot;&gt;https://github.com/Boost-Panda/sleek-doc-api&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Boost-Panda/sleek-doc-ui&quot;&gt;https://github.com/Boost-Panda/sleek-doc-ui&lt;/a&gt;&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="chatbot" /><category term="gpt-4" /><category term="bun" /><category term="next.js" /><category term="tailwind" /><category term="100-days-of-ai" /><summary type="html">I’ve been quietly working on a personal challenge: 100 days of AI. As part of this journey, I built a chatbot that lets you chat with a PDF file. Using GPT-4 and the Assistants API, my bot can help you interact with the content of any PDF you upload.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/docseek.jpg" /><media:content medium="image" url="http://localhost:4000/images/docseek.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Using Google Gemini to build Karachi Chal</title><link href="http://localhost:4000/karachi-chal" rel="alternate" type="text/html" title="Using Google Gemini to build Karachi Chal" /><published>2024-05-05T19:03:00+05:00</published><updated>2024-05-05T19:03:00+05:00</updated><id>http://localhost:4000/karachi-chal</id><content type="html" xml:base="http://localhost:4000/karachi-chal">&lt;h2 id=&quot;the-inspiration-spark&quot;&gt;The Inspiration Spark&lt;/h2&gt;
+&lt;p&gt;Picture this: I’m on a flight to Karachi, a megacity I’ve always felt a connection to, when it hits me. The sheer scale of the place, the energy – there had to be a better way to navigate it than generic travel guides. Enter Karachi Chal, my AI-powered itinerary planner! Sometimes, even when you think you’re escaping work to clear your head, inspiration strikes in the most unexpected places. That flight to Karachi turned into an accidental coding adventure! With its bustling streets and hidden gems, I knew there had to be a way to help visitors – and tourists like myself – experience the city’s true spirit. Powered by Google’s Gemini API, it quickly became more than a side project; it was a deep dive into building web apps with the power of advanced language models.&lt;/p&gt;
+
+&lt;h2 id=&quot;gemini-api-your-ai-copilot&quot;&gt;Gemini API: Your AI Copilot&lt;/h2&gt;
+
+&lt;p&gt;Gemini is a super-smart language model from Google AI that can generate text, translate languages, write different kinds of creative content, and answer your questions in an informative way. It also has multimodal capabilities.&lt;/p&gt;
+
+&lt;p&gt;For Karachi Chal, I needed more than just an AI that could spit out search results. Gemini’s the perfect fit because it can understand complex requests and go beyond the typical tourist traps. For example, if a user asks, “Help me find offbeat Karachi experiences, things most tourists wouldn’t know about. I am here for 3 days,” Gemini could tap into its knowledge of Karachi to suggest.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-code-behind-the-magic&quot;&gt;The Code Behind the Magic&lt;/h2&gt;
+
+&lt;p&gt;Let’s start by bringing in the necessary tools. The first line imports the core Gemini functionalities from Google’s library. MarkdownIt will help us format the AI’s responses for the web, and your style.css keeps everything looking good. Of course, we need your super-secret API key to communicate with Gemini!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GoogleGenerativeAI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HarmBlockThreshold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HarmCategory&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@google/generative-ai&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Bringing in the tools to work with Gemini&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;MarkdownIt&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;markdown-it&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Library to make the AI&apos;s output look nice&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./style.css&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+
+&lt;span class=&quot;c1&quot;&gt;// Your API Key - Keep it Safe!&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;API_KEY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;meta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;VITE_GEMINI_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is where I teach Gemini how to be the ultimate Karachi travel guide. By setting the ‘role’ to ‘user’, I’m making sure the AI understands this input is coming from someone asking for help. Inside the ‘parts’ is where I’ll carefully craft instructions for creating the perfect itinerary:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;parts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                    &lt;span class=&quot;c1&quot;&gt;// Your prompt text here &lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now here is the real Jugaar (hack), the prompt that makes Karachi Chal tick:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contents&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;parts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+                    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;`You are a knowledgeable travel guide specializing in Karachi. 
+                    When a visitor asks you about their upcoming trip using the 
+                    variable &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;promptInput&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;, provide a comprehensive response. 
+                    Include detailed daily itineraries, top dining spots, and must-see attractions. 
+                    Ensure you account for travel logistics, such as travel times and 
+                    operational hours of venues.`&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+                &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/idx-khi-chal.png&quot; alt=&quot;Karachi Chal dev in Google&apos;s project IDX&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the coolest parts of building with AI is those ‘aha!’ moments. Gemini works by sending a stream of text rather than a single block, and figuring out how to handle that on the fly was a big win! Working with Markdown to make everything look good on the website added another layer to the challenge.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-end-result&quot;&gt;The End Result&lt;/h2&gt;
+
+&lt;p&gt;For the input we used above, here is how Karachi Chal would respond:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-md&quot; data-lang=&quot;md&quot;&gt;Day 1: Discovering Karachi&apos;s Quirky Side
+
+Morning:
+
+Start your day by visiting the ethereal Khuda Ki Basti (God&apos;s Colony), a unique neighborhood adorned with vibrant street art and murals by local and international artists. Spend about an hour exploring its colorful streets.
+Afternoon:
+
+Head to the bustling Tower Market for a sensory overload. Wander through its maze-like alleys, marveling at the vibrant fabrics, handicrafts, and delicious street food. Allow 2-3 hours for shopping and lunch.
+Evening:
+
+Immerse yourself in the local culture at Pakka Qila (Association of the Faithful). Witness traditional wrestling matches or indulge in mouthwatering street delicacies at this vibrant public space. Stay for about 2 hours.
+Day 2: Architectural Wonders and Culinary Delights
+
+Morning:
+
+Explore the grandeur of the Frere Hall (City Library), a majestic Gothic Revival building. Admire its intricate architecture and delve into its extensive collection of books. Visit for approximately 2 hours.
+Afternoon:
+
+Visit the picturesque Haleji Lake, a serene wetland home to diverse birdlife. Take a boat ride or stroll along its scenic shores, enjoying the tranquil atmosphere. Allow 3-4 hours for this excursion.
+Evening:
+
+Indulge in authentic Sindhi cuisine at Sohni Dharti Restaurant. Savor flavorsome dishes like sajji (grilled meat) and bhel puri (spicy puffed rice). Dinner takes about 2 hours.
+Day 3: The Soul of Karachi
+
+Morning:
+
+Discover the fascinating history and culture of Karachi at the Pakistan Maritime Museum. Explore its exhibits on naval history, marine life, and the role of the Pakistani Navy. Plan for 2-3 hours at the museum.
+Afternoon:
+
+Immerse yourself in the vibrant atmosphere of Kemari Town, a historic fishing village. Witness the bustling fish market, interact with friendly locals, and savor fresh seafood at roadside stalls. Dedicate 2-3 hours to this experience.
+Evening:
+
+End your Karachi adventure at the Mohatta Palace, a stunning palace built in the Rajput architectural style. Admire its intricate carvings and serene gardens, while enjoying a memorable dinner at its in-house restaurant. Allow 2-3 hours for dinner and exploration.
+Travel Logistics:
+
+Getting Around: Use ride-sharing apps like Careem or Uber for convenient transportation.
+Local Transport: Explore the city by rickshaw for an authentic experience.
+Travel Times: Factor in approximately 30-60 minutes for travel between attractions.
+Operating Hours: Venues typically open around 9 AM and close between 6 PM and 9 PM. Check specific venues for exact hours.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/khi-chal.png&quot; alt=&quot;Karachi Chal&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The possibilities are endless with Karachi Chal! Think about tweaking the prompt for a budget-friendly trip, a focus on Karachi’s art scene, or even adding a time-of-year element (festival season vs. quieter months).&lt;/p&gt;
+
+&lt;p&gt;If you’re a coder, data enthusiast, or just bursting with ideas to make Karachi Chal even better, join the adventure! Let’s turn this AI itinerary planner into the ultimate Karachi travel companion. Check out the &lt;a href=&quot;https://github.com/codeforpakistan/karachi-chal&quot;&gt;GitHub Repo&lt;/a&gt; and the &lt;a href=&quot;https://karachichal.com&quot;&gt;Website&lt;/a&gt; if you want to contribute or just explore the project.&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="karachi" /><category term="ai" /><category term="city-guide" /><category term="open-source" /><category term="llm" /><summary type="html">The Inspiration Spark Picture this: I’m on a flight to Karachi, a megacity I’ve always felt a connection to, when it hits me. The sheer scale of the place, the energy – there had to be a better way to navigate it than generic travel guides. Enter Karachi Chal, my AI-powered itinerary planner! Sometimes, even when you think you’re escaping work to clear your head, inspiration strikes in the most unexpected places. That flight to Karachi turned into an accidental coding adventure! With its bustling streets and hidden gems, I knew there had to be a way to help visitors – and tourists like myself – experience the city’s true spirit. Powered by Google’s Gemini API, it quickly became more than a side project; it was a deep dive into building web apps with the power of advanced language models.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/arfat-jabbar-RtIVw8BGMWc-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/images/arfat-jabbar-RtIVw8BGMWc-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">ZenPad, A Minimal Markdown Editor for Distraction-Free Writing</title><link href="http://localhost:4000/zen-pad.minimal-markdown-editor" rel="alternate" type="text/html" title="ZenPad, A Minimal Markdown Editor for Distraction-Free Writing" /><published>2024-03-24T00:51:00+05:00</published><updated>2024-03-24T00:51:00+05:00</updated><id>http://localhost:4000/zen-pad.minimal-markdown-editor</id><content type="html" xml:base="http://localhost:4000/zen-pad.minimal-markdown-editor">&lt;p&gt;I recently launched &lt;a href=&quot;http://zenpad.aliirz.com&quot;&gt;Zenpad&lt;/a&gt;, inspired by my search for a distraction-free writing tool that’s straightforward yet powerful. Despite trying various platforms, I found them lacking in simplicity, prompting me to create Zenpad. Designed for writers who value focus, it requires no sign-up or sign-in, embodying the essence of minimalism.&lt;/p&gt;
+
+&lt;p&gt;My philosophy is simple: if you can’t find the right tool, it’s time to build it. Zenpad stands as a testament to this belief, offering a clean, user-centric writing experience. Here’s to celebrating the spirit of open-source innovation and the joy of crafting tools that resonate with our needs.&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="markdown" /><summary type="html">I recently launched Zenpad, inspired by my search for a distraction-free writing tool that’s straightforward yet powerful. Despite trying various platforms, I found them lacking in simplicity, prompting me to create Zenpad. Designed for writers who value focus, it requires no sign-up or sign-in, embodying the essence of minimalism.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/aliirz_In_a_serene_minimalist_workspace_under_the_soft_glow_of__31895718-3e48-409b-a82d-325b4e9b8ad9.png" /><media:content medium="image" url="http://localhost:4000/images/aliirz_In_a_serene_minimalist_workspace_under_the_soft_glow_of__31895718-3e48-409b-a82d-325b4e9b8ad9.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Sora, A New Horizon in AI-Generated Video Content</title><link href="http://localhost:4000/openai-sora" rel="alternate" type="text/html" title="Sora, A New Horizon in AI-Generated Video Content" /><published>2024-02-15T23:20:00+05:00</published><updated>2024-02-15T23:20:00+05:00</updated><id>http://localhost:4000/openai-sora</id><content type="html" xml:base="http://localhost:4000/openai-sora">&lt;p&gt;Like a RKO out of nowwhere, OpenAI has unveiled Sora, a AI model designed to transform text instructions into realistic and imaginative video scenes. This launch marks a significant milestone in AI’s capability to understand and simulate the physical world in motion, opening up unprecedented possibilities for creators across the globe.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-sora&quot;&gt;What is Sora?&lt;/h2&gt;
+
+&lt;p&gt;Sora is not just any AI model; it is a technology capable of generating up to a minute-long videos that maintain visual quality and adhere closely to the given prompts. Developed by OpenAI, it represents a leap forward in the field, aiming to bridge the gap between imagination and visual representation without the need for extensive video production resources.  &lt;a href=&quot;https://openai.com/sora&quot;&gt;OpenAI’s website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;impact-on-the-video-generation-ecosystem&quot;&gt;Impact on the Video Generation Ecosystem&lt;/h2&gt;
+
+&lt;p&gt;The introduction of Sora into the market is set to redefine the competitive landscape for startups and established companies alike in the AI-generated video space. Here’s how it impacts other players:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://runwayml.com&quot;&gt;&lt;strong&gt;Runway AI&lt;/strong&gt;&lt;/a&gt;: A generative AI video editing platform, enabling users to produce short video clips from text prompts.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://stability.ai&quot;&gt;&lt;strong&gt;Stability AI&lt;/strong&gt;&lt;/a&gt;: Entered the video generation domain with Stable Video Diffusion, a model for generating videos from images.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.inworld.ai&quot;&gt;&lt;strong&gt;Inworld AI&lt;/strong&gt;&lt;/a&gt;: Specializes in creating AI-powered characters for video games and digital entertainment, using natural language processing for lifelike interactions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.steve.ai&quot;&gt;&lt;strong&gt;Steve.ai&lt;/strong&gt;&lt;/a&gt;: An online platform transforming text prompts into animated videos, targeting content creators for efficient video production.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other notable companies in this space include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.synthesia.io&quot;&gt;&lt;strong&gt;Synthesia&lt;/strong&gt;&lt;/a&gt;: For professional-looking AI videos from text.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.deepbrainai.io&quot;&gt;&lt;strong&gt;Deepbrain AI&lt;/strong&gt;&lt;/a&gt;: For conversational AI avatars and AI video generator.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.pika.art&quot;&gt;&lt;strong&gt;Pika&lt;/strong&gt;&lt;/a&gt;: Focuses on editing and generating videos from captions and still images.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://typecast.ai&quot;&gt;&lt;strong&gt;Neosapience&lt;/strong&gt;&lt;/a&gt;: Featuring Typecast’s Online AI Voice Generator for video content.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;opportunities-for-creators-and-businesses&quot;&gt;Opportunities for Creators and Businesses&lt;/h2&gt;
+
+&lt;p&gt;Sora opens up a world of possibilities for visual artists, filmmakers, and designers, providing them with a tool to bring their visions to life without the traditional barriers of video production. This democratization of content creation has the potential to spur a new wave of creativity and innovation, enabling personalized and engaging content across various sectors, including education, marketing, and entertainment.&lt;/p&gt;
+
+&lt;p&gt;Look at some amazing video examples here &lt;a href=&quot;https://openai.com/sora&quot;&gt;OpenAI’s website&lt;/a&gt;.&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="openai" /><category term="sora" /><summary type="html">Like a RKO out of nowwhere, OpenAI has unveiled Sora, a AI model designed to transform text instructions into realistic and imaginative video scenes. This launch marks a significant milestone in AI’s capability to understand and simulate the physical world in motion, opening up unprecedented possibilities for creators across the globe.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/openai-sora.png" /><media:content medium="image" url="http://localhost:4000/images/openai-sora.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Using Crew AI to detect fake news with your own LLM</title><link href="http://localhost:4000/fight-fake-news-with-crew-ai" rel="alternate" type="text/html" title="Using Crew AI to detect fake news with your own LLM" /><published>2024-02-07T13:19:35+05:00</published><updated>2024-02-07T13:19:35+05:00</updated><id>http://localhost:4000/fight-fake-news-with-crew-ai</id><content type="html" xml:base="http://localhost:4000/fight-fake-news-with-crew-ai">&lt;p&gt;I found out about &lt;a href=&quot;https://www.crewai.io/&quot;&gt;crew ai&lt;/a&gt; some time ago. While the use of multiple AT agents to perform a task is not something new. Crew AI serves as a framework to make this a lot more easier. The best part is that it lets you define your agents and their tasks in a very &lt;a href=&quot;https://github.com/joaomdmoura/crewAI-examples/tree/main/starter_template&quot;&gt;organized manner&lt;/a&gt;. I have been playing with it for a while now and I did a small experiment to see if I could use it to detect fake news.&lt;/p&gt;
+
+&lt;p&gt;One of the most powerful features that Crew AI has is the ability to have your agents use  tools in their tasks. For example you can have a agent use the following tool to search the web&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Search the internet&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;search_internet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Useful to search the internet 
+about a a given topic and return relevant results&quot;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://google.serper.dev/search&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dumps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;q&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&apos;X-API-KEY&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;environ&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;SERPER_API_KEY&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&apos;content-type&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;application/json&apos;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;organic&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;
+        &lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Title: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Link: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;link&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Snippet: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;snippet&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-----------------&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;By default Crew AI uses openai’s api, you need to have the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OPENAI_API_KEY&lt;/code&gt; as a env var available. But would it not be fun if we could use our own model? I have been playing with &lt;a href=&quot;https://ollama.ai/library/openhermes&quot;&gt;openhermes&lt;/a&gt; so I decided to give it a shot and voila! I was able to use it with crew ai.&lt;/p&gt;
+
+&lt;p&gt;Here is a small snippet of the code from my &lt;a href=&quot;https://github.com/aliirz/crews&quot;&gt;crews&lt;/a&gt; repo:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;crewai&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Crew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Process&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;langchain.tools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tool&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;langchain.llms&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ollama&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ollama_llm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ollama&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;openhermes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;langchain.tools&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DuckDuckGoSearchRun&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;search_tool&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;DuckDuckGoSearchRun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+
+&lt;span class=&quot;c1&quot;&gt;# Define your CrewAI agents and tasks
+# Define Agents
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fact_checking_agent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Fact-Checking Agent&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;goal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Verify the factual accuracy of the news article or statement.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;backstory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Expert in data verification and fact-checking, skilled in discerning truth from fiction in news reporting.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search_tool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;llm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ollama_llm&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;political_analyst_agent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Political Analyst Agent&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;goal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Provide context and political analysis on Pakistan.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;backstory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Specializes in South Asian geopolitics, focusing on Pakistan.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;llm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ollama_llm&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;media_bias_analyst_agent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Media Bias Analyst Agent&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;goal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Assess potential biases in the news source.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;backstory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Expert in media studies, focusing on detecting biases in news reporting.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;llm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ollama_llm&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;public_sentiment_analyst_agent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;role&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Public Sentiment Analyst Agent&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;goal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Gauge public reaction to the news.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;backstory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Skilled in analyzing public opinion and sentiment on social media and online forums.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;search_tool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;llm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ollama_llm&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Define a function to integrate the tools with CrewAI
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;analyze_news_article&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;fact_checking_task&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Analyze the news article: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; for factual accuracy. Final answer must be a detailed report on factual findings.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;agent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fact_checking_agent&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;political_analysis_task&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Analyze the political context of the news article: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;. Final answer must include an assessment of the current political situation and its credibility.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;agent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;political_analyst_agent&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;media_bias_analysis_task&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Evaluate the news source: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; for biases and report on potential influences on the article&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s narrative. Final answer must include an analysis of media bias.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;agent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;media_bias_analyst_agent&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;public_sentiment_analysis_task&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&apos;Analyze public reaction to the news: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; on social media and forums. Final answer must summarize public sentiment.&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;agent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;public_sentiment_analyst_agent&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+    &lt;span class=&quot;n&quot;&gt;crew&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Crew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;agents&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fact_checking_agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;political_analyst_agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media_bias_analyst_agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;public_sentiment_analyst_agent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;#  agents
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fact_checking_task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;political_analysis_task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;media_bias_analysis_task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;public_sentiment_analysis_task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;#  tasks
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# currently the only way it works
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;crew&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;kickoff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#  usage
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;final_result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;analyze_news_article&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Feb 8 2024 Elections have been cancelled in Pakistan. The government has declared a state of emergency. The military has taken over the country.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;final_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As you can see I am using DuckDuckGo as a tool and openhermes as the LLM. The result is a detailed report on the news article. I am still playing with it and I am sure I can make it better. But I am happy with the results so far. My news article is a fake news around the delay of elections in Pakistan. As I am writing this post, elections are due tomorrow. My crew was able to successfuly research and provide its findings on the news article. This was the output i got:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Based on the context provided, it appears that the news article is outdated or incorrect as elections are still scheduled for February 8, 2024 in Pakistan and no state of emergency or military takeover has been reported.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Pretty cool right? I am excited to see what else we can do with this. I have barely began to scratch the surface. You can checkout crew ai &lt;a href=&quot;https://www.crewai.io/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="ollama" /><category term="openhermes" /><summary type="html">I found out about crew ai some time ago. While the use of multiple AT agents to perform a task is not something new. Crew AI serves as a framework to make this a lot more easier. The best part is that it lets you define your agents and their tasks in a very organized manner. I have been playing with it for a while now and I did a small experiment to see if I could use it to detect fake news.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/aliirz_a_crew_of_researchers_working_together_to_find_if_a_news_dca49ea5-e643-4dc2-b532-fd879522cd79.png" /><media:content medium="image" url="http://localhost:4000/images/aliirz_a_crew_of_researchers_working_together_to_find_if_a_news_dca49ea5-e643-4dc2-b532-fd879522cd79.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Gesture Recognition with Python OpenCV</title><link href="http://localhost:4000/gesture-recognition-with-python" rel="alternate" type="text/html" title="Gesture Recognition with Python OpenCV" /><published>2024-01-21T16:19:35+05:00</published><updated>2024-01-21T16:19:35+05:00</updated><id>http://localhost:4000/gesture-recognition-with-python</id><content type="html" xml:base="http://localhost:4000/gesture-recognition-with-python">&lt;p&gt;A long time ago I was part of a competition where people were presenting and building some great ideas. One such startup that really inspired me was trying to build an app to recognize ASL(American Sign Language) and PSL(Pakistan Sign Language). To no one’s surprise they won the competion, however down the line 4 years from that day, that startup now works as a event management company and provides sign language interpreters for such events.&lt;/p&gt;
+
+&lt;p&gt;We promise big, but we deliver small. It has been part of a norm here in Pakistan. Anyhow, since I’ve never had much experience working with Computer Vision, I decided to give it a shot and see if how hard it would be build a simple gesture recognition python script. Turns out, its not that hard. I was able to build a simple app that recognizes a few gestures.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;images/gesturerecog.png&quot; alt=&quot;Gesture Recognition in action&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The only dependencies are &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opencv-python&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mediapipe&lt;/code&gt;. You can install them using pip:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;opencv-python mediapipe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is the code:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/aliirz/9a235a3973a511c13e04b0ff452b600b.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Enjoy!&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="todayilearned" /><category term="python" /><summary type="html">A long time ago I was part of a competition where people were presenting and building some great ideas. One such startup that really inspired me was trying to build an app to recognize ASL(American Sign Language) and PSL(Pakistan Sign Language). To no one’s surprise they won the competion, however down the line 4 years from that day, that startup now works as a event management company and provides sign language interpreters for such events.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/gesture.png" /><media:content medium="image" url="http://localhost:4000/images/gesture.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code Roaster GPT</title><link href="http://localhost:4000/code-roaster-gpt" rel="alternate" type="text/html" title="Code Roaster GPT" /><published>2024-01-03T00:19:35+05:00</published><updated>2024-01-03T00:19:35+05:00</updated><id>http://localhost:4000/code-roaster-gpt</id><content type="html" xml:base="http://localhost:4000/code-roaster-gpt">&lt;p&gt;While experimenting with building my own GPTs, I stumbled upon a fascinating idea. What if we could train a GPT on code and utilize it to roast code? Intrigued by the concept, I decided to give it a shot. As a result Roasty was born. Roasty is a fiesty little GPT that roasts your code (and you). While its a novel idea, its the prompt that matters and the results. So far Roasty has roasted my code and me pretty well. It has also roasted some of my friends and their code.&lt;/p&gt;
+
+&lt;div style=&quot;position: relative; padding-bottom: 56.25%; height: 0;&quot;&gt;&lt;iframe src=&quot;https://www.loom.com/embed/a31f7ae3721f43858ff86e4ddc7f7a29?sid=86db9780-7f4c-48ce-be64-a28efc516311&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot; style=&quot;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+
+&lt;p&gt;As an example here is the code snippet from my &lt;a href=&quot;https://www.encodedecode.lol/&quot; target=&quot;_blank&quot;&gt;encodedecode.lol&lt;/a&gt; side project.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;template&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;form-group&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textarea&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;form-control&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;inputText&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;placeholder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Ready for some Base64 sorcery? Input your text!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;floatingTextarea&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/textarea&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;br&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d-flex justify-content-end&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;convertTo64&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;disabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;isEncoded&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;btn btn-primary&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;{ &apos;marginRight&apos;: &apos;10px&apos; }&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Encode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;          &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;convertFrom64&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;disabled&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;!isEncoded&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;btn btn-secondary&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Decode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;        &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/template&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ts&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defineComponent&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;vue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defineComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;ConvertTo64&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;methods&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;convertTo64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;btoa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isEncoded&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;convertFrom64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;atob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isEncoded&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;inputText&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;isEncoded&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This is what Roasty had to say about it:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Ah, Vue.js meets Base64 – the peanut butter and jelly of web development, but with a side of &quot;What were they thinking?&quot;
+
+First off, let&apos;s address the elephant in the room: `convertTo64` and `convertFrom64`. Ah, naming methods like they&apos;re Transformers characters. Optimus Encode and Decodetron, roll out! But seriously, how about `encodeToBase64` and `decodeFromBase64`? It&apos;s like a gift to your future self who won&apos;t remember what &quot;64&quot; stood for.
+
+And then, `this.isEncoded`. I appreciate the effort to track state, but what happens when someone decodes and then re-encodes? Do we just flip-flop this boolean like a politician in election season? Consider tracking the state more robustly.
+
+Oh, and speaking of robust – `btoa` and `atob` – the good ol&apos; built-in duo. They&apos;re great until they meet non-Latin1 characters and throw a tantrum like a toddler denied candy. Maybe consider handling that so your app doesn&apos;t crash when it encounters an emoji. 🙃
+
+Now, let&apos;s talk about your template. It&apos;s like a minimalist painting - there&apos;s beauty in simplicity, but a few more strokes wouldn&apos;t hurt. How about some validation or user feedback? Let the user know if something went wrong, or if they&apos;re trying to decode a string that wasn&apos;t encoded in the first place. We don&apos;t want to be decoding gibberish, do we?
+
+Lastly, the inline style in the button – `:style=&quot;{ &apos;marginRight&apos;: &apos;10px&apos; }&quot;`. Inline styles are like seasoning – a little goes a long way, but too much and you&apos;ll ruin the dish. Maybe consider a class? Keep it clean, keep it maintainable.
+
+In summary:
+1. Rename your methods for clarity.
+2. Improve your state tracking.
+3. Handle non-Latin1 characters.
+4. Provide user feedback and validation.
+5. Avoid inline styles.
+
+But hey, you&apos;ve got the basics down. Now, just polish it until it shines brighter than a bald man&apos;s head under a spotlight! 🌟
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;iframe src=&quot;https://giphy.com/embed/RdKjAkFTNZkWUGyRXF&quot; width=&quot;480&quot; height=&quot;256&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/RdKjAkFTNZkWUGyRXF&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see it not only roasted me but also provided some useful feedback. I am planning to use this in my code reviews from now own. Specially when I am reviewing code from my friends. Let me know what you think about this idea. You can try it out &lt;a href=&quot;https://chat.openai.com/g/g-6CMx7oOl1-roasty-the-code-roaster/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="chatgpt" /><summary type="html">While experimenting with building my own GPTs, I stumbled upon a fascinating idea. What if we could train a GPT on code and utilize it to roast code? Intrigued by the concept, I decided to give it a shot. As a result Roasty was born. Roasty is a fiesty little GPT that roasts your code (and you). While its a novel idea, its the prompt that matters and the results. So far Roasty has roasted my code and me pretty well. It has also roasted some of my friends and their code.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/roasty.png" /><media:content medium="image" url="http://localhost:4000/images/roasty.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Code for All Summit 2023</title><link href="http://localhost:4000/code-for-all-summit-2023" rel="alternate" type="text/html" title="Code for All Summit 2023" /><published>2023-10-20T09:33:35+05:00</published><updated>2023-10-20T09:33:35+05:00</updated><id>http://localhost:4000/code-for-all-summit-2023</id><content type="html" xml:base="http://localhost:4000/code-for-all-summit-2023">&lt;p&gt;This year marked the 10th anniversary of the &lt;a href=&quot;https://codeforall.org/2023/06/05/call-for-proposals-code-for-all-summit-2023/&quot;&gt;Code for All&lt;/a&gt;, a premier gathering for civic tech enthusiasts worldwide. The summit provided a unique platform to discuss, explore, and evaluate the impact of civic tech on a global scale. I had the honor of participating in a panel discussion on open-source technology and delivering a lightning talk on one of our community efforts, “Flood Light.”&lt;/p&gt;
+
+&lt;h4 id=&quot;the-open-source-panel-more-than-just-hype&quot;&gt;The Open-Source Panel: More Than Just Hype&lt;/h4&gt;
+
+&lt;p&gt;The panel discussion aimed to assess the true replicability of open-source software across civic tech. I was joined by experts like Olivia Vereha from Code for Romania and Xavier Frankline from Code for Africa. We discussed why open-source works, citing examples from organizations like Mozilla and civic tech projects like &lt;a href=&quot;https://decidim.org/&quot;&gt;Decidim&lt;/a&gt;. The consensus was clear: open-source is not just a buzzword; it’s a viable approach for civic tech solutions.&lt;/p&gt;
+
+&lt;h4 id=&quot;flood-light-a-community-led-crisis-response&quot;&gt;Flood Light: A Community-Led Crisis Response&lt;/h4&gt;
+
+&lt;p&gt;In 2022, Pakistan faced a catastrophic climate event that led to widespread devastation. In response, Code for Pakistan launched Flood Light, an initiative to create a comprehensive data platform for flood mapping. My colleague Mubassir Hayat and I shared how this effort successfully mapped over 1,500 relief camps and connected those in need with international donors and volunteers. You can watch the full lightning talk &lt;a href=&quot;https://www.youtube.com/watch?v=eAl-P5i7YSw&amp;amp;list=PL6kG8TTskjRP3Qfkzu10VdAFT-rBY4H-9&amp;amp;index=14&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;key-takeaways-from-flood-light&quot;&gt;Key Takeaways from Flood Light&lt;/h4&gt;
+
+&lt;p&gt;We highlighted the transformative power of community-led initiatives in crisis response. The project was a quick solution developed overnight using &lt;a href=&quot;https://www.ushahidi.com/&quot;&gt;Ushahidi&lt;/a&gt;, collecting over 2,000 data points through crowdsourcing. This data was then used by the government and aid organizations to provide relief to the affected people.&lt;/p&gt;
+
+&lt;h4 id=&quot;other-highlights-and-future-directions&quot;&gt;Other Highlights and Future Directions&lt;/h4&gt;
+
+&lt;p&gt;The summit had several sessions on AI and civic tech, which resonated with our ongoing project, &lt;a href=&quot;https://github.com/codeforpakistan/numainda&quot;&gt;Numainda&lt;/a&gt;. It was motivating to see that we are on the right track. I was particularly inspired by Olivia Vereha’s stories and look forward to networking more with like-minded organizations like Code for Romania.&lt;/p&gt;
+
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;The Code for All Summit 2023 was an enriching experience that left me motivated to continue our work at Code for Pakistan. The summit served as a reminder of the transformative power of technology when used for the greater good. As we move forward, our focus remains on empowering the community and creating a lasting impact.&lt;/p&gt;
+
+&lt;h4 id=&quot;additional-resources&quot;&gt;Additional Resources&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codeforall.org/events/code-for-all-summit-2023/&quot;&gt;Code for All Summit 2023&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/codeforpakistan/numainda&quot;&gt;Numainda on GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=eAl-P5i7YSw&amp;amp;list=PL6kG8TTskjRP3Qfkzu10VdAFT-rBY4H-9&amp;amp;index=14&quot;&gt;Flood Light Lightning Talk&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=oxYLs9sz8QA&amp;amp;list=PL6kG8TTskjRP3Qfkzu10VdAFT-rBY4H-9&amp;amp;index=66&quot;&gt;Open-Source Panel Discussion&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Feel free to share, comment, and stay tuned for more updates on our projects and community efforts!&lt;/p&gt;
+
+&lt;h4 id=&quot;tags&quot;&gt;Tags&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#CodeForAllSummit2023&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#CivicTech&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#OpenSource&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#CommunityLedInitiatives&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#FloodLight&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#CrisisResponse&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#numainda&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#AI&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#Networking&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#CodeForPakistan&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#CodeForRomania&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#CodeForAfrica&lt;/code&gt;&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="tutorials" /><category term="best-practices" /><summary type="html">This year marked the 10th anniversary of the Code for All, a premier gathering for civic tech enthusiasts worldwide. The summit provided a unique platform to discuss, explore, and evaluate the impact of civic tech on a global scale. I had the honor of participating in a panel discussion on open-source technology and delivering a lightning talk on one of our community efforts, “Flood Light.”</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/Code-for-All-Summit-Website.jpg" /><media:content medium="image" url="http://localhost:4000/images/Code-for-All-Summit-Website.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Importance of HTTP Status Codes in Microservice and API Development</title><link href="http://localhost:4000/Http-Status-Codes" rel="alternate" type="text/html" title="The Importance of HTTP Status Codes in Microservice and API Development" /><published>2023-10-20T09:33:35+05:00</published><updated>2023-10-20T09:33:35+05:00</updated><id>http://localhost:4000/Http-Status-Codes</id><content type="html" xml:base="http://localhost:4000/Http-Status-Codes">&lt;p&gt;Recently, I had a small argument with a colleague who suggested that one of our developers should determine whether a request failed or succeeded based on the returned string—specifically, whether it was empty or not. While this might seem like a straightforward approach, I strongly believe that decisions should be based on HTTP status codes, not the content of the response string. Here’s why.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-role-of-http-status-codes&quot;&gt;The Role of HTTP Status Codes&lt;/h3&gt;
+&lt;p&gt;HTTP status codes are issued by a server in response to a client’s request. They fall into various categories, each serving a specific purpose:&lt;/p&gt;
+
+&lt;p&gt;2xx (Success): Indicates that the client’s request was successfully received and processed.
+3xx (Redirection): Suggests that further action needs to be taken to complete the request.
+4xx (Client Error): Signifies that the client seems to have made an error.
+5xx (Server Error): Indicates that the server failed to fulfill a valid request.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-are-they-important&quot;&gt;Why Are They Important?&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Clarity and Consistency&lt;/strong&gt;: Using standard HTTP status codes makes it easier for developers to understand the outcome of an API call without having to dig into the response payload.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Debugging and Troubleshooting&lt;/strong&gt;: Status codes can quickly point developers to the root cause of an issue, whether it’s a client-side mistake or a server-side error.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Automation&lt;/strong&gt;: Automated systems can easily interpret these codes and take appropriate actions, such as retrying a failed request or logging an error for future investigation.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Monitoring and Analytics&lt;/strong&gt;: Tracking the frequency of various status codes can provide valuable insights into API health and usage patterns.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;User Experience&lt;/strong&gt;: Proper use of status codes can help in creating a more responsive and user-friendly application by handling different scenarios gracefully.&lt;/p&gt;
+
+&lt;h3 id=&quot;best-practices&quot;&gt;best-practices&lt;/h3&gt;
+&lt;p&gt;Use the most specific status code for each operation. For example, use 201 Created for resource creation and 204 No Content for a successful delete operation.&lt;/p&gt;
+
+&lt;p&gt;Avoid using generic status codes like 200 OK for all successful operations, as it doesn’t provide enough context about what happened in the server.&lt;/p&gt;
+
+&lt;p&gt;Always include a message body to elaborate on the status code, especially in the case of client and server errors.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;HTTP status codes are an integral part of API and microservice development. They offer a standardized way to communicate the status of HTTP requests, making it easier for both humans and machines to understand what’s happening. By using HTTP status codes effectively, developers can build more robust, efficient, and user-friendly applications.&lt;/p&gt;
+
+&lt;p&gt;So, the next time you find yourself in a debate about whether to use status codes or response strings to indicate the outcome of an API call, remember the many benefits that come with sticking to standard HTTP status codes. It could make all the difference in your project’s success.&lt;/p&gt;</content><author><name>Ali Raza</name></author><category term="tutorials" /><category term="best-practices" /><summary type="html">Recently, I had a small argument with a colleague who suggested that one of our developers should determine whether a request failed or succeeded based on the returned string—specifically, whether it was empty or not. While this might seem like a straightforward approach, I strongly believe that decisions should be based on HTTP status codes, not the content of the response string. Here’s why.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/images/aliirz_http_status_codes_ce4348d4-bc9f-41cc-bdf7-8f307b45f638.png" /><media:content medium="image" url="http://localhost:4000/images/aliirz_http_status_codes_ce4348d4-bc9f-41cc-bdf7-8f307b45f638.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
