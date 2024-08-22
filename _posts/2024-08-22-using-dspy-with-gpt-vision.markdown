@@ -112,6 +112,7 @@ class VqaCoT(dspy.Signature):
                 - Expiration Date"""
 
     image_path = dspy.InputField(desc="Base64 format of the image")
+    {% raw %}
     demographics = dspy.OutputField(desc="""{
                     "Full Name": "",
                     "First Name": "",
@@ -129,6 +130,7 @@ class VqaCoT(dspy.Signature):
                     "Issue Date": "",
                     "Expiration Date": ""
                 }}""")
+    {% endraw %}
 {% endhighlight %}
 
 So far, I am quite satisfied with this implementation. I’m not sure what I’ll add next, but I’m excited about the possibilities!
