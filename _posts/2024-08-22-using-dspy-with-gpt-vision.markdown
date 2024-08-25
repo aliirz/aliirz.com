@@ -2,7 +2,7 @@
 layout: post
 title: GPT Vision and DSPY towards smarter automation
 description: The one time I used DSPY with GPT vision to extract structued json from an image.
-image: "images/dspy-license.webp"
+image: "images/dspy-license.jpg"
 tags: [gpt, vision, dspy]
 date: 2024-08-22 21:54:00 +0500
 ---
