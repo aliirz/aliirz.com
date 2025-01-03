@@ -17,6 +17,21 @@ Innovative product leader with 14 years of experience driving technological adva
 
 ## Professional Experience
 
+### Co-Founder and CEO
+**BoostPanda AI LLC** | November 2023 - Present
+- Develop and execute product vision and strategy for Botterfly, an AI-based project management tool optimizing workflows for engineering and product teams.
+- Lead cross-functional teams through the entire product lifecycle, from development to launch and scaling.
+- Led call center intelligence software development, showcasing innovation in AI applications.
+- Manage Marketing Technologies for US-based clients, providing end-to-end solutions, including website and CRM development.
+
+**Key Achievements:**
+- Successfully launched MVP within three months.
+- Managed team building and maintaining custom CRM software for a US-based timeshare company.
+- Implemented marketing campaign technology, enabling a client to collect over $700K in maintenance fees.
+- Built TCPA-compliant marketing nurture SMS and email pipeline software.
+- Provided Feedback Agent development services to improve AI-generated responses for clients.
+
+
 ### Director of Technology
 **Code for Pakistan** | April 2020 - Present
 - Spearheaded product strategy and development for civic tech applications, utilizing AI and data-driven insights to enhance community engagement.
@@ -30,19 +45,7 @@ Innovative product leader with 14 years of experience driving technological adva
 - Created What the Food, a nutritional web application leveraging AI technology.
 - Launched Watchtower, an open-source government website monitoring platform.
 
-### Co-Founder and CEO
-**BoostPanda AI** | November 2023 - Present
-- Develop and execute product vision and strategy for Botterfly, an AI-based project management tool optimizing workflows for engineering and product teams.
-- Lead cross-functional teams through the entire product lifecycle, from development to launch and scaling.
-- Led call center intelligence software development, showcasing innovation in AI applications.
-- Manage Marketing Technologies for US-based clients, providing end-to-end solutions, including website and CRM development.
 
-**Key Achievements:**
-- Successfully launched MVP within three months.
-- Managed team building and maintaining custom CRM software for a US-based timeshare company.
-- Implemented marketing campaign technology, enabling a client to collect over $700K in maintenance fees.
-- Built TCPA-compliant marketing nurture SMS and email pipeline software.
-- Provided Feedback Agent development services to improve AI-generated responses for clients.
 
 ### Senior Solutions Architect
 **AI XPRT (Audit XPRT) LIMITED** | October 2019 - February 2020
