@@ -3,8 +3,8 @@ layout: post
 title: "Chain of Draft (CoD): Making LLMs Think Like Humans on a Deadline"
 description: "A new prompting strategy that makes LLMs think like humans on a deadline"
 date: 2025-04-15
-tags: [llm, prompt engineering, chain of thought, chain of draft]
-image: "/images/chain-of-draft.png"
+tags: [llm, prompt-technique, chain-of-thought, chain-of-draft]
+image: "images/chain-of-draft.jpg"
 ---
 
 Ever watched someone solve a tough problem while pacing, scribbling half-sentences, muttering "carry the two..." under their breath? That’s how we humans reason. We don’t narrate full essays in our heads. We sketch ideas. And that's *exactly* the vibe of Chain of Draft (CoD).
@@ -42,27 +42,32 @@ This is ideal when your app’s running a fleet of agents and one of them decide
 ### Try it Yourself
 
 {% highlight python %}
-import openai
-openai.api_key = "your-api-key"
+import os
+from openai import OpenAI
+
+# Initialize the OpenAI client with your API key
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def chain_of_draft_prompt(question):
-    return f"""
-You're a reasoning wizard. Solve this problem using extremely short steps (5 words max). Then, give the answer.
+    return f"""You're a reasoning expert. Solve this problem using extremely 
+    short steps (5 words max). Then, give the answer.
 
-Question: {question}
+    Question: {question}
 
-Steps:
+    Steps:
 """
 
-response = openai.ChatCompletion.create(
-    model="gpt-4",
+# Create a chat completion
+response = client.chat.completions.create(
+    model="gpt-4o",
     messages=[
         {"role": "user", "content": chain_of_draft_prompt("What’s 23 * 17?")}
     ],
     temperature=0.3
 )
 
-print(response['choices'][0]['message']['content'])
+# Print the assistant's reply
+print(response.choices[0].message.content)
 {% endhighlight %}
 
 ### TL;DR
