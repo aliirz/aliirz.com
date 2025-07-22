@@ -1,0 +1,26 @@
+---
+layout: post
+title: "TICTeC 2025"
+description: "Got the opportunity to speak at TICTeC 2025 and my visa never came through"
+date: 2025-07-22
+tags: [tictec]
+image: "images/presenting-at-tictec.jpg"
+---
+
+Sometimes I hate the fact that I was born in Pakistan... well, not sometimes, just whenever my visa gets rejected for no clear reason.
+
+This year I was invited to speak at TICTeC 2025 in Belgium. I was super excited as I would get a chance to talk about my passion for AI and democracy. I was going to present Numainda as a case study. The TICTeC team made sure I had tickets and reservations all set up. 
+
+I applied for my visa at VFS's new office in Chata Bakhtawar. The whole process itself was time-consuming and cumbersome. My visa appointment was set at 10 am and I got free from it all finally around 6 pm. They don't allow you to take phones with you and make you run for exchanging currency to euros, just FYI. 
+
+Khair, I applied grinding my teeth at all times and then I waited. With the date for the conference fast approaching, I realized that I would not be able to get it on time. I tried everything I could to learn more about it but to no avail.
+
+Gemma and her team offered me to present virtually, which I accepted gladly. So here is my talk:
+
+<p>
+<iframe src="https://www.youtube.com/embed/2Zuez5TBDK4?si=hCtyyViuPiiw_U_V" frameborder="0" allowfullscreen></iframe>
+</p>
+
+While the visa process was frustrating and ultimately unsuccessful, this experience taught me that opportunities can still come through alternative means. The TICTeC team's flexibility and willingness to accommodate virtual participation shows that the global tech community values diverse voices, regardless of bureaucratic hurdles.
+
+I hope that one day, Pakistani citizens won't have to face such lengthy and uncertain visa processes. One can only hope 🥹.
