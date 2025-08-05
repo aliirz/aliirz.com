@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Remember when we owned our files?"
+description: "There was a time when we controlled our data. You didn't need permission from a company to send someone a file. You didn't need an account. You didn't need to agree to anything. You just shared it. One computer talked to another. That was enough."
 date: 2025-08-05
 categories: [tech, nostalgia]
 image: "images/Nostalgia Picture from Unsplash.jpg"
