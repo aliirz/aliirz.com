@@ -3,10 +3,8 @@ layout: post
 title: "Remember when we owned our files?"
 date: 2025-08-05
 categories: [tech, nostalgia]
+image: "images/Nostalgia Picture from Unsplash.jpg"
 ---
-
-## Remember when we actually owned our files?
-
 There was a time when we controlled our data.
 You didn't need permission from a company to send someone a file. You didn't need an account. You didn't need to agree to anything. You just shared it. One computer talked to another. That was enough.
 
@@ -29,3 +27,6 @@ We have to remember what we had. And why we gave it up.
 Not to go back. But to build something better.
 
 And this time, to keep it.
+
+Photo by [Jon Tyson](https://unsplash.com/@jontyson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-pile-of-old-photos-and-postcards-sitting-on-top-of-each-other-P2aOvMMUJnY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+      
