@@ -95,6 +95,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+feed:
+  posts_limit: 1000
+
 paginate: 5
 paginate_path: "/page/:num"
 
