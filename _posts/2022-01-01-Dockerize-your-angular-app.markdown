@@ -29,7 +29,7 @@ RUN npm run start
 
 Now normally this will be it but I am going kick it up a notch.
 
-![I am gonna pull a pro gamer move](/images/3flgzv.png "Pro Gamer!!!")
+![I am gonna pull a pro gamer move](images/3flgzv.png "Pro Gamer!!!")
 
 I am going to run my app on nginx using multi stage docker builds. This will help us run the app as if it would run on a production server:
 

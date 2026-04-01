@@ -62,7 +62,7 @@ let contents = [
 ];
 {% endhighlight %}
 
-![Karachi Chal dev in Google's project IDX](/images/idx-khi-chal.png)
+![Karachi Chal dev in Google's project IDX](images/idx-khi-chal.png)
 
 One of the coolest parts of building with AI is those 'aha!' moments. Gemini works by sending a stream of text rather than a single block, and figuring out how to handle that on the fly was a big win! Working with Markdown to make everything look good on the website added another layer to the challenge.
 
@@ -112,7 +112,7 @@ Travel Times: Factor in approximately 30-60 minutes for travel between attractio
 Operating Hours: Venues typically open around 9 AM and close between 6 PM and 9 PM. Check specific venues for exact hours.
 {% endhighlight %}
 
-![Karachi Chal](/images/khi-chal.png)
+![Karachi Chal](images/khi-chal.png)
 
 The possibilities are endless with Karachi Chal! Think about tweaking the prompt for a budget-friendly trip, a focus on Karachi's art scene, or even adding a time-of-year element (festival season vs. quieter months).
 

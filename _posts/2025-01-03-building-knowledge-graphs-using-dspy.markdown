@@ -97,7 +97,7 @@ build_knowledge_graph(entity_extractor, text)
 
 The output is a knowledge graph that looks like this:
 
-![Knowledge Graph](/images/graph.png)
+![Knowledge Graph](images/graph.png)
 
 I am so excited about this. I think this is a great way to extract knowledge graphs from text.
 
