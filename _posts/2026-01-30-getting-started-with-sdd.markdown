@@ -42,7 +42,7 @@ Several toolkits now automate the management of specifications:
 
 - [**GitHub Spec Kit**](https://github.com/github/spec-kit) - An open-source toolkit providing slash commands (`/speckit.specify`, `/speckit.plan`) to automate branch creation, template generation, and task breakdown. Works with Copilot, Claude Code, and Gemini CLI.
 - [**Amazon Kiro**](https://kiro.dev/) - An agentic development tool that guides you through requirements and design phases directly within an integrated environment.
-- [**OpenSpec**](https://github.com/Fission-AI/OpenSpec) - A lightweight layer for brownfield *and* greenfield development that helps align humans and AI on changes before code is written. Supports 21+ AI tools.
+- [**OpenSpec**](https://github.com/Fission-AI/OpenSpec) - A lightweight layer for brownfield *and* greenfield development that helps align humans and AI on changes before code is written. Supports 24 AI tools.
 - [**Tessl**](https://tessl.io/) - A platform where the specification itself is the maintained artifact, allowing code to be continuously regenerated.
 
 For this walkthrough, I'm using OpenSpec. It's lightweight, open-source, and works with whatever AI coding assistant you already have.
@@ -69,7 +69,7 @@ cd my-mobile-app
 openspec init
 {% endhighlight %}
 
-This creates an `.openspec/` folder in your project.
+This creates an `openspec/` folder in your project.
 
 Now the crucial part. Open `openspec/project.md` and edit it manually. This is your project's constitution — the non-negotiable constraints every future spec must respect.
 
@@ -77,7 +77,7 @@ Mine looks something like:
 
 > This is a React Native app using Expo. We use TypeScript, Tailwind (via NativeWind) for styling, and Supabase for the backend. All navigation uses expo-router. We follow atomic design principles for components.
 
-This is the single most important file in the whole process. Every time the AI generates a plan or writes code, it checks back against this constitution. It's how you stop the AI from "forgetting" your stack choices in Phase 4.
+This is the single most important file in the whole process. OpenSpec injects this context into every artifact it generates — proposals, designs, tasks. It's how you stop the AI from "forgetting" your stack choices halfway through Phase 4.
 
 ### Phase 2: The Base Build (Your First Change)
 
