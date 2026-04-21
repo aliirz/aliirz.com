@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Harness engineering: the layer everyone's building and nobody's naming"
-description: "Claude Code, Codex, LangGraph, CrewAI — they all have different answers to the same question: what happens to your agent's knowledge when the session ends? Here's why that question matters, how each system answers it, and why I ended up building on top of one that gets it right."
+description: "Claude Code, Codex, LangGraph, CrewAI, Pi — they all have different answers to the same question: what happens to your agent's knowledge when the session ends? Here's why that question matters, how each system answers it, and why I ended up building on top of one that gets it right."
 date: 2026-04-18
 tags: [ai-agents, claude, memory, open-source, engineering]
 image: "images/Horse-Harness-on-Dark-Surface.png"
@@ -83,6 +83,20 @@ AutoGen's memory is an afterthought. The default is stateless. You can plug in C
 
 ---
 
+### Pi (pi.dev)
+
+Pi is by Mario Zechner and it's the most honest harness on this list. The tagline is "there are many coding agents, but this one is mine." That's not a joke — it's the design philosophy.
+
+Pi is a minimal terminal harness that supports 15+ LLM providers and a TypeScript extension system. No MCP. No built-in sub-agents. No permission popups. No memory layer baked in. The core is four tools: Read, Write, Edit, Bash. Everything else — sub-agents, sandboxing, RAG, persistence — you build via extensions or you don't have it.
+
+Session state uses tree-structured storage so you can branch from any previous point, which is genuinely useful. Context loading comes from `AGENTS.md` and `SYSTEM.md` files at the project root. Auto-summarization handles compaction. That's it.
+
+The absence of a memory layer isn't an oversight. Pi's bet is that most harnesses bundle too much and the right answer is primitives you can compose. I find that compelling. The downside is you have to build the memory layer yourself — or bring one in from outside.
+
+**What survives a session:** Tree-structured session history you can branch from. No cross-session learning without an external brain.
+
+---
+
 ## The problem none of them fully solve
 
 Every system above has at least one of these gaps:
@@ -98,7 +112,7 @@ Most tools pick two or three of these to solve. None of them address all four cl
 
 ## Why I use agentic-stack
 
-[agentic-stack](https://github.com/codejunkie99/agentic-stack) is not a framework. It's a portable `.agent/` folder — a structured memory system that plugs into whatever AI harness you're actually using: Claude Code, Cursor, Windsurf, OpenCode, or a custom Python setup.
+[agentic-stack](https://github.com/codejunkie99/agentic-stack) is not a framework. It's a portable `.agent/` folder — a structured memory system that plugs into whatever AI harness you're actually using: Claude Code, Pi, Cursor, Windsurf, OpenCode, or a custom Python setup.
 
 The memory structure is four layers with distinct retention policies:
 
@@ -111,7 +125,7 @@ The **dream cycle** runs at session end. It clusters episodic entries by content
 
 **Recall** runs before any risky operation — deploy, migration, schema change. It surfaces the most relevant past events. Not just similar keywords, but events that mattered.
 
-The portability is the differentiator. Your `.agent/` folder moves with you. Switch from Claude Code to Cursor, the memory comes along. Switch from Cursor to a custom agent — same thing. Your knowledge isn't owned by the framework.
+The portability is the differentiator. Your `.agent/` folder moves with you. Switch from Claude Code to Cursor, the memory comes along. Switch to Pi — there's a first-class adapter for that too. Switch to a custom Python agent — same thing. Your knowledge isn't owned by the framework.
 
 ---
 
