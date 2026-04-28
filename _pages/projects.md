@@ -5,6 +5,20 @@ title: Projects & Portfolio
 ---
 *Innovative solutions across AI, Civic Tech, and Data-Driven Applications*
 
+## Harmless DSPy
+**AI • Education • DSPy**
+
+A practical guide to DSPy — the Stanford NLP framework for programming LLMs instead of prompting them. Written from two years of real-world experience: real code, real errors, the things nobody explains in documentation.
+
+[View Project](https://harmlessdspy.com/)
+
+## phntm.sh
+**Privacy • Security • Open Source**
+
+A zero-knowledge, self-destructing file sharing tool. Files encrypt in your browser using AES-256-GCM before they go anywhere — the decryption key never touches the server. Built for journalists, lawyers, and developers who need to share sensitive files without leaving a trace.
+
+[View Project](https://phntm.sh/)
+
 ## Pehchan
 **Civic Tech • Security • SSO**
 
