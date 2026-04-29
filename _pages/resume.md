@@ -13,13 +13,7 @@ Istanbul, Türkiye &nbsp;|&nbsp; [dejavu87@gmail.com](mailto:dejavu87@gmail.com)
 
 ## Summary
 
-I build AI products and ship them. 15 years of engineering experience across startups, nonprofits, and consulting. Currently based in Istanbul.
-
-What I'm building right now:
-- **Meridian** — open source blogging platform with zero platform fees (meridian.blog)
-- **Ozone** — the terminal UI framework for the rest of us
-
-I also take on fractional CTO engagements and AI consulting for teams that need someone who's actually built things. Before all this: Code for Pakistan, civic tech, open data advocacy. Top Rated Plus on Upwork.
+I build AI products and ship them. 15 years of engineering experience across startups, nonprofits, and consulting. Currently based in Istanbul. I take on fractional CTO engagements and AI consulting for teams that need someone who's actually built things. Before all this: Code for Pakistan, civic tech, open data advocacy.
 
 ---
 
@@ -135,12 +129,15 @@ BS, Computer Science · 2006 – 2010
 
 ## Notable Projects
 
-- **[Harmless DSPy](https://harmlessdspy.com/)** — A practical guide to DSPy, the Stanford NLP framework for programming LLMs instead of prompting them. Written from two years of real-world experience.
-- **[phntm.sh](https://phntm.sh/)** — Zero-knowledge, self-destructing file sharing. Files encrypt in-browser with AES-256-GCM; the decryption key never touches the server.
-- **Meridian** — Open source blogging platform with zero platform fees (meridian.blog)
-- **Numainda** — Chatbot using Next.js, PGVector, and GPT-4o to educate users on Pakistan's constitution and election laws
-- **Watchtower** — Government website performance monitoring for transparency and accountability
-- **Pehchan** — Secure SSO identity platform for citizen access to government services
+**[Harmless DSPy](https://harmlessdspy.com/)** — The practical DSPy guide nobody else wrote. Real code, real errors, two years of production experience with the Stanford NLP framework for programming LLMs.
+
+**[phntm.sh](https://phntm.sh/)** — Zero-knowledge file sharing that self-destructs. AES-256-GCM encryption runs entirely in-browser; the decryption key never touches the server.
+
+**[Meridian](https://meridian.blog)** — Open source blogging platform with zero platform fees. Built for writers who are tired of being rented their own audience.
+
+**Ozone** — Terminal UI framework for the rest of us. Not another React-in-the-terminal clone.
+
+**[KarachiChal](https://karachichal.com)** — AI-powered travel itinerary planner built for Karachi. Served 100+ users with personalized trip plans.
 
 ---
 
