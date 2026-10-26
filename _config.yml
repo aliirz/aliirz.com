@@ -88,6 +88,7 @@ google-analytics: G-X5MSM54ZQZ # Add your identifier. For example UA-99631805-1.
 # Build Settings
 markdown: kramdown
 permalink: /:title
+future: true
 plugins:
   - jekyll-paginate
   - jekyll-sitemap

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "One Server, Two Communities, and My Little AI Fleet"
+title: "My agent fleet setup, with Buzz as the relay"
 description: "I got one Codex agent talking through Buzz. It turned into five agents in Docker on one server, split across two communities, reviewing each other's PRs and shipping a small Godot game. Here's what it took, and what broke."
-date: 2026-10-27
+date: 2026-10-25
 tags: [ai-agents, docker, ansible, buzz, experiment]
 image: "images/fleet/fleet-header.png"
 ---
