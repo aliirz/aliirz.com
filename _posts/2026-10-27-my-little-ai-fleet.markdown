@@ -4,7 +4,7 @@ title: "One Server, Two Communities, and My Little AI Fleet"
 description: "I got one Codex agent talking through Buzz. It turned into five agents in Docker on one server, split across two communities, reviewing each other's PRs and shipping a small Godot game. Here's what it took, and what broke."
 date: 2026-10-27
 tags: [ai-agents, docker, ansible, buzz, experiment]
-image: "images/fleet-header.png"
+image: "images/fleet/fleet-header.png"
 ---
 
 *(The header is an illustration, not a screenshot. My server is not that cute and has no cat on it.)*
@@ -31,13 +31,23 @@ Now there are five managed agents, each in its own Docker container, all on one 
 
 **Personal community:** djangrok (Grok Build) and codexcore (Codex). These are the two that built the game.
 
+<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:1.5em 0;text-align:center;font-size:0.85em;">
+  <figure style="margin:0;width:110px;"><img src="{{ '/images/fleet/acodex.png' | relative_url }}" alt="acodex avatar: a cream robot with a green terminal-prompt face and a teal jacket" style="width:110px;border-radius:50%;"><figcaption>acodex</figcaption></figure>
+  <figure style="margin:0;width:110px;"><img src="{{ '/images/fleet/alphapi.png' | relative_url }}" alt="alphapi avatar: a cream robot with a pi symbol on its head and a blue jacket" style="width:110px;border-radius:50%;"><figcaption>alphapi</figcaption></figure>
+  <figure style="margin:0;width:110px;"><img src="{{ '/images/fleet/aclaude.png' | relative_url }}" alt="aclaude avatar: a cream robot with an orange spark on its head and a purple jacket" style="width:110px;border-radius:50%;"><figcaption>aclaude</figcaption></figure>
+  <figure style="margin:0;width:110px;"><img src="{{ '/images/fleet/djangrok.png' | relative_url }}" alt="djangrok avatar: a robot in a cowboy hat and red bandana" style="width:110px;border-radius:50%;"><figcaption>djangrok</figcaption></figure>
+  <figure style="margin:0;width:110px;"><img src="{{ '/images/fleet/codexcore.png' | relative_url }}" alt="codexcore avatar: a white and blue robot with a terminal-prompt badge" style="width:110px;border-radius:50%;"><figcaption>codexcore</figcaption></figure>
+</div>
+
+Yes, djangrok is a cowboy. I don't make the rules. (I do make the rules.)
+
 The interesting part was never collecting models. Anyone can sign up for five subscriptions. The interesting part was getting a small group of agents to persist, communicate, reach the right tools, and actually build something together.
 
 ---
 
 ## How it fits together
 
-![A diagram showing one server hosting work agents and personal agents in separate containers, each community connected to its own Buzz relay, with credentials provisioned from the host and access to repositories and external tools.]({{ "/images/fleet-architecture.png" | relative_url }})
+![A diagram showing one server hosting work agents and personal agents in separate containers, each community connected to its own Buzz relay, with credentials provisioned from the host and access to repositories and external tools.]({{ "/images/fleet/fleet-architecture.png" | relative_url }})
 *The generic shape of the fleet. Each community has its own relay, its own agents, and its own access. Nothing crosses over unless I configure it to.*
 
 In plain language:
@@ -49,6 +59,84 @@ In plain language:
 - **Deployment is Docker Compose plus Ansible**, generated from a fleet config file. I looked at Terraform and decided it was more than I needed for "run these containers on this one server."
 
 I want to be honest about that last one. It's generated, not magic. Several onboarding steps were manual. I fixed the scripts more than once along the way. And a real chunk of the work was just keeping my local repo in sync with what was actually deployed, which is a problem as old as servers.
+
+---
+
+## The config is the source of truth (mostly)
+
+Everything starts from one `fleet.json`. Communities, runtimes and agents are separate sections, because reusing a runtime image should never mean reusing someone's identity, home directory or API key. Trimmed, with the real values swapped for placeholders:
+
+```json
+{
+  "communities": {
+    "work": {
+      "relay_url": "wss://<work-relay>",
+      "owner_public_key": "<me>",
+      "external_collaborators": { "rumi": "<rumi's public key>" }
+    }
+  },
+  "runtimes": {
+    "codex": {
+      "image": "sha256:<pinned local image>",
+      "command": "/usr/local/bin/codex-acp",
+      "model_auth": "subscription",
+      "verified": true
+    }
+  },
+  "agents": {
+    "acodex": {
+      "community": "work",
+      "runtime": "codex",
+      "memory_mb": 3072,
+      "respond_to": "allowlist",
+      "onboarding_complete": true
+    }
+  }
+}
+```
+
+The generator refuses to render an agent until it's actually ready. This is the bit I like most, because it encodes most of the "looks done but isn't" lessons as blockers:
+
+```python
+for good, message in [
+    (a["public_key"], "agent public identity missing"),
+    (r["verified"] and r["image"] and r["command"], "runtime image/adapter not verified and pinned"),
+    (a["model_verified"], "model selection not verified"),
+    (a["onboarding_complete"], "login, identity authorization and registration not verified"),
+    (not a["existing_container"], "existing deployment requires reviewed adoption/cutover"),
+]:
+    if not good:
+        blockers.append(message)
+```
+
+Sender allowlists are compiled from the same file. Everyone in the same community who's managed and enabled, plus any external collaborator like Rumi. An unknown public key blocks the deploy instead of quietly widening who can talk to an agent.
+
+Each agent then becomes its own Compose project. Here's the part of the generated service that matters:
+
+```python
+service = {
+    'image': resource['image'],
+    'pull_policy': 'never',          # pinned local image, no surprise upgrades
+    'user': f"{uid}:{uid}",          # non-root, one UID per agent
+    'read_only': True,
+    'cap_drop': ['ALL'],
+    'security_opt': ['no-new-privileges:true'],
+    'mem_limit': f"{memory_mb}m",
+    'memswap_limit': f"{memory_mb}m",
+    'pids_limit': 512,
+    'restart': 'unless-stopped',
+    # ...
+}
+```
+
+Home and workspace are the only writable mounts. Everything under `/run/secrets` is mounted read-only, one file per secret, and the generator only accepts secret names it recognises.
+
+Two details I didn't expect:
+
+- **That `pids_limit: 512` is why I'm not on Terraform.** The Docker Terraform provider couldn't express the process limit the existing container already had. Compose could. That settled it.
+- **`mem_limit` is a ceiling, not a reservation.** The validator checks that enabled agents fit inside a host memory budget, but that's arithmetic on paper. Docker doesn't set that memory aside.
+
+And the "mostly" in the heading: not every agent goes through the generator yet. A couple were onboarded with dedicated scripts and still live outside generic reconciliation. The config file even says so in its notes, which is the most honest thing in the repo.
 
 ---
 
@@ -88,6 +176,18 @@ Work agents got organization-scoped GitHub access. Personal agents got broader a
 Credentials are reused deliberately within a group. Master credential files live on the host, owned by root. Individual agents get explicit grants, and the secrets are mounted read-only into their containers.
 
 Read-only means the agent can't modify the *file*. It does not mean the *token* is read-only. If the token can push, the agent can push. An agent can use whatever credentials you hand it, so the real decision is what to hand it.
+
+The onboarding scripts are paranoid about this in a way I've come to appreciate. When I let the two personal agents reply to each other, the script didn't just overwrite their sender policy. It checked that the current policy was one of the two shapes it expected, and stopped otherwise:
+
+```python
+need(c['respond_to'] == 'owner-only' and c['allowlist'] == []
+     or c['respond_to'] == 'allowlist' and set(c['allowlist']) == {peer},
+     'Unexpected sender policy; inspect instead of replacing it.')
+```
+
+"Inspect instead of replacing it" is pretty much the theme of this whole project.
+
+One caveat I want on the record: an allowlist controls *who* can trigger an agent, not *how long* two agents can keep talking to each other. There's no hard loop prevention yet. Prompt guidance helps. It's not a guarantee.
 
 I'm also still on personal GitHub tokens, not GitHub Apps. Which means every API action those tokens perform is me, as far as GitHub is concerned, even when the commit author says otherwise. That's a trade-off I made knowingly. It's not a vault and it's not a perfect security boundary. It's a practical setup for a small fleet.
 
