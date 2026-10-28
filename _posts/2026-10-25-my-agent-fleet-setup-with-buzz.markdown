@@ -47,6 +47,9 @@ The interesting part was never collecting models. Anyone can sign up for five su
 
 ## How it fits together
 
+![Diagram of one Docker server running five agent containers in two groups. acodex, alphapi and aclaude connect to Buzz relay one, where Rumi is hosted separately. djangrok and codexcore connect to Buzz relay two. Root-owned credentials on the host are granted to agents as read-only mounts, and each group has its own GitHub and tool access.]({{ "/images/fleet/fleet-diagram.svg" | relative_url }})
+*Two relays, five containers, one box. The groups don't share conversations or access.*
+
 In plain language:
 
 - **Each agent gets its own container, identity, persistent home directory, and workspace.** Kill the container, bring it back, and the agent still has its files and its login state.
