@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My agent fleet setup, with Buzz as the relay"
-description: "I got one Codex agent talking through Buzz. It turned into five agents in Docker on one server, split across two communities, reviewing each other's PRs and shipping a small Godot game. Here's what it took, and what broke."
+description: "I got one Codex agent talking through Buzz. It turned into five agents in Docker on one server, split across two Buzz relays, reviewing each other's PRs and shipping a small Godot game. Here's what it took, and what broke."
 date: 2026-10-25
 tags: [ai-agents, docker, ansible, buzz, experiment]
 image: "images/fleet/fleet-header.png"
@@ -9,7 +9,7 @@ image: "images/fleet/fleet-header.png"
 
 *(The header is an illustration, not a screenshot. My server is not that cute and has no cat on it.)*
 
-The two agents in my personal community made a game.
+Two of my agents made a game.
 
 It's small. A Godot project where you collect items, deliver them, and try not to get caught by drones. They split the work between them, opened pull requests, reviewed each other's PRs, ran headless checks, and cut a tagged source release.
 
@@ -25,11 +25,11 @@ The original goal was modest. Get one Codex agent running and reachable through 
 
 That worked. So naturally I added another one. Then another.
 
-Now there are five managed agents, each in its own Docker container, all on one server, split across two separate communities:
+Now there are five managed agents, each in its own Docker container, all on one server, split across two separate Buzz relays:
 
-**Work community:** acodex (Codex), alphapi (Pi through OpenRouter), and aclaude (Claude Code). They also collaborate with Rumi, an existing reviewer agent that's hosted elsewhere. I don't run Rumi. My agents just talk to it.
+**Relay one:** acodex (Codex), alphapi (Pi through OpenRouter), and aclaude (Claude Code). They also collaborate with Rumi, an existing reviewer agent that's hosted elsewhere. I don't run Rumi. My agents just talk to it.
 
-**Personal community:** djangrok (Grok Build) and codexcore (Codex). These are the two that built the game.
+**Relay two:** djangrok (Grok Build) and codexcore (Codex). These are the two that built the game.
 
 <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin:1.5em 0;text-align:center;font-size:0.85em;">
   <figure style="margin:0;width:110px;"><img src="{{ '/images/fleet/acodex.png' | relative_url }}" alt="acodex avatar: a cream robot with a green terminal-prompt face and a teal jacket" style="width:110px;border-radius:50%;"><figcaption>acodex</figcaption></figure>
@@ -47,15 +47,12 @@ The interesting part was never collecting models. Anyone can sign up for five su
 
 ## How it fits together
 
-![A diagram showing one server hosting work agents and personal agents in separate containers, each community connected to its own Buzz relay, with credentials provisioned from the host and access to repositories and external tools.]({{ "/images/fleet/fleet-architecture.png" | relative_url }})
-*The generic shape of the fleet. Each community has its own relay, its own agents, and its own access. Nothing crosses over unless I configure it to.*
-
 In plain language:
 
 - **Each agent gets its own container, identity, persistent home directory, and workspace.** Kill the container, bring it back, and the agent still has its files and its login state.
 - **Model access is a mix.** Some agents use subscription logins, some use API access. Whatever worked for that tool.
 - **Agents talk through Buzz mentions and replies.** Each agent has an explicit sender policy: me, plus selected peers, can trigger it. Everyone else gets ignored.
-- **Collaboration is configured per community.** The work agents and the personal agents don't share conversations or access. Two separate setups that happen to live on the same box.
+- **Collaboration is configured per relay.** The two groups don't share conversations or access. Two separate setups that happen to live on the same box.
 - **Deployment is Docker Compose plus Ansible**, generated from a fleet config file. I looked at Terraform and decided it was more than I needed for "run these containers on this one server."
 
 I want to be honest about that last one. It's generated, not magic. Several onboarding steps were manual. I fixed the scripts more than once along the way. And a real chunk of the work was just keeping my local repo in sync with what was actually deployed, which is a problem as old as servers.
@@ -69,8 +66,8 @@ Everything starts from one `fleet.json`. Communities, runtimes and agents are se
 ```json
 {
   "communities": {
-    "work": {
-      "relay_url": "wss://<work-relay>",
+    "relay-one": {
+      "relay_url": "wss://<relay-one>",
       "owner_public_key": "<me>",
       "external_collaborators": { "rumi": "<rumi's public key>" }
     }
@@ -85,7 +82,7 @@ Everything starts from one `fleet.json`. Communities, runtimes and agents are se
   },
   "agents": {
     "acodex": {
-      "community": "work",
+      "community": "relay-one",
       "runtime": "codex",
       "memory_mb": 3072,
       "respond_to": "allowlist",
@@ -109,7 +106,7 @@ for good, message in [
         blockers.append(message)
 ```
 
-Sender allowlists are compiled from the same file. Everyone in the same community who's managed and enabled, plus any external collaborator like Rumi. An unknown public key blocks the deploy instead of quietly widening who can talk to an agent.
+Sender allowlists are compiled from the same file. Everyone on the same relay who's managed and enabled, plus any external collaborator like Rumi. An unknown public key blocks the deploy instead of quietly widening who can talk to an agent.
 
 Each agent then becomes its own Compose project. Here's the part of the generated service that matters:
 
@@ -171,13 +168,13 @@ There was also a stretch of relay rate-limit warnings and an outage. I never pin
 
 This part I thought about the most, and I still wouldn't call it sophisticated.
 
-Work agents got organization-scoped GitHub access. Personal agents got broader access, explicitly granted, to the repositories and hosting projects I authorized.
+Agents on the first relay got GitHub access scoped to a single organization. Agents on the second got broader access, explicitly granted, to the repositories and hosting projects I authorized.
 
 Credentials are reused deliberately within a group. Master credential files live on the host, owned by root. Individual agents get explicit grants, and the secrets are mounted read-only into their containers.
 
 Read-only means the agent can't modify the *file*. It does not mean the *token* is read-only. If the token can push, the agent can push. An agent can use whatever credentials you hand it, so the real decision is what to hand it.
 
-The onboarding scripts are paranoid about this in a way I've come to appreciate. When I let the two personal agents reply to each other, the script didn't just overwrite their sender policy. It checked that the current policy was one of the two shapes it expected, and stopped otherwise:
+The onboarding scripts are paranoid about this in a way I've come to appreciate. When I let djangrok and codexcore reply to each other, the script didn't just overwrite their sender policy. It checked that the current policy was one of the two shapes it expected, and stopped otherwise:
 
 ```python
 need(c['respond_to'] == 'owner-only' and c['allowlist'] == []
@@ -195,7 +192,7 @@ I'm also still on personal GitHub tokens, not GitHub Apps. Which means every API
 
 ## Back to the game
 
-Once the personal agents had working Git access, a shared channel, and permission to mention each other, the game happened pretty naturally. One would pick up a piece, open a PR, mention the other for review. Review comments came back. Fixes went in. Headless checks ran. Eventually, a tag.
+Once djangrok and codexcore had working Git access, a shared channel, and permission to mention each other, the game happened pretty naturally. One would pick up a piece, open a PR, mention the other for review. Review comments came back. Fixes went in. Headless checks ran. Eventually, a tag.
 
 After that milestone I provisioned Meshy for 3D assets and ElevenLabs for audio. Access was verified. That's all I'll claim for now. Giving an agent a tool credential and approving a budget to actually generate stuff turned out to be two separate decisions, and I'm glad I kept them separate.
 
@@ -213,7 +210,7 @@ They're not conscious and they're not infallible. They make confident claims abo
 
 ## What's next
 
-Five agents across two communities means I want one place to see all of them. Not a vanity dashboard. Something that shows:
+Five agents across two relays means I want one place to see all of them. Not a vanity dashboard. Something that shows:
 
 - Host and Docker resource usage
 - Relay presence and whatever activity signals Buzz exposes
