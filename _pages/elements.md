@@ -1,5 +1,6 @@
 ---
 layout: page
+published: false
 # title: Elements
 permalink: /elements/
 image: "/images/11.jpg"

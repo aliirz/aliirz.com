@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Projects & Portfolio
-# permalink: /projects/
+title: Projects
+permalink: /projects/
 ---
-*Innovative solutions across AI, Civic Tech, and Data-Driven Applications*
+
+Things I've built or written that I can still stand behind. The longer stories are usually in the [blog]({{ "/" | relative_url }}).
 
 ## Harmless DSPy
 **AI • Education • DSPy**
@@ -19,22 +20,34 @@ A zero-knowledge, self-destructing file sharing tool. Files encrypt in your brow
 
 [View Project](https://phntm.sh/)
 
+## Meridian
+**Open Source • Writing**
+
+An open source blogging platform with zero platform fees. Built for writers who are tired of being rented their own audience.
+
+[View Project](https://meridian.blog)
+
+## Ozone
+**Open Source • Terminal**
+
+A terminal UI framework for the rest of us. Not another React-in-the-terminal clone.
+
 ## Pehchan
 **Civic Tech • Security • SSO**
 
-![Pehchan](images/projects/pehchan.png)
+![Pehchan]({{ "/images/projects/pehchan.png" | relative_url }})
 A secure identity platform enabling seamless citizen logins to government services, similar to Google/GitHub SSO. Empowered 1,000+ citizens to access public services securely.
 
 ## Numainda
 **Civic Tech • AI • Chatbot**
 
-![Numainda](images/projects/numainda.png)
+![Numainda]({{ "/images/projects/numainda.png" | relative_url }})
 A chatbot designed to promote legal literacy and citizen engagement by providing users with information on the constitution and election laws.
 
 ## KarachiChal
 **AI • Travel • Civic Tech**
 
-An AI-powered itinerary planning tool originally created for Karachi and later redeployed for KPK province. Helped 100+ users plan personalized trips.
+An itinerary planning tool originally created for Karachi and later redeployed for KPK province. Helped 100+ users plan personalized trips.
 
 [View Project](https://karachichal.com/)
 
@@ -53,15 +66,13 @@ A monitoring system for government websites that improved uptime and responsiven
 [View Project](https://github.com/codeforpakistan/watchtower)
 
 ## Call Analytics Platform
-**AI • Generative AI • SaaS**
+**AI • SaaS**
 
-A Generative AI-powered call analytics platform built with OpenAI Whisper API and GPT-4, reducing QA efforts by 80% and optimizing customer interactions.
-
+A call analytics platform built with Whisper and GPT-4, used to review calls with less manual QA.
 
 ## RevReply
-**LLMS • SaaS**
+**SaaS**
 
-A SaaS platform that uses LLMs to generate replies for customer support emails, reducing response times by 50% and improving customer satisfaction.
+A tool that drafts replies to customer support emails.
 
 [View Project](https://revreply.com/)
-

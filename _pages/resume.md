@@ -2,12 +2,13 @@
 layout: page
 title: Resume
 permalink: /resume/
+published: false
 ---
 
 # Ali Raza
 *AI developer building in public · Open source advocate · Fractional CTO · Founder @ Boostpanda AI*
 
-Istanbul, Türkiye &nbsp;|&nbsp; [dejavu87@gmail.com](mailto:dejavu87@gmail.com) &nbsp;|&nbsp; [linkedin.com/in/aliirz](https://www.linkedin.com/in/aliirz) &nbsp;|&nbsp; [aliirz.com](https://aliirz.com) &nbsp;|&nbsp; [github.com/aliirz](https://github.com/aliirz)
+Istanbul, Türkiye &nbsp;|&nbsp; [ali@aliirz.com](mailto:ali@aliirz.com) &nbsp;|&nbsp; [linkedin.com/in/aliirz](https://www.linkedin.com/in/aliirz) &nbsp;|&nbsp; [aliirz.com](https://aliirz.com) &nbsp;|&nbsp; [github.com/aliirz](https://github.com/aliirz)
 
 ---
 
