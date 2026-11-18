@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="spread-title spread-desc">
+<title id="spread-title">Cheapest vs most expensive harness by model, average cost per task</title>
+<desc id="spread-desc">Range of average cost per task across 22 harnesses for each of five models in FrontierHarness Eval v1.1.</desc>
+<rect width="1200" height="640" fill="#f0f0f0"/>
+<text x="48" y="52" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">Cheapest vs most expensive harness, by model</text>
+<text x="48" y="80" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#6a6d76">Average cost per task across 22 harnesses. The model sets the general level; the spread inside each model is still 1.8× to 5.0×.</text>
+<line x1="210" y1="560" x2="1020" y2="560" stroke="#1e2740" stroke-width="1.5"/>
+<line x1="210.0" y1="560" x2="210.0" y2="568" stroke="#1e2740" stroke-width="1.5"/>
+<line x1="210.0" y1="150" x2="210.0" y2="560" stroke="#1e2740" stroke-width="0.6" stroke-opacity="0.12"/>
+<text x="210.0" y="588" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">$0.0</text>
+<line x1="394.0909090909091" y1="560" x2="394.0909090909091" y2="568" stroke="#1e2740" stroke-width="1.5"/>
+<line x1="394.0909090909091" y1="150" x2="394.0909090909091" y2="560" stroke="#1e2740" stroke-width="0.6" stroke-opacity="0.12"/>
+<text x="394.0909090909091" y="588" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">$0.5</text>
+<line x1="578.1818181818182" y1="560" x2="578.1818181818182" y2="568" stroke="#1e2740" stroke-width="1.5"/>
+<line x1="578.1818181818182" y1="150" x2="578.1818181818182" y2="560" stroke="#1e2740" stroke-width="0.6" stroke-opacity="0.12"/>
+<text x="578.1818181818182" y="588" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">$1.0</text>
+<line x1="762.2727272727273" y1="560" x2="762.2727272727273" y2="568" stroke="#1e2740" stroke-width="1.5"/>
+<line x1="762.2727272727273" y1="150" x2="762.2727272727273" y2="560" stroke="#1e2740" stroke-width="0.6" stroke-opacity="0.12"/>
+<text x="762.2727272727273" y="588" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">$1.5</text>
+<line x1="946.3636363636364" y1="560" x2="946.3636363636364" y2="568" stroke="#1e2740" stroke-width="1.5"/>
+<line x1="946.3636363636364" y1="150" x2="946.3636363636364" y2="560" stroke="#1e2740" stroke-width="0.6" stroke-opacity="0.12"/>
+<text x="946.3636363636364" y="588" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">$2.0</text>
+<text x="615.0" y="612" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">Average cost per task (USD)</text>
+<text x="194" y="196.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">GLM-5.3</text>
+<line x1="380.45235" y1="191.0" x2="710.2475318181819" y2="191.0" stroke="#533feb" stroke-width="8" stroke-linecap="round"/>
+<circle cx="380.45235" cy="191.0" r="7" fill="#ffffff" stroke="#533feb" stroke-width="3"/>
+<circle cx="710.2475318181819" cy="191.0" r="7" fill="#533feb" stroke="#533feb" stroke-width="3"/>
+<text x="380.45235" y="175.0" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">Codex CLI $0.463</text>
+<text x="710.2475318181819" y="175.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">Exo $1.36</text>
+<text x="1036" y="196.0" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#533feb">2.9×</text>
+<text x="194" y="278.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">GLM-5.3 Flash</text>
+<line x1="257.7450818181818" y1="273.0" x2="308.51293636363636" y2="273.0" stroke="#533feb" stroke-width="8" stroke-linecap="round"/>
+<circle cx="257.7450818181818" cy="273.0" r="7" fill="#ffffff" stroke="#533feb" stroke-width="3"/>
+<circle cx="308.51293636363636" cy="273.0" r="7" fill="#533feb" stroke="#533feb" stroke-width="3"/>
+<text x="257.7450818181818" y="257.0" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">Pi $0.130</text>
+<text x="308.51293636363636" y="295.0" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">DeepSeek Harness: Minimal $0.268</text>
+<text x="1036" y="278.0" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#533feb">2.1×</text>
+<text x="194" y="360.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">DeepSeek</text>
+<line x1="249.90207272727272" y1="355.0" x2="410.49635454545455" y2="355.0" stroke="#533feb" stroke-width="8" stroke-linecap="round"/>
+<circle cx="249.90207272727272" cy="355.0" r="7" fill="#ffffff" stroke="#533feb" stroke-width="3"/>
+<circle cx="410.49635454545455" cy="355.0" r="7" fill="#533feb" stroke="#533feb" stroke-width="3"/>
+<text x="249.90207272727272" y="339.0" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">OpenCode v1 $0.108</text>
+<text x="410.49635454545455" y="377.0" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">Cline CLI $0.545</text>
+<text x="1036" y="360.0" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#533feb">5.0×</text>
+<text x="194" y="442.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">Muse</text>
+<line x1="468.2810181818181" y1="437.0" x2="939.9057272727273" y2="437.0" stroke="#533feb" stroke-width="8" stroke-linecap="round"/>
+<circle cx="468.2810181818181" cy="437.0" r="7" fill="#ffffff" stroke="#533feb" stroke-width="3"/>
+<circle cx="939.9057272727273" cy="437.0" r="7" fill="#533feb" stroke="#533feb" stroke-width="3"/>
+<text x="468.2810181818181" y="421.0" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">DeepSeek Harness: Creator $0.702</text>
+<text x="939.9057272727273" y="421.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">Claude Code $1.98</text>
+<text x="1036" y="442.0" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#533feb">2.8×</text>
+<text x="194" y="524.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">Kimi-K3</text>
+<line x1="518.7933545454546" y1="519.0" x2="780.8114181818181" y2="519.0" stroke="#533feb" stroke-width="8" stroke-linecap="round"/>
+<circle cx="518.7933545454546" cy="519.0" r="7" fill="#ffffff" stroke="#533feb" stroke-width="3"/>
+<circle cx="780.8114181818181" cy="519.0" r="7" fill="#533feb" stroke="#533feb" stroke-width="3"/>
+<text x="518.7933545454546" y="503.0" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">Oh My Pi $0.839</text>
+<text x="780.8114181818181" y="503.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="500" fill="#1e2740">Antigravity CLI $1.55</text>
+<text x="1036" y="524.0" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#533feb">1.8×</text>
+<text x="48" y="618" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#6a6d76">Source: Runta and Baseten, FrontierHarness Eval v1.1</text>
+</svg>

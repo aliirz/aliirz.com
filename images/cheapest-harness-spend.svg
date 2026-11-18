@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="spend-title spend-desc">
+<title id="spend-title">Where estimated inference spend went</title>
+<desc id="spend-desc">64.5 percent of estimated inference cost went to trials that did not pass: 52.7 percent failed, 11.8 percent timed out, 35.5 percent passed.</desc>
+<rect width="1200" height="420" fill="#f0f0f0"/>
+<text x="48" y="52" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">Where the estimated inference spend went</text>
+<text x="48" y="80" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#6a6d76">Share of list-price inference cost across the scored runs, all harnesses and models.</text>
+<rect x="48.0" y="200" width="581.8" height="72" fill="#533feb"/>
+<rect x="629.8" y="200" width="130.3" height="72" fill="#1e2740"/>
+<rect x="760.1" y="200" width="391.9" height="72" fill="#6a6d76"/>
+<text x="48" y="150" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1e2740">64.5% of the cost went to trials that did not pass.</text>
+<text x="338.9" y="246" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">52.7%</text>
+<text x="338.9" y="308" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">Failed</text>
+<text x="694.9" y="246" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">11.8%</text>
+<text x="694.9" y="308" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">Timed out</text>
+<text x="956.0" y="246" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">35.5%</text>
+<text x="956.0" y="308" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1e2740">Passed</text>
+<text x="48" y="398" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#6a6d76">Source: Runta and Baseten, FrontierHarness Eval v1.1</text>
+</svg>

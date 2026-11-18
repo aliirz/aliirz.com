@@ -19,29 +19,36 @@ The short answer is yes.
 
 ## A cheap option is a pair, not a brand
 
-Each model had a different best-value harness. Their rule is the lowest cost per pass, unless another harness costs at most 30 percent more per pass and passes at least five points more often.
+Each model had a different best-value harness. Their rule is the lowest cost per pass, unless another harness costs at most 30 percent more per pass and passes at least five points more often. That rule is why ZCode beats cheaper OpenCode v1 on DeepSeek, and why Alma beats cheaper Oh My Pi on Kimi-K3.
 
-- Codex CLI with GLM-5.3
-- Pi with GLM-5.3 Flash
-- ZCode with DeepSeek V4.1 Flash 1017
-- Oh My Pi with Muse
-- Alma with Kimi-K3
+| Model | Best-value harness | Pass rate | Cost per task | Cost per pass | Won in resamples |
+| --- | --- | --- | --- | --- | --- |
+| GLM-5.3 | Codex CLI | 57.7% | $0.463 | $0.803 | 99.6% |
+| GLM-5.3 Flash | Pi | 58.1% | $0.130 | $0.223 | 42% |
+| DeepSeek V4.1 Flash 1017 | ZCode | 69.0% | $0.153 | $0.222 | 47% |
+| Muse | Oh My Pi | 58.9% | $0.714 | $1.212 | 53% |
+| Kimi-K3 | Alma | 64.1% | $1.013 | $1.579 | 25% |
 
-That list looks tidy. The certainty behind it is not. They redrew the 62 tasks 4,000 times and picked the winner each time. Codex CLI stayed first with GLM-5.3 in 99.6 percent of those draws. The other four are the most likely of several close harnesses: Oh My Pi at 53 percent, ZCode at 47, Pi at 42, Alma at 25. A 25 percent winner is a maybe wearing a medal.
+The last column is the catch. They redrew the 62 tasks 4,000 times and picked the winner each time. Codex CLI stayed first with GLM-5.3 in 99.6 percent of those draws. The other four are the most likely of several close harnesses. A 25 percent winner is a maybe wearing a medal.
 
 The cost ranks moved around even more. By cost per task, the median harness jumped 11 of 22 places when the model changed. Codex CLI went from 1st with GLM-5.3 to 16th with Kimi-K3. DeepSeek Harness: Creator moved from 1st with Muse to 21st with GLM Flash.
 
+![Range of average cost per task from the cheapest harness to the most expensive, for each of the five models]({{ "/images/cheapest-harness-cost-spread.svg" | relative_url }})
+*Cheapest and most expensive harness for each model, by average cost per task. The spread is 1.8× to 5.0× with the model fixed. Source: [Runta and Baseten, FrontierHarness Eval v1.1](https://runta.com/blog/introducing-frontierharness-eval-v1-1/).*
+
 This is the result I keep coming back to. The harness is not a universal socket. It is a pair. Change one side and the cheap option stops being cheap.
 
-The model still sets most of the bill. In their analysis it explains 92.8 percent of the variance of cost per task, which is what you'd expect when list prices differ by twenty times or more. But with the model fixed, the most expensive harness still cost 1.8 to 5.0 times as much per task as the cheapest, and 1.9 to 4.9 times as much per pass. They shuffled trials 300 times to see if that spread was noise. It wasn't.
+The model still sets most of the bill. In their analysis it explains 92.8 percent of the variance of cost per task, which is what you'd expect when list prices differ by twenty times or more. The chart is the rest of that sentence: with the model fixed, the most expensive harness still cost 1.8 to 5.0 times as much per task as the cheapest, and 1.9 to 4.9 times as much per pass. They shuffled trials 300 times to see if that spread was noise. It wasn't.
 
 A higher cost did not buy a higher pass rate. Across the five models, the rank correlation of cost per task and pass rate ran from -0.39 to +0.22. With four of the five, the most expensive harness per pass passed less often than the cheapest one.
 
-Over all models, four harnesses sit on the Pareto line: OpenCode v2 at the low-cost end ($0.561 per task), then Pi, then Codex CLI, then ZCode at the high-pass end (61.9 percent). Everyone else cost up to 1.6 times as much and passed between 50.6 and 60.2 percent. Those pass-rate gaps come with a wide interval, about ±10 points, so a lead of a few points is a tie.
+![Pass rate against average cost per task for all 22 harnesses, averaged over five models, with the Pareto frontier marked]({{ "/images/cheapest-harness-pareto.svg" | relative_url }})
+*Each point is one harness, averaged over all five models. The frontier is OpenCode v2 ($0.561 per task), Pi, Codex CLI, and ZCode (61.9 percent pass rate). Everyone else cost up to 1.6 times as much and passed between 50.6 and 60.2 percent. Those gaps come with a 95 percent interval of about ±10 points, so a lead of a few points is a tie. Source: [FrontierHarness Eval v1.1](https://runta.com/blog/introducing-frontierharness-eval-v1-1/).*
 
 ## Most of the money goes to a confident no
 
-64.5 percent of the estimated inference cost went to trials that did not pass. 52.7 percent failed. 11.8 percent timed out.
+![Share of estimated inference cost on failed, timed-out, and passed trials]({{ "/images/cheapest-harness-spend.svg" | relative_url }})
+*Share of list-price inference cost across the scored runs. 64.5 percent went to trials that did not pass: 52.7 percent failed, 11.8 percent timed out. Source: [FrontierHarness Eval v1.1](https://runta.com/blog/introducing-frontierharness-eval-v1-1/).*
 
 The more irritating part is how the failures ended. With the five best-value harnesses, 68 to 82 percent of the failed runs stopped on a confident final answer, not at the time limit. Few said the work was incomplete. The traces show a model announcing that the tests passed, and a verifier showing that they did not.
 
