@@ -81,6 +81,15 @@
     font-size: 24px;
     text-align: right;
 
+    button {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font-size: inherit;
+      cursor: pointer;
+    }
+
     .ion-md-close {
       transition: $global-transition;
       cursor: pointer;
@@ -161,7 +170,20 @@
   align-items: center;
   font-size: 21px;
   color: var(--link-color);
-  cursor: pointer;
+
+  button.nav__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+    cursor: pointer;
+  }
 
   .nav__icon {
     transition: $global-transition;

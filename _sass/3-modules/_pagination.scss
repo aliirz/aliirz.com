@@ -43,9 +43,10 @@
   }
 
   &.disabled {
-    opacity: 0.4;
     cursor: not-allowed;
-    color: inherit;
+    /* Avoid dimming with opacity: #a5a9b3 on white is 2.4:1. */
+    color: #5c5f68;
+    pointer-events: none;
   }
 }
 

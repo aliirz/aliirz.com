@@ -23,6 +23,12 @@ $(document).ready(function() {
     menuClose();
   })
 
+  $(document).on('keydown', function (event) {
+    if (event.key === 'Escape' || event.keyCode === 27) {
+      if (menuList.hasClass('is-open')) menuClose();
+    }
+  });
+
   searchOpenIcon.click(function () {
     searchOpen();
   });
@@ -37,10 +43,12 @@ $(document).ready(function() {
 
   function menuOpen() {
     menuList.addClass("is-open");
+    menuOpenIcon.attr("aria-expanded", "true");
   }
 
   function menuClose() {
     menuList.removeClass("is-open");
+    menuOpenIcon.attr("aria-expanded", "false");
   }
 
   function searchOpen() {
@@ -63,15 +71,19 @@ $(document).ready(function() {
   function darkMode() {
     if (html.hasClass('dark-mode')) {
       html.removeClass('dark-mode');
-      localStorage.removeItem("theme")
+      localStorage.setItem("theme", "light");
       document.documentElement.removeAttribute("dark");
+      toggleTheme.attr("aria-pressed", "false");
     } else {
       html.addClass('dark-mode');
       localStorage.setItem("theme", "dark");
       document.documentElement.setAttribute("dark", "");
+      toggleTheme.attr("aria-pressed", "true");
     }
   }
 
+
+  toggleTheme.attr("aria-pressed", html.hasClass("dark-mode") ? "true" : "false");
 
   /* ========================
   // Simple Jekyll Search

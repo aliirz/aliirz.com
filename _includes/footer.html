@@ -16,11 +16,11 @@
       <div class="col col-12">
         <div class="footer__info">
           <div class="copyright">{{site.time | date: '%Y'}} &copy; <a href="/">{{site.title}}</a>. Crafted & Designed by <a href="https://jekyllthemes.io/developers/artem-sheludko">Artem Sheludko</a>.</div>
-          <div class="toggle-theme">
-            <div class="toggle-moon"><i class="ion ion-ios-moon"></i></div>
-            <div class="toggle-sun"><i class="ion ion-ios-sunny"></i></div>
-            <div class="toggle-thumb"></div>
-          </div>
+          <button type="button" class="toggle-theme" aria-label="Switch color theme">
+            <span class="toggle-moon" aria-hidden="true"><i class="ion ion-ios-moon"></i></span>
+            <span class="toggle-sun" aria-hidden="true"><i class="ion ion-ios-sunny"></i></span>
+            <span class="toggle-thumb" aria-hidden="true"></span>
+          </button>
         </div>
       </div>
     </div>

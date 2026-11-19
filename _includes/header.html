@@ -14,10 +14,12 @@
           </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
           <div class="main-nav__box">
             <div class="nav__icon-close">
-              <i class="ion ion-md-close"></i>
+              <button type="button" class="nav__icon-close-button" aria-label="Close menu">
+                <i class="ion ion-md-close" aria-hidden="true"></i>
+              </button>
             </div>
             <div class="nav__title">Menu</div>
             <ul class="nav__list list-reset">
@@ -38,8 +40,12 @@
         </nav>
 
         <div class="nav-buttons">
-          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
-          <i class="nav__icon nav__icon-search ion ion-md-search"></i>
+          <button type="button" class="nav__icon nav__icon-menu" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+            <i class="ion ion-md-menu" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="nav__icon nav__icon-search" aria-label="Search">
+            <i class="ion ion-md-search" aria-hidden="true"></i>
+          </button>
         </div>
 
       </div>

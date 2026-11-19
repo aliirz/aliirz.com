@@ -179,7 +179,7 @@ a {
   transition: $global-transition;
 
   &:hover {
-    color: var(--link-color)-hover;
+    color: var(--link-color-hover);
   }
 }
 
@@ -248,12 +248,16 @@ table td {
   border: none;
   color: var(--white);
   background-color: var(--button-background-color);
-  outline: none;
   cursor: pointer;
   transition: all .25s;
 
   &:hover {
     background: var(--button-background-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--brand-color);
+    outline-offset: 3px;
   }
 
   &:active {

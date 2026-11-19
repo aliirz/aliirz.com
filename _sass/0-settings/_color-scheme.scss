@@ -28,11 +28,16 @@
 
   --tr-color: var(--light-gray);
 
+  /* Footer is always the navy surface, even in light mode.
+     #6a6d76 on #0c101a is 3.68:1 and fails WCAG AA. */
+  --footer-text-color: #9a9eab;
+
   --syntax-highlighting-background: #f3f3f3;
 }
 
 :root[dark] {
-  --brand-color: #533feb;
+  /* #533feb on #0c101a is 2.97:1 — too low for hover/focus text. */
+  --brand-color: #7d74ff;
   --white: #fff;
   --light-gray: #f0f0f0;
   --dark: #0c101a;

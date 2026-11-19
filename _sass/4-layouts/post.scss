@@ -74,21 +74,18 @@
 
 .post__title,
 .page__title {
-  margin-bottom: 40px;
-  font-size: 72px;
-  line-height: .85em;
-  text-transform: uppercase;
-
-  @media only screen and (max-width: 1140px) {
-    font-size: 64px;
-  }
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-transform: none;
 
   @media only screen and (max-width: $desktop) {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   @media only screen and (max-width: $mobile) {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-size: 32px;
   }
 }
@@ -141,31 +138,13 @@
     text-transform: uppercase;
     border: none;
     border-radius: 4px;
-    color: var(--background-color)-alt;
+    color: var(--button-color);
+    background: var(--button-background-color);
+    transition: $global-transition;
 
-    &.share__facebook,
-    &.share__twitter {
-      transition: $global-transition;
-
-      &:hover {
-        color: var(--white);
-      }
-    }
-    &.share__facebook {
-      color: var(--white);
-      background: #3b5998;
-
-      &:hover {
-        background: #344e86;
-      }
-    }
-    &.share__twitter {
-      color: var(--white);
-      background: #55acee;
-
-      &:hover {
-        background: #3ea1ec;
-      }
+    &:hover {
+      color: var(--button-color);
+      background: var(--button-background-hover);
     }
   }
 }
@@ -184,15 +163,15 @@
     text-transform: uppercase;
     border: none;
     border-radius: 4px;
-    color: var(--text-alt-color);
-    background-color: var(--light-gray);
+    color: var(--heading-font-color);
+    background-color: var(--border-color);
   
     &:last-child {
       margin-right: 0;
     }
   
     &:hover {
-      color: var(--dark);
+      color: var(--link-color-hover);
     }
   }
 }

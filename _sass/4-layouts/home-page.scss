@@ -8,10 +8,11 @@
 }
 
 .article__title {
-  margin-bottom: 32px;
-  font-size: 48px;
-  line-height: .85em;
-  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-transform: none;
 
   a {
     &:hover {
@@ -29,8 +30,8 @@
   }
 
   @media only screen and (max-width: $mobile) {
-    margin-bottom: 24px;
-    font-size: 32px;
+    margin-bottom: 20px;
+    font-size: 28px;
 
     a i {
       display: none;

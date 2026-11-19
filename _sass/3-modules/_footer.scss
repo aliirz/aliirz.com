@@ -112,7 +112,7 @@
   .footer-text {
     margin: 0;
     font-size: 14px;
-    color: var(--text-alt-color);
+    color: var(--footer-text-color);
   }
 
   .social {
@@ -169,7 +169,7 @@
 
     .subscribe__description {
       font-size: 14px;
-      color: var(--text-alt-color);
+      color: var(--footer-text-color);
     }
   }
 
@@ -192,7 +192,7 @@
       outline: 0;
 
       &::placeholder {
-        color: var(--text-alt-color);
+        color: var(--footer-text-color);
         font-weight: 500;
       }
 
@@ -253,7 +253,7 @@
     text-transform: uppercase;
     border: 2px solid var(--border-color-alt);
     border-radius: 30px;
-    color: var(--text-alt-color);
+    color: var(--footer-text-color);
 
     &:hover {
       color: var(--light-gray);
@@ -287,7 +287,7 @@
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
-  color: var(--text-alt-color);
+  color: var(--footer-text-color);
 
   a {
     color: var(--light-gray);
@@ -302,8 +302,10 @@
 .toggle-theme {
   position: relative;
   display: flex;
-  width: 45px;
-  height: 24px;
+  width: 48px;
+  height: 28px;
+  padding: 0;
+  border: 0;
   border-radius: 30px;
   background-color: var(--border-color-alt);
   user-select: none;

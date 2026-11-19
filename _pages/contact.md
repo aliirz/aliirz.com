@@ -2,6 +2,8 @@
 layout: page
 title: Contact
 permalink: /contact/
+published: false
+# Contact details already live on /about/. Kept off the nav on purpose.
 # Dropped the 1.8 MB Unsplash hero on purpose.
 ---
 
