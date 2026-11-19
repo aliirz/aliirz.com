@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="712" viewBox="0 0 1200 712" role="img" aria-labelledby="t1 d1">
+<title id="t1">Estimated effects of adopting AI coding agents</title>
+<desc id="d1">Lines of code +44.0%, commits +36.0%, pull requests +35.7%; Jira issues resolved +13.7% (borderline significant), epics +18.0%; time from submission to approval +56.1%, backlog wait +59.9%, active review +58.5%, comments per pull request +38.6%.</desc>
+<rect width="1200" height="712" fill="#f0f0f0"/>
+<text x="48" y="52" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">More code went in. Review got slower.</text>
+<text x="48" y="80" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#6a6d76">Estimated change after firms adopted AI coding agents, on top of AI assistants. 655 firms, 720,542 workers.</text>
+<text x="48" y="128" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#6a6d76">CODE WRITTEN</text>
+<text x="404" y="161" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Lines of code added</text>
+<rect x="420" y="142" width="462.0" height="26" fill="#6a6d76"/>
+<text x="892.0" y="161" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6a6d76">+44.0%</text>
+<text x="404" y="201" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Commits</text>
+<rect x="420" y="182" width="378.0" height="26" fill="#6a6d76"/>
+<text x="808.0" y="201" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6a6d76">+36.0%</text>
+<text x="404" y="241" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Pull requests opened</text>
+<rect x="420" y="222" width="374.9" height="26" fill="#6a6d76"/>
+<text x="804.85" y="241" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6a6d76">+35.7%</text>
+<text x="48" y="292" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1e2740">WORK SHIPPED</text>
+<text x="404" y="325" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Jira issues resolved</text>
+<rect x="420" y="306" width="143.8" height="26" fill="#1e2740"/>
+<text x="573.85" y="325" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1e2740">+13.7%</text>
+<text x="404" y="365" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Jira epics resolved</text>
+<rect x="420" y="346" width="189.0" height="26" fill="#1e2740"/>
+<text x="619.0" y="365" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1e2740">+18.0%</text>
+<text x="48" y="416" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#533feb">REVIEW</text>
+<text x="404" y="449" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Time from submission to approval</text>
+<rect x="420" y="430" width="589.1" height="26" fill="#533feb"/>
+<text x="1019.0500000000001" y="449" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#533feb">+56.1%</text>
+<text x="404" y="489" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Time waiting in backlog</text>
+<rect x="420" y="470" width="628.9" height="26" fill="#533feb"/>
+<text x="1058.9499999999998" y="489" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#533feb">+59.9%</text>
+<text x="404" y="529" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Time in active review</text>
+<rect x="420" y="510" width="614.2" height="26" fill="#533feb"/>
+<text x="1044.25" y="529" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#533feb">+58.5%</text>
+<text x="404" y="569" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="500" fill="#1e2740">Comments per pull request</text>
+<rect x="420" y="550" width="405.3" height="26" fill="#533feb"/>
+<text x="835.3" y="569" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#533feb">+38.6%</text>
+<line x1="420" y1="120" x2="420" y2="590" stroke="#1e2740" stroke-opacity="0.12" stroke-width="2"/>
+<text x="48" y="666" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#6a6d76">Issues resolved is borderline significant.</text>
+<text x="48" y="688" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#6a6d76">Source: Fiona Chen and James Stratton, Artificial Intelligence in the Firm: Bottlenecks in Software Production (Harvard working paper, Nov 14 2026 version)</text>
+</svg>

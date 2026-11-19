@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="t2 d2">
+<title id="t2">How often a closed review concern was not actually fixed</title>
+<desc id="d2">In synthetic revision histories, a sticky outdated-line proxy marked 72.9% of unresolved concerns as resolved. REVAL with three oracle-sampled witnesses had a false-resolution rate of 11%, and 13% with witnesses derived from review comments. Stopping checks after the first success missed 100% of recurrences; REVAL detected 80.4% and 88.3%.</desc>
+<rect width="1200" height="430" fill="#f0f0f0"/>
+<text x="48" y="52" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">The comment moved. The bug didn't.</text>
+<text x="48" y="80" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#6a6d76">Synthetic revision histories: 441 review concerns, 1,284 assessments, 12 defect families.</text>
+<text x="48" y="132" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1e2740">Unresolved concerns marked resolved (lower is better)</text>
+<text x="48" y="178" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#1e2740">Sticky outdated-line proxy</text>
+<rect x="48" y="188" width="460" height="26" fill="#1e2740" fill-opacity="0.08"/>
+<rect x="48" y="188" width="335.3" height="26" fill="#6a6d76"/>
+<text x="393.34" y="207" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6a6d76">72.9%</text>
+<text x="48" y="256" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#1e2740">REVAL, oracle-sampled witnesses</text>
+<rect x="48" y="266" width="460" height="26" fill="#1e2740" fill-opacity="0.08"/>
+<rect x="48" y="266" width="50.6" height="26" fill="#533feb"/>
+<text x="108.6" y="285" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#533feb">11%</text>
+<text x="48" y="334" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#1e2740">REVAL, witnesses from review comments</text>
+<rect x="48" y="344" width="460" height="26" fill="#1e2740" fill-opacity="0.08"/>
+<rect x="48" y="344" width="59.8" height="26" fill="#533feb"/>
+<text x="117.8" y="363" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#533feb">13%</text>
+<text x="640" y="132" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#1e2740">Recurrences caught (higher is better)</text>
+<text x="640" y="178" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#1e2740">Stop checking after first success</text>
+<rect x="640" y="188" width="460" height="26" fill="#1e2740" fill-opacity="0.08"/>
+<rect x="640" y="188" width="0.0" height="26" fill="#6a6d76"/>
+<text x="650.0" y="207" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#6a6d76">0%</text>
+<text x="640" y="256" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#1e2740">REVAL, oracle-sampled witnesses</text>
+<rect x="640" y="266" width="460" height="26" fill="#1e2740" fill-opacity="0.08"/>
+<rect x="640" y="266" width="369.8" height="26" fill="#533feb"/>
+<text x="1019.8399999999999" y="285" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#533feb">80.4%</text>
+<text x="640" y="334" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#1e2740">REVAL, witnesses from review comments</text>
+<rect x="640" y="344" width="460" height="26" fill="#1e2740" fill-opacity="0.08"/>
+<rect x="640" y="344" width="406.2" height="26" fill="#533feb"/>
+<text x="1036.1799999999998" y="363" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">88.3%</text>
+<text x="48" y="406" text-anchor="start" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="400" fill="#6a6d76">Source: Mamdouh Alenezi, AI Code Review Requires Revision-Aware Evidence of Concern Resolution (arXiv:2611.23275). Controlled setting, not real review histories.</text>
+</svg>
