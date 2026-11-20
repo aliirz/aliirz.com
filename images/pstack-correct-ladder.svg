@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="t2 d2">
+<title id="t2">Where pstack's /correct skill puts a fix for a repeated agent mistake</title>
+<desc id="d2">Five levels, tried from the top: eliminate it with architecture, enforce it with types, a lint or CI check whose error names the fix, a test of the behavior, and docs or agent rules last, only for judgment calls. The top levels make the mistake impossible; the bottom one fails silently when an agent skips it.</desc>
+<rect width="1200" height="600" fill="#f0f0f0"/>
+<text x="48" y="54" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">A correction belongs in the repo, not in a rules file</text>
+<text x="48" y="82" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#6a6d76">pstack's /correct: fix each repeated mistake at the highest level that works. A class counts once it has happened twice.</text>
+<rect x="60" y="118" width="1080" height="70" rx="8" fill="#533feb"/>
+<text x="600" y="148" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">1. Architecture</text>
+<text x="600" y="171" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">one owner per piece of state, hide internals so the wrong import fails</text>
+<rect x="136" y="200" width="929" height="70" rx="8" fill="#533feb"/>
+<text x="600" y="230" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">2. Types</text>
+<text x="600" y="253" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">the bad state can't be written</text>
+<rect x="211" y="282" width="778" height="70" rx="8" fill="#1e2740"/>
+<text x="600" y="312" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">3. Lint or CI check</text>
+<text x="600" y="335" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">the error names the file, type, or function to use instead</text>
+<rect x="287" y="364" width="626" height="70" rx="8" fill="#1e2740"/>
+<text x="600" y="394" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">4. Test the behavior</text>
+<text x="600" y="417" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">fails when the behavior breaks, not when internals move</text>
+<rect x="362" y="446" width="475" height="70" rx="8" fill="#6a6d76"/>
+<text x="600" y="476" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff">5. Docs or agent rules</text>
+<text x="600" y="499" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">last, only for judgment calls</text>
+<text x="48" y="550" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#533feb">Top: the mistake can't happen.</text>
+<text x="1152" y="550" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#6a6d76">Bottom: "Nothing fails when an agent skips them."</text>
+<text x="48" y="576" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Source: pstack v0.15.46, skills/correct/SKILL.md (github.com/cursor/plugins). Wording condensed from the skill.</text>
+</svg>

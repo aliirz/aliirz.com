@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="t1 d1">
+<title id="t1">How a /poteto-mode run moves</title>
+<desc id="d1">A prompt goes to the chat running /poteto-mode. It restates the goal and the smallest change, matches a playbook and copies its steps into the todo list, then understands and designs (how, why, architect, prototype a fork instead of asking). It hands code to poteto-agent delegates or fans out with swarm or arena. Work is verified on the real surface; a failed or inconclusive check loops back to a fresh delegate. Passing work becomes a PR of small ordered commits with a Verification section. The lead chat owns every delegate and pauses only for irreversible writes.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e2740"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#533feb"/></marker></defs>
+<rect width="1200" height="760" fill="#f0f0f0"/>
+<text x="48" y="54" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">One chat owns the run. Delegates do the typing.</text>
+<text x="48" y="82" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#6a6d76">The path a task takes under /poteto-mode, as its SKILL.md and playbooks describe it.</text>
+<rect x="32" y="112" width="1136" height="590" rx="14" fill="none" stroke="#6a6d76" stroke-width="1.5" stroke-dasharray="6 6"/>
+<text x="52" y="138" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#6a6d76">THE CHAT THAT RECEIVES /poteto-mode: owns the playbook, the todo list, every spawn</text>
+<rect x="60" y="160" width="250" height="130" rx="10" fill="#ffffff" stroke="#1e2740" stroke-width="2"/>
+<text x="78" y="192" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1e2740">1. Your prompt</text>
+<text x="78" y="216" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">goal, done check,</text>
+<text x="78" y="237" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">the proof you want,</text>
+<text x="78" y="258" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">real constraints</text>
+<rect x="350" y="160" width="250" height="130" rx="10" fill="#ffffff" stroke="#1e2740" stroke-width="2"/>
+<text x="368" y="192" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1e2740">2. Restate</text>
+<text x="368" y="216" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">the goal and the</text>
+<text x="368" y="237" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">smallest change</text>
+<text x="368" y="258" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">that meets it</text>
+<rect x="640" y="160" width="250" height="130" rx="10" fill="#ffffff" stroke="#1e2740" stroke-width="2"/>
+<text x="658" y="192" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1e2740">3. Match a playbook</text>
+<text x="658" y="216" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">bug fix, feature, perf,</text>
+<text x="658" y="237" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">refactor ... (22 total)</text>
+<text x="658" y="258" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">steps copied verbatim</text>
+<rect x="930" y="160" width="210" height="130" rx="10" fill="#ffffff" stroke="#1e2740" stroke-width="2"/>
+<text x="948" y="192" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1e2740">4. Understand</text>
+<text x="948" y="216" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">how, why, trace</text>
+<text x="948" y="237" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">architect the shape</text>
+<text x="948" y="258" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">prototype a fork</text>
+<line x1="310" y1="225" x2="346" y2="225" stroke="#1e2740" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="600" y1="225" x2="636" y2="225" stroke="#1e2740" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="890" y1="225" x2="926" y2="225" stroke="#1e2740" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="930" y="370" width="210" height="140" rx="10" fill="#1e2740" stroke="#1e2740" stroke-width="2"/>
+<text x="948" y="402" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">5. Delegate</text>
+<text x="948" y="426" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">poteto-agent per task</text>
+<text x="948" y="447" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">swarm: fan out</text>
+<text x="948" y="468" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">arena: bakeoff</text>
+<line x1="1035" y1="290" x2="1035" y2="366" stroke="#1e2740" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="560" y="370" width="300" height="140" rx="10" fill="#533feb" stroke="#533feb" stroke-width="2"/>
+<text x="578" y="402" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">6. Verify on the real surface</text>
+<text x="578" y="426" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">the repro passes, or</text>
+<text x="578" y="447" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">the number is explained</text>
+<text x="578" y="468" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#ffffff">inconclusive is not a pass</text>
+<line x1="926" y1="440" x2="864" y2="440" stroke="#1e2740" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="60" y="370" width="420" height="140" rx="10" fill="#ffffff" stroke="#1e2740" stroke-width="2"/>
+<text x="78" y="402" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1e2740">7. Opening a PR</text>
+<text x="78" y="426" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">small ordered commits, failing repro first</text>
+<text x="78" y="447" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">## Why  ## What changed  ## Verification</text>
+<text x="78" y="468" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">you review the evidence, then the diff</text>
+<line x1="556" y1="440" x2="484" y2="440" stroke="#533feb" stroke-width="2.5" marker-end="url(#ap)"/>
+<path d="M710,514 C710,610 1035,610 1035,514" fill="none" stroke="#6a6d76" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#a)"/>
+<text x="872" y="618" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#6a6d76">fails: a fresh delegate gets the brief and the report</text>
+<rect x="60" y="560" width="420" height="96" rx="10" fill="#1e2740" fill-opacity="0.06" stroke="#1e2740" stroke-width="1.5"/>
+<text x="78" y="590" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1e2740">Pauses only for irreversible writes</text>
+<text x="78" y="614" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">force-push to shared branches, deploys,</text>
+<text x="78" y="635" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#6a6d76">data deletion, customer messages</text>
+<text x="48" y="736" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Source: pstack v0.15.46, skills/poteto-mode/SKILL.md and playbooks/ (github.com/cursor/plugins). Simplified; most playbooks run fewer steps.</text>
+</svg>
