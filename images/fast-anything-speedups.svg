@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610" role="img" aria-labelledby="t d">
+<title id="t">End-to-end run time before and after fast-anything, two Python apps</title>
+<desc id="d">Fuzzy dedupe example: 2.58 s in Python, 17 ms with the Rust port, 150 times faster. Paragraph dedupe over my blog posts: 380 ms in Python, 104 ms with the Rust port, 3.6 times faster. Log scale.</desc>
+<rect width="1200" height="610" fill="#f0f0f0"/>
+<text x="48" y="54" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">Same tool, same box, very different wins</text>
+<text x="48" y="84" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#6a6d76">Whole-app run time, median of 5 interleaved runs from fast-anything bench. Log scale: each gridline is 10x.</text>
+<rect x="48" y="112" width="18" height="18" rx="3" fill="#6a6d76"/><text x="76" y="127" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#6a6d76">original Python</text>
+<rect x="250" y="112" width="18" height="18" rx="3" fill="#533feb"/><text x="278" y="127" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#533feb">with the verified Rust port</text>
+<line x1="380.0" y1="180" x2="380.0" y2="470" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="380.0" y="494" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">10 ms</text>
+<line x1="623.3" y1="180" x2="623.3" y2="470" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="623.3" y="494" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">100 ms</text>
+<line x1="866.7" y1="180" x2="866.7" y2="470" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="866.7" y="494" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">1 s</text>
+<line x1="1110.0" y1="180" x2="1110.0" y2="470" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="1110.0" y="494" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">10 s</text>
+<text x="48" y="218" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">Their example: fuzzy dedupe</text>
+<text x="48" y="242" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">pure-Python Levenshtein, 700 names</text>
+<text x="48" y="286" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#533feb">150× faster</text>
+<rect x="380" y="198" width="586.8" height="32" rx="3" fill="#6a6d76"/>
+<text x="976.8" y="220" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#6a6d76">2.58 s</text>
+<rect x="380" y="242" width="56.1" height="32" rx="3" fill="#533feb"/>
+<text x="446.1" y="264" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#533feb">17 ms</text>
+<text x="48" y="368" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">My workload: paragraph dedupe</text>
+<text x="48" y="392" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">set intersections, 632 paragraphs</text>
+<text x="48" y="436" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#533feb">3.6× faster</text>
+<rect x="380" y="348" width="384.4" height="32" rx="3" fill="#6a6d76"/>
+<text x="774.4" y="370" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#6a6d76">380 ms</text>
+<rect x="380" y="392" width="247.5" height="32" rx="3" fill="#533feb"/>
+<text x="637.5" y="414" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#533feb">104 ms</text>
+<text x="48" y="572" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Source: my runs of fast-anything 0.8.0 on an 8-vCPU Linux box, Python 3.13.5, Rust 1.85.1, 2026-11-23. Example app from the fast-anything repo, port = its reference lib.rs.</text>
+<text x="48" y="592" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Speedups are as fast-anything bench reported them. Bars start at 10 ms. Python startup and file loading are inside both totals.</text>
+</svg>

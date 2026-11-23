@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="770" viewBox="0 0 1200 770" role="img" aria-labelledby="t d">
+<title id="t">How many inputs each version of my Rust port got wrong, by test set</title>
+<desc id="d">First port: 0 of 35 in fast-anything verify with the app as workload, 10 of 56 with a workload that includes two nasty calls, 2 of 3 hand-written inputs, 3341 of 20000 random inputs, 128 of 20000 random inputs without file separators. Fixed port: 0 in every set.</desc>
+<rect width="1200" height="770" fill="#f0f0f0"/>
+<text x="48" y="54" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">Green on verify, wrong in the wild</text>
+<text x="48" y="84" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#6a6d76">Inputs where the Rust port and the Python original disagree. Both ports passed verify when the app itself was the workload.</text>
+<text x="710" y="170" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1e2740">first port</text>
+<text x="710" y="188" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">split_whitespace, (x*1000).round()</text>
+<text x="1000" y="170" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#533feb">fixed port</text>
+<text x="1000" y="188" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Python whitespace, Python rounding</text>
+<line x1="48" y1="200" x2="1152" y2="200" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="240" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">fast-anything verify, app as workload</text>
+<text x="48" y="264" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">1 recorded call + 34 edge and derived cases</text>
+<text x="710" y="248" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#6a6d76">0<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 35</tspan></text>
+<text x="1000" y="248" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#533feb">0<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 35</tspan></text>
+<line x1="48" y1="296" x2="1152" y2="296" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="336" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">fast-anything verify, mean workload</text>
+<text x="48" y="360" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">3 recorded calls (app + 2 nasty ones) + 53 derived</text>
+<text x="710" y="344" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1e2740">10<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 56</tspan></text>
+<text x="1000" y="344" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#533feb">0<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 56</tspan></text>
+<line x1="48" y1="392" x2="1152" y2="392" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="432" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">Three inputs I wrote on purpose</text>
+<text x="48" y="456" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">a 5/16 tie, a \x1c separator, a dotted İ</text>
+<text x="710" y="440" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1e2740">2<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 3</tspan></text>
+<text x="1000" y="440" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#533feb">0<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 3</tspan></text>
+<line x1="48" y1="488" x2="1152" y2="488" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="528" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">20,000 random inputs</text>
+<text x="48" y="552" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">words + spaces, tabs, NBSP, \x1c, \x1f</text>
+<text x="710" y="536" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1e2740">3,341<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 20,000</tspan></text>
+<text x="710" y="560" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">16.7% wrong</text>
+<text x="1000" y="536" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#533feb">0<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 20,000</tspan></text>
+<line x1="48" y1="584" x2="1152" y2="584" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="624" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">20,000 random inputs, no \x1c-\x1f</text>
+<text x="48" y="648" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">so only the rounding can differ</text>
+<text x="710" y="632" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1e2740">128<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 20,000</tspan></text>
+<text x="710" y="656" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">0.6% wrong</text>
+<text x="1000" y="632" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#533feb">0<tspan font-size="16" font-weight="500" fill="#6a6d76"> of 20,000</tspan></text>
+<line x1="48" y1="680" x2="1152" y2="680" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="732" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Source: my runs on 2026-11-23 (fast-anything 0.8.0, Python 3.13.5, Rust 1.85.1). Random sets use threshold 0.0 so every pair is compared; seed 23.</text>
+<text x="48" y="752" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">The random inputs are deliberately mean. My actual blog posts trip neither bug, which is why verify only saw them once I fed it the nasty calls.</text>
+</svg>
