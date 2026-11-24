@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="748" viewBox="0 0 1200 748" role="img" aria-labelledby="t d">
+<title id="t">Which check found which bug in the agent-written send panel</title>
+<desc id="d">Bombadil, clicking the real page for 150 seconds, found the double-send bug and the cancel bug and missed the two bugs that need an upload to finish. TLC, checking a TLA+ model, found all four in under three seconds. After the fix, Bombadil reported 0 violations in 150 seconds and TLC found all four rules hold.</desc>
+<rect width="1200" height="748" fill="#f0f0f0"/>
+<text x="48" y="54" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">Two kinds of proof, two kinds of blind spot</text>
+<text x="48" y="84" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#6a6d76">The four bugs in the agent-written send panel, and which check found each one.</text>
+<text x="660" y="144" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1e2740">Bombadil</text>
+<text x="660" y="166" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">real page, 150 s, ~4,000 actions</text>
+<text x="1010" y="144" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1e2740">TLC on a TLA+ model</text>
+<text x="1010" y="166" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">246 states, 2.8 s</text>
+<line x1="48" y1="190" x2="1152" y2="190" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="230" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">Two Sends while encrypting</text>
+<text x="48" y="254" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">two uploads run at once</text>
+<circle cx="590" cy="230" r="11" fill="#533feb"/>
+<text x="610" y="236" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#533feb">caught</text>
+<text x="610" y="258" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">1:37 into the run</text>
+<circle cx="940" cy="230" r="11" fill="#533feb"/>
+<text x="960" y="236" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#533feb">caught</text>
+<text x="960" y="258" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">5-step path</text>
+<line x1="48" y1="282" x2="1152" y2="282" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="322" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">Cancel stops only the newest timer</text>
+<text x="48" y="346" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">Start jumps to Uploading by itself</text>
+<circle cx="590" cy="322" r="11" fill="#533feb"/>
+<text x="610" y="328" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#533feb">caught</text>
+<text x="610" y="350" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">1:32 into the run</text>
+<circle cx="940" cy="322" r="11" fill="#533feb"/>
+<text x="960" y="328" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#533feb">caught</text>
+<text x="960" y="350" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">4-step path</text>
+<line x1="48" y1="374" x2="1152" y2="374" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="414" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">New file picked while a link is shown</text>
+<text x="48" y="438" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">the old 8 s timer expires the new file</text>
+<circle cx="590" cy="414" r="10" fill="#ffffff" stroke="#6a6d76" stroke-width="2.5"/>
+<text x="610" y="420" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#6a6d76">missed</text>
+<text x="610" y="442" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">never saw an upload finish</text>
+<circle cx="940" cy="414" r="11" fill="#533feb"/>
+<text x="960" y="420" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#533feb">caught</text>
+<text x="960" y="442" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">5-step path</text>
+<line x1="48" y1="466" x2="1152" y2="466" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="506" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">Send pressed again on a shown link</text>
+<text x="48" y="530" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">the old link stays up while encrypting</text>
+<circle cx="590" cy="506" r="10" fill="#ffffff" stroke="#6a6d76" stroke-width="2.5"/>
+<text x="610" y="512" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#6a6d76">missed</text>
+<text x="610" y="534" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">never saw an upload finish</text>
+<circle cx="940" cy="506" r="11" fill="#533feb"/>
+<text x="960" y="512" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#533feb">caught</text>
+<text x="960" y="534" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">5-step path</text>
+<line x1="48" y1="558" x2="1152" y2="558" stroke="#1e2740" stroke-width="0.8" stroke-opacity="0.12"/>
+<text x="48" y="598" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#0c101a">After the fix</text>
+<text x="610" y="598" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1e2740">0 violations</text>
+<text x="610" y="620" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">150 s, ~4,300 actions</text>
+<text x="960" y="598" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1e2740">4 of 4 rules hold</text>
+<text x="960" y="620" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">7 states</text>
+<text x="48" y="702" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Source: my runs on 2026-11-24. Bombadil 0.8.0, headless Chrome, real time. TLC from tla2tools 1.8.0 via the /statechart skill in pstack.</text>
+<text x="48" y="724" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">A model is only as good as its match to the code; Bombadil checks the real page. They agreed on both bugs Bombadil could reach.</text>
+</svg>

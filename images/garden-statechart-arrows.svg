@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="786" viewBox="0 0 1200 786" role="img" aria-labelledby="t d">
+<title id="t">Every arrow in the send panel statechart, by the state it starts in and the state it ends in</title>
+<desc id="d">The chart of the code as the agent wrote it has 39 arrows. 15 match the chart after the fix. 24 exist only in the code as written: 20 are a timer or the fake network firing in a state the user already left, 4 are the Send button working where the ticket offered a different button.</desc>
+<rect width="1200" height="786" fill="#f0f0f0"/>
+<text x="48" y="54" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#1e2740">39 arrows, where 15 will do</text>
+<text x="48" y="84" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#6a6d76">Each cell is an arrow in the statechart: the state it leaves (row) and the state it lands in (column).</text>
+<rect x="48" y="104" width="18" height="18" rx="3" fill="#1e2740"/><text x="74" y="119" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#1e2740">in the chart after the fix (15)</text>
+<rect x="330" y="104" width="18" height="18" rx="3" fill="#533feb"/><text x="356" y="119" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" fill="#1e2740">only in the code as the agent wrote it (24)</text>
+<text x="678.0" y="164" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#6a6d76" letter-spacing="1">LANDS IN</text>
+<text x="294.0" y="196" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e2740">Start</text>
+<text x="422.0" y="196" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e2740">File picked</text>
+<text x="550.0" y="196" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e2740">Encrypting</text>
+<text x="678.0" y="196" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e2740">Uploading</text>
+<text x="806.0" y="196" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e2740">Upload failed</text>
+<text x="934.0" y="196" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e2740">Link shown</text>
+<text x="1062.0" y="196" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#1e2740">Link expired</text>
+<text x="210" y="196" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#6a6d76" letter-spacing="1">LEAVES</text>
+<text x="210" y="244.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1e2740">Start</text>
+<rect x="233" y="213" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="361" y="213" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="422.0" y="244.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Pick</text>
+<rect x="489" y="213" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="617" y="213" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="678.0" y="244.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">encrypt ends</text>
+<rect x="745" y="213" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="806.0" y="244.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">network drops</text>
+<rect x="873" y="213" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="934.0" y="244.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">upload ends</text>
+<rect x="1001" y="213" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="1062.0" y="244.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">8 s pass</text>
+<text x="210" y="302.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1e2740">File picked</text>
+<rect x="233" y="271" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="361" y="271" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="489" y="271" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="550.0" y="302.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Send</text>
+<rect x="617" y="271" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="678.0" y="302.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">encrypt ends</text>
+<rect x="745" y="271" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="806.0" y="302.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">network drops</text>
+<rect x="873" y="271" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="934.0" y="302.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">upload ends</text>
+<rect x="1001" y="271" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="1062.0" y="302.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">8 s pass</text>
+<text x="210" y="360.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1e2740">Encrypting</text>
+<rect x="233" y="329" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="294.0" y="360.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Cancel</text>
+<rect x="361" y="329" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="422.0" y="360.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Pick</text>
+<rect x="489" y="329" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="550.0" y="360.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Send</text>
+<rect x="617" y="329" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="678.0" y="360.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">encrypt ends</text>
+<rect x="745" y="329" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="806.0" y="360.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">network drops</text>
+<rect x="873" y="329" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="934.0" y="360.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">upload ends</text>
+<rect x="1001" y="329" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="1062.0" y="360.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">8 s pass</text>
+<text x="210" y="418.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1e2740">Uploading</text>
+<rect x="233" y="387" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="294.0" y="418.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Cancel</text>
+<rect x="361" y="387" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="422.0" y="418.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Pick</text>
+<rect x="489" y="387" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="617" y="387" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="678.0" y="418.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">encrypt ends</text>
+<rect x="745" y="387" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="806.0" y="418.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">network drops</text>
+<rect x="873" y="387" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="934.0" y="418.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">upload ends</text>
+<rect x="1001" y="387" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="1062.0" y="418.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">8 s pass</text>
+<text x="210" y="476.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1e2740">Upload failed</text>
+<rect x="233" y="445" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="361" y="445" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="422.0" y="476.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Pick</text>
+<rect x="489" y="445" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="550.0" y="476.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Send</text>
+<rect x="617" y="445" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="678.0" y="476.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Retry</text>
+<rect x="745" y="445" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="873" y="445" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="934.0" y="476.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">upload ends</text>
+<rect x="1001" y="445" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="1062.0" y="476.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">8 s pass</text>
+<text x="210" y="534.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1e2740">Link shown</text>
+<rect x="233" y="503" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="361" y="503" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="422.0" y="534.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Pick</text>
+<rect x="489" y="503" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="550.0" y="534.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Send</text>
+<rect x="617" y="503" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="678.0" y="534.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">encrypt ends</text>
+<rect x="745" y="503" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="806.0" y="534.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">network drops</text>
+<rect x="873" y="503" width="122" height="52" rx="5" fill="#ffffff"/>
+<rect x="1001" y="503" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="1062.0" y="534.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">8 s pass</text>
+<text x="210" y="592.0" text-anchor="end" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#1e2740">Link expired</text>
+<rect x="233" y="561" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="294.0" y="592.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Send another</text>
+<rect x="361" y="561" width="122" height="52" rx="5" fill="#1e2740"/>
+<text x="422.0" y="592.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Pick</text>
+<rect x="489" y="561" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="550.0" y="592.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Send</text>
+<rect x="617" y="561" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="678.0" y="592.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">encrypt ends</text>
+<rect x="745" y="561" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="806.0" y="592.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">network drops</text>
+<rect x="873" y="561" width="122" height="52" rx="5" fill="#533feb"/>
+<text x="934.0" y="592.0" text-anchor="middle" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff">upload ends</text>
+<rect x="1001" y="561" width="122" height="52" rx="5" fill="#ffffff"/>
+<text x="48" y="660" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#1e2740"><tspan font-weight="700" fill="#533feb">20 of the 24 extra arrows</tspan> are a timer or the fake network finishing in a state you already left.</text>
+<text x="48" y="684" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="16" fill="#1e2740">The other 4 are the Send button, live in states where the ticket offered a different button.</text>
+<text x="48" y="712" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="14" fill="#6a6d76">In the code as written, the Upload failed → Uploading arrow also fires on "encrypt ends", not only on Retry.</text>
+<text x="48" y="762" font-family="Work Sans, Inter, Helvetica, Arial, sans-serif" font-size="13" fill="#6a6d76">Source: my TLA+ models of the send panel before and after the fix, checked with TLC (tla2tools 1.8.0) and drawn by the /statechart skill from pstack, 2026-11-24.</text>
+</svg>
