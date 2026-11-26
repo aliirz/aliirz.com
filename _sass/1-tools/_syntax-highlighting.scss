@@ -5,7 +5,10 @@
 .highlight {
   background: var(--syntax-highlighting-background);
 
-  .highlighter-rouge & {
+  // Light surface for the light theme only. Leaving this on in dark mode
+  // pins the block to #eef while `pre` follows --heading-font-color
+  // (#f0f0f0), so plain text and any token without its own color vanish.
+  :root:not([dark]) .highlighter-rouge & {
     background: #eef;
   }
 
@@ -68,4 +71,49 @@
   .vg    { color: #008080 } // Name.Variable.Global
   .vi    { color: #008080 } // Name.Variable.Instance
   .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+// Dark mode token colors. The rules above are a light Rouge theme:
+// several of those hexes fall under 4.5:1 on #080b12, and keywords,
+// operators, and names set no color at all. These overrides keep the
+// light theme intact and retint every token for the dark surface.
+:root[dark] {
+  .highlight {
+    color: var(--heading-font-color);
+
+    .c, .cm, .c1 { color: #9a9eab } // Comment
+    .err   { color: #ffd0cc; background-color: #3a1618 } // Error
+    .k, .kc, .kd, .kp, .kr, .ow { color: #b7b1ff } // Keyword
+    .cp, .cs { color: #a8acb8 } // Comment.Preproc / Special
+    .gd    { color: #ffd0d4; background-color: #3a1a1e } // Generic.Deleted
+    .gd .x { color: #ffd0d4; background-color: #4a2228 } // Generic.Deleted.Specific
+    .gr, .gt { color: #ff9d94 } // Generic.Error / Traceback
+    .gh    { color: #a8acb8 } // Generic.Heading
+    .gi    { color: #c8f5d4; background-color: #143028 } // Generic.Inserted
+    .gi .x { color: #c8f5d4; background-color: #1a3a30 } // Generic.Inserted.Specific
+    .go    { color: #a8acb8 } // Generic.Output
+    .gp    { color: #c5c8d4 } // Generic.Prompt
+    .gu    { color: #c5c8d4 } // Generic.Subheading
+    .kt, .nc { color: #a8b8ff } // Keyword.Type / Name.Class
+    .m, .mf, .mh, .mi, .mo, .il { color: #5ad4d4 } // Literal.Number
+    .s, .sb, .sc, .sd, .s1, .s2, .se, .sh, .si, .sx, .sa { color: #ff8aa6 } // Literal.String
+    .na, .no, .nv, .vc, .vg, .vi { color: #7ee0d4 } // Name.Attribute / Constant / Variable
+    .nb    { color: #6ec8ea } // Name.Builtin
+    .ni    { color: #e090e8 } // Name.Entity
+    .ne, .nf { color: #ffb089 } // Name.Exception / Function
+    .nn    { color: #c5c8d4 } // Name.Namespace
+    .nt    { color: #9ecbff } // Name.Tag
+    .bp    { color: #a8acb8 } // Name.Builtin.Pseudo
+    .sr    { color: #5ee09a } // Literal.String.Regex
+    .ss    { color: #f0a0d8 } // Literal.String.Symbol
+    .w     { color: #9a9eab } // Text.Whitespace
+  }
+
+  .post :not(pre) > code,
+  .page :not(pre) > code {
+    padding: 0.05em 0.28em;
+    border-radius: 2px;
+    color: var(--heading-font-color);
+    background-color: var(--dark-blue);
+  }
 }
