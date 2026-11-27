@@ -2,46 +2,74 @@
   var root = document.documentElement;
   var btn = document.getElementById("theme-toggle");
 
-  function isDark() {
-    return root.hasAttribute("dark");
+  function prefersDark() {
+    return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
   }
 
-  function sync() {
+  function mode() {
+    try {
+      var stored = localStorage.getItem("theme");
+      if (stored === "light" || stored === "dark") return stored;
+    } catch (e) {}
+    return "system";
+  }
+
+  function label(current) {
+    if (current === "light") return "Light theme";
+    if (current === "dark") return "Dark theme";
+    return "Theme follows the system setting";
+  }
+
+  function paint(current) {
+    var dark = current === "dark" || (current === "system" && prefersDark());
+    if (dark) {
+      root.setAttribute("dark", "");
+      root.setAttribute("data-theme", current === "dark" ? "dark" : "auto");
+    } else if (current === "light") {
+      root.removeAttribute("dark");
+      root.setAttribute("data-theme", "light");
+    } else {
+      root.removeAttribute("dark");
+      root.removeAttribute("data-theme");
+    }
+  }
+
+  function remember(current) {
+    try {
+      if (current === "system") localStorage.removeItem("theme");
+      else localStorage.setItem("theme", current);
+    } catch (e) {}
+  }
+
+  function sync(current) {
     if (!btn) return;
-    var dark = isDark();
-    btn.setAttribute("aria-pressed", dark ? "true" : "false");
-    btn.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    btn.setAttribute("data-mode", current);
+    btn.setAttribute("aria-pressed", current === "system" ? "false" : "true");
+    btn.setAttribute("aria-label", label(current));
+  }
+
+  function nextMode(current) {
+    var systemDark = prefersDark();
+    if (current === "system") return systemDark ? "light" : "dark";
+    if (current === "light") return systemDark ? "dark" : "system";
+    return systemDark ? "system" : "light";
   }
 
   if (btn) {
+    sync(mode());
     btn.addEventListener("click", function () {
-      if (isDark()) {
-        root.removeAttribute("dark");
-        root.setAttribute("data-theme", "light");
-        try { localStorage.setItem("theme", "light"); } catch (e) {}
-      } else {
-        root.setAttribute("dark", "");
-        root.setAttribute("data-theme", "dark");
-        try { localStorage.setItem("theme", "dark"); } catch (e) {}
-      }
-      sync();
+      var current = nextMode(mode());
+      paint(current);
+      remember(current);
+      sync(current);
     });
-    sync();
   }
 
   if (window.matchMedia) {
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
-      var stored = null;
-      try { stored = localStorage.getItem("theme"); } catch (e) {}
-      if (stored === "light" || stored === "dark") return;
-      if (event.matches) {
-        root.setAttribute("dark", "");
-        root.setAttribute("data-theme", "auto");
-      } else {
-        root.removeAttribute("dark");
-        root.removeAttribute("data-theme");
-      }
-      sync();
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
+      if (mode() !== "system") return;
+      paint("system");
+      sync("system");
     });
   }
 

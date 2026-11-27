@@ -9,14 +9,16 @@
       {% else %}
       <a class="name" href="{{ "/" | relative_url }}">{{ site.title | escape }}<span class="caret" aria-hidden="true"></span></a>
       {% endif %}
-      <nav class="nav" aria-label="Site">
-        <a href="{{ "/about/" | relative_url }}">about</a>
-        <a href="{{ "/projects/" | relative_url }}">projects</a>
-        <a href="{{ "/feed.xml" | relative_url }}">feed</a>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch color theme">
-          <span class="when-light">dark</span><span class="when-dark">light</span>
+      <div class="mast-end">
+        <nav class="nav" aria-label="Site">
+          <a href="{{ "/about/" | relative_url }}">about</a>
+          <a href="{{ "/projects/" | relative_url }}">projects</a>
+          <a href="{{ "/feed.xml" | relative_url }}">feed</a>
+        </nav>
+        <button type="button" class="theme-switch" id="theme-toggle" aria-pressed="false" aria-label="Theme follows the system setting">
+          <span class="theme-glyph" aria-hidden="true"></span>
         </button>
-      </nav>
+      </div>
     </header>
     <main>
       {{ content }}

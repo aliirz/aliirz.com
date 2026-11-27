@@ -2,7 +2,7 @@
 
 Ali Raza's blog. Jekyll 4.3, built by GitHub Actions and published to GitHub Pages.
 
-The layout is a single monospace column in the spirit of [no-style-please](https://github.com/riggraz/no-style-please) (MIT, see `assets/css/no-style-please.LICENSE.txt`). Light and dark colors follow `prefers-color-scheme`, with a text toggle that remembers a choice. Code uses Rouge, with a separate dark palette.
+The layout is a single monospace column in the spirit of [no-style-please](https://github.com/riggraz/no-style-please) (MIT, see `assets/css/no-style-please.LICENSE.txt`). Light and dark colors follow `prefers-color-scheme` until the small header switch is clicked. A click cycles light, dark, and back to the system setting. Code uses Rouge, with a separate dark palette.
 
 ```
 bundle install
