@@ -9,6 +9,6 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Posts live in `_posts` and keep the `/:title` permalink. Tag pages, the RSS feed, the sitemap, and Google Analytics stay wired in `_config.yml`.
+Posts live in `_posts` and keep the `/:title` permalink. Tag pages, the RSS feed, the sitemap, and Google Analytics stay wired in `_config.yml`. Old `/page/2/` through `/page/16/` addresses redirect to the homepage. `/search.json` is an empty list so that previous URL still resolves.
 
 Kudos are a hold-to-fill button at the end of a post. Counts need `kudos_endpoint` in `_config.yml`. The serverless function is in `kudos-api/` and is not part of the Jekyll build. Setup is in `kudos-api/README.md`.
