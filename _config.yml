@@ -79,8 +79,7 @@ exclude:
 
 # Public kudos counts. Leave blank and the button still animates
 # and remembers a kudo in this browser; it just hides the number.
-# Example: https://your-project.vercel.app/api/kudos
-kudos_endpoint:
+kudos_endpoint: https://aliirz-kudos.vercel.app/api/kudos
 
 # Pages Path
 defaults:
