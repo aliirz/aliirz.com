@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 {% include head.html %}
-
 <body>
-
-    {% include header.html %}
-
-    <!-- begin content -->
-    <main id="content" class="content" aria-label="Content">
+  <div class="w">
+    <header class="mast">
+      {% if page.url == "/" or page.url == "/index.html" %}
+      <h1 class="name"><a href="{{ "/" | relative_url }}">{{ site.title | escape }}<span class="caret" aria-hidden="true"></span></a></h1>
+      {% else %}
+      <a class="name" href="{{ "/" | relative_url }}">{{ site.title | escape }}<span class="caret" aria-hidden="true"></span></a>
+      {% endif %}
+      <nav class="nav" aria-label="Site">
+        <a href="{{ "/about/" | relative_url }}">about</a>
+        <a href="{{ "/projects/" | relative_url }}">projects</a>
+        <a href="{{ "/feed.xml" | relative_url }}">feed</a>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="Switch color theme">
+          <span class="when-light">dark</span><span class="when-dark">light</span>
+        </button>
+      </nav>
+    </header>
+    <main>
       {{ content }}
     </main>
-    <!-- end content -->
-
-    <button type="button" class="top" aria-label="Back to top"><i class="ion ion-ios-arrow-round-up" aria-hidden="true"></i></button>
-
-    {% include footer.html %}
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="{{ site.baseurl }}/js/scripts.js"></script>
-
-  {% include pandy-widget.html %}
+    <footer class="colophon">
+      <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+        · <a href="https://x.com/aliirz">@aliirz</a></p>
+    </footer>
+  </div>
+  <script src="{{ "/assets/js/site.js" | relative_url }}"></script>
 </body>
-
 </html>

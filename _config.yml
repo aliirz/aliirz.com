@@ -61,8 +61,26 @@ plugins:
 feed:
   posts_limit: 1000
 
-paginate: 5
-paginate_path: "/page/:num"
+# Homepage lists every post. kudos-api is a separate service and must
+# not be copied into the static site. `exclude` replaces Jekyll's
+# defaults, so the usual entries stay listed here.
+exclude:
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - kudos-api
+
+# Public kudos counts. Leave blank and the button still animates
+# and remembers a kudo in this browser; it just hides the number.
+# Example: https://your-project.vercel.app/api/kudos
+kudos_endpoint:
 
 # Pages Path
 defaults:
@@ -78,10 +96,6 @@ include:
 tag_page_dir: tag
 tag_page_layout: tag_page
 tag_permalink_style: /:title
-
-sass:
-  sass_dir: _sass
-  style: compressed
 
 twitter:
   username: aliirz

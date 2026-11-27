@@ -1,74 +1,27 @@
 ---
 layout: default
 ---
-
-{% if page.image %}
-<div class="container">
-  <div class="row">
-    <div class="col col-12">
-      <div class="post-image">
-        <img src="{{ page.image | relative_url }}" alt="{{page.title}}">
-      </div>
-    </div>
+<article class="post">
+  <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.image %}
+  <figure class="post-figure">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+  </figure>
+  {% endif %}
+  <div class="post-body">
+    {{ content }}
   </div>
-</div>
-{% endif %}
-
-<!-- begin post -->
-<div class="container animate">
-
-  <div class="post__info">
-    <h1 class="post__title">{{ page.title | escape }}</h1>
-    <div class="post__meta">
-      <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time> – <span class="post__minutes">{% assign words = page.content | number_of_words %} {% if words < 360 %} 1 min read {% else %} {{ words | divided_by:180 }} min read {% endif %}
-      </span>
-    </div>
-  </div>
-
-  <article class="post">
-
-    <div class="post__content">
-      {{ content }}
-    </div>
-
-    <div class="post__bottom">
-      
-      <div class="post__share">
-        <ul class="share__list list-reset">
-          <li class="share__item">
-            <a class="share__link share__x" href="https://x.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
-              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
-              title="Share on X" rel="nofollow">Share on X</a>
-          </li>
-        </ul>
-      </div>
-
-      {% if page.tags.size >= 1 %}
-      <div class="post__tags">
-        {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}/tag/{{ tag }}" class="post__tag">{{ tag }}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </div>
-
-    <div class="post-author">
-      <a href="{{site.baseurl}}/about/" class="post-author__image" aria-label="{{site.author.name}}">
-        <img src="{{ site.author.avatar | relative_url }}" alt="{{site.author.name}}">
-      </a>
-      <div class="post-author__info">
-        <h2 class="post-author__name"><a href="{{site.baseurl}}/about/">{{site.author.name}}</a></h2>
-        <p class="post-author__bio">{{ site.author.bio }}</p>
-        <div class="post-author__meta">
-          {% for social in site.social %}
-          <a class="post-author__link" href="{{social.link}}" target="_blank" rel="noopener" aria-label="{{social.label}}"><i class="ion {{social.icon}}" aria-hidden="true"></i></a>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-
-    {% if site.disqus-identifier %} {% include disqus-comments.html %} {% endif %}
-
-  </article>
-</div>
-<!-- end post -->
+  {% if page.tags.size > 0 %}
+  <p class="tags">
+    {% for tag in page.tags %}
+    <a href="{{ tag | tag_url }}">{{ tag | escape }}</a>
+    {% endfor %}
+  </p>
+  {% endif %}
+  <button type="button" class="kudos" data-kudos="{{ page.slug | escape }}" data-endpoint="{% if site.kudos_endpoint %}{{ site.kudos_endpoint | escape }}{% endif %}" aria-pressed="false" aria-label="Hold to give a kudo">
+    <span class="kudos-ring" aria-hidden="true"><span class="kudos-fill"></span></span>
+    <span class="kudos-label">kudos</span>
+    <span class="kudos-count" aria-live="polite"></span>
+  </button>
+</article>

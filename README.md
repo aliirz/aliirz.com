@@ -1,28 +1,14 @@
-# Joseph is a super minimal content focus theme for Jekyll
+# aliirz.com
 
-Joseph is a super minimal content focus theme for Jekyll. This theme was created with a focus on typography and a reading experience and has a light and dark mode for easy reading. This theme is perfect for the personal blog of a programmer, designer, blogger, or any creative person.
+Ali Raza's blog. Jekyll 4.3, built by GitHub Actions and published to GitHub Pages.
 
-* * *
+The layout is a single monospace column in the spirit of [no-style-please](https://github.com/riggraz/no-style-please) (MIT, see `assets/css/no-style-please.LICENSE.txt`). Light and dark colors follow `prefers-color-scheme`, with a text toggle that remembers a choice. Code uses Rouge, with a separate dark palette.
 
-### Demo
+```
+bundle install
+bundle exec jekyll serve
+```
 
-Check the theme in action [Demo](https://joseph-jekyll.netlify.app/)
+Posts live in `_posts` and keep the `/:title` permalink. Tag pages, the RSS feed, the sitemap, and Google Analytics stay wired in `_config.yml`.
 
-* * *
-
-### Deployment
-
-To run the theme locally, navigate to the theme directory and run `bundle install` to install the dependencies, then run `jekyll serve` or `bundle exec jekyll serve` to start the Jekyll server.
-
-I would recommend checking the [Deployment Methods](https://jekyllrb.com/docs/deployment-methods/) page on Jekyll website.
-
-
-* * *
-
-### Documentation
-
-Before using the Joseph theme, please read the attached documentation.
-
-### Support
-
-<p>If you have any questions, please feel free to contact me by mail <a href="mailto:artemsheludko@tuta.io">Contact</a><p>
+Kudos are a hold-to-fill button at the end of a post. Counts need `kudos_endpoint` in `_config.yml`. The serverless function is in `kudos-api/` and is not part of the Jekyll build. Setup is in `kudos-api/README.md`.
