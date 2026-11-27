@@ -400,22 +400,35 @@ blockquote p + p { margin-top: 0.75rem; }
 }
 
 .post-body {
-  overflow-x: auto;
+  overflow-wrap: anywhere;
 }
 
 .post-body table {
-  border-collapse: collapse;
-  width: 100%;
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  width: max-content;
   margin: 1rem 0;
+  border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
 }
 
 .post-body th,
 .post-body td {
   border: 1px solid var(--fg);
-  padding: 0.4rem 0.5rem;
+  padding: 0.45rem 0.65rem;
   text-align: left;
   vertical-align: top;
-  min-width: 11rem;
+  min-width: 14ch;
+}
+
+.post-body th {
+  white-space: nowrap;
+}
+
+.post-body td {
+  min-width: 28ch;
+  max-width: 42ch;
 }
 
 .post-body :not(pre) > code {
@@ -424,11 +437,20 @@ blockquote p + p { margin-top: 0.75rem; }
   padding: 0.05em 0.28em;
   background: var(--inline-bg);
   color: var(--inline-fg);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.highlighter-rouge,
+.highlight,
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .highlighter-rouge {
   margin: 1rem 0;
-  max-width: 100%;
   background: var(--syn-bg);
   color: var(--syn-fg);
 }
@@ -439,12 +461,19 @@ blockquote p + p { margin-top: 0.75rem; }
 }
 
 .highlight pre,
-pre.highlight {
+pre.highlight,
+.highlighter-rouge pre,
+pre code {
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.highlight pre,
+pre.highlight,
+pre {
   margin: 0;
   padding: 0.85rem 1rem;
-  overflow-x: auto;
-  max-width: 100%;
-  white-space: pre;
   background: transparent;
   color: inherit;
 }
