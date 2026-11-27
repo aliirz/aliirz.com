@@ -404,13 +404,12 @@ blockquote p + p { margin-top: 0.75rem; }
 }
 
 .post-body table {
-  display: block;
-  overflow-x: auto;
+  display: table;
+  width: 100%;
   max-width: 100%;
-  width: max-content;
+  table-layout: fixed;
   margin: 1rem 0;
   border-collapse: collapse;
-  -webkit-overflow-scrolling: touch;
 }
 
 .post-body th,
@@ -419,16 +418,22 @@ blockquote p + p { margin-top: 0.75rem; }
   padding: 0.45rem 0.65rem;
   text-align: left;
   vertical-align: top;
-  min-width: 14ch;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
-.post-body th {
-  white-space: nowrap;
+.post-body th code,
+.post-body td code {
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
-.post-body td {
-  min-width: 28ch;
-  max-width: 42ch;
+@media (max-width: 40rem) {
+  .post-body th,
+  .post-body td {
+    padding: 0.28rem 0.22rem;
+    font-size: 0.75em;
+  }
 }
 
 .post-body :not(pre) > code {
