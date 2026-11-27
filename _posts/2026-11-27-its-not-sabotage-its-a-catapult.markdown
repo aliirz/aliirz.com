@@ -1,212 +1,281 @@
 ---
 layout: post
-title: "It's not sabotage. It's a catapult."
-description: "Omar Khattab, who created DSPy, says plenty of people would rather believe Claude is sabotaging their experiments than admit agents are still unreliable. The replies are better than the take, and DSPy 3.5 quietly handed everyone a second catapult."
+title: "Six things people hand-build around LLM calls that DSPy already does"
+description: "JSON-parsing regexes, retry loops, pasted few-shot examples, a prompt file per model and a home-made agent loop. Here is the DSPy 3.5 code that replaces each one, and what you get to delete."
 date: 2026-11-27
-tags: [dspy, ai-agents, evaluation, llm, python]
-image: "images/its-not-sabotage-its-a-catapult-header.jpg"
+tags: [dspy, llm, python, engineering]
+image: "images/six-things-dspy-header.jpg"
 ---
 
-Omar Khattab, who created DSPy, [posted this last night](https://x.com/lateinteraction/status/2126057001964704241):
+In a lot of LLM code the call to the model is one line, and the code around it runs to a few hundred. There is a regex that digs JSON out of the reply and a retry loop for when the regex finds nothing. Next to them sit a string of few-shot examples somebody picked months ago and a folder of prompts with one file per model. Each piece made sense on the day it was written. Together they are hard to change, because nobody is sure which line is doing the work.
 
-> my timeline is full of folks who would rather believe that Claude is sabotaging their ML experiments and not simply that frontier agents are still disappointingly unreliable at sustained goal-oriented work
+DSPy is one of my favourite libraries, and my team uses it on most of our projects. Most of that surrounding code already exists in DSPy as a class or a function, so this post goes through six of those pieces. For each one there is a short version of what people usually write, the DSPy version, and what changes for the engineer who has to maintain it.
 
-It had about 1,200 likes this morning. Under it, plenty of people explained, with great confidence, why he was wrong. A few others skipped the argument and left debugging tips, which turned out to be the good part.
-
-I'm not going to adjudicate whether any model has ever done anything on purpose. That's a different post and a different pay grade. I want to talk about the other half of his sentence, the boring half, because it's the half you can do something about. DSPy is the library I reach for first, and my team uses it on most of our projects. So this is a post about a thing I'd rather have in a pipeline than a theory.
-
----
-
-## The catapult
-
-Omar followed his tweet with [a reply](https://x.com/lateinteraction/status/2126058515756392685), then a [repost of an older analogy](https://x.com/lateinteraction/status/2126058949631955426) with the words "my odd little analogy from a while back still holds." Here's the reply:
-
-> it isn't as hard to "model" LLMs as people make it out to be. the more unusual & long-tail your goal, the longer & messier your context, the less verifiable your intermediate steps are (ie, no Lean), the more these things will disappoint you and require heavy supervision for now
-
-And here's [the analogy itself](https://x.com/lateinteraction/status/2101433590248837568), from September:
-
-> my quick and dirty analogy for the model's flavor of jaggedness in 2026 is kind of like...
->
-> if you ask for a taxi ride but someone hands you a catapult that is highly pre-aimed on a very small number of destinations in advance
->
-> initially, you're super impressed by the speed and distance of transportation, but you can never quite use it to land at your actual freaking destination, no matter how many times you're willing to get thrown flying through the air :/
-
-I laughed. Then I read the reply again, and the joke turned into a spec.
-
-A catapult has one checkpoint, the landing. A taxi has a steering wheel. The difference between them isn't the engine. It's how many times per trip somebody gets to look out the window.
-
-![Two lanes. Top: a catapult throws a long dotted arc and lands short of the destination, with no checks along the way. Bottom: a taxi route with six checkpoints, the third marked as failed and caught]({{ "/images/catapult-taxi-lanes.png" | relative_url }})
-*The catapult is Omar's. The checks are the part you add.*
-
-"The less verifiable your intermediate steps are." Read that as an instruction. If long runs go wrong in proportion to how unverifiable the middle is, then the job is to make the middle verifiable. That is, more or less, what DSPy has been trying to get you to do since before agents were a thing.
+The running example is a small classifier that reads an agent's run log and says how the run ended: finished, gave up, called the wrong tool or flaked. Every DSPy snippet here runs on DSPy 3.5.0 against `dspy.utils.DummyLM`, a fake model that returns canned answers. That checks the code constructs and runs. It says nothing about accuracy on a real model.
 
 ---
 
-## The reply section brought receipts
+## 1. Asking for JSON and parsing it with a regex
 
-Back to the replies. Past the people who skipped the second half of the sentence, a few were doing quiet engineering.
+What people write:
 
-| What you tell yourself | What a reply says it usually is | The check it implies |
-| --- | --- | --- |
-| "It sabotaged the run." | [@drborismichel](https://x.com/drborismichel/status/2126219688673976759): "Sabotage would be an exciting story. 🥷 Sadly it mostly is: 'step 37 called the wrong tool'." | Make the verdict quote a step. |
-| "It told me it was done." | [@dvvaliya](https://x.com/dvvaliya/status/2126217642440835287): "make every long run keep a log of what it tried and why it stopped, and 'sabotage' mostly turns into 'gave up at step 40 and said done'" | Separate *finished* from *gave up*, and check against the log. |
-| "ML research is special." | [@tao_an_hpu](https://x.com/tao_an_hpu/status/2126213386795123027): "The sabotage story is testable. Give the same agent a non-ML task of similar length with the same number of checkable steps." | Run a control task. |
+{% raw %}
+```python
+prompt = f"""You are an expert at reading agent logs.
+Classify how this run ended. Respond ONLY with JSON like
+{{"verdict": "finished|gave_up|wrong_tool|flaked", "step": <int>, "evidence": "..."}}
+IMPORTANT: Do not wrap the JSON in markdown.
 
-These are people on X telling you what they see, not measurements. I'm quoting them because each one is a check you can write down.
+Log:
+{log}"""
 
-I wrote the first two down.
+raw = client.chat.completions.create(
+    model="gpt-4o", messages=[{"role": "user", "content": prompt}]
+).choices[0].message.content
 
----
+match = re.search(r"\{.*\}", raw, re.DOTALL)
+data = json.loads(match.group(0)) if match else {}
+verdict = data.get("verdict", "flaked").lower().strip()
+if verdict not in {"finished", "gave_up", "wrong_tool", "flaked"}:
+    verdict = "flaked"
+step = int(data.get("step", -1))
+```
+{% endraw %}
 
-## A small judge, in DSPy
-
-The idea: a tiny module that reads an agent's run log and decides how the run actually ended. The verdict is a closed set. One of the options is `sabotage`, because I'd like the conspiracy to at least have to fill in a form. And the module has to quote a step.
+The DSPy version:
 
 ```python
-import re
 from typing import Literal
 
 import dspy
 
 
 class Triage(dspy.Signature):
-    """Read an agent run log. Decide how the run actually ended, and cite the step."""
+    """Read an agent run log and decide how the run ended. Quote the step that shows it."""
 
     log: str = dspy.InputField()
-    verdict: Literal["finished", "gave_up", "wrong_tool", "flaked", "sabotage"] = dspy.OutputField()
-    evidence: str = dspy.OutputField(desc="quote the step that justifies the verdict, e.g. 'step 37: ...'")
+    verdict: Literal["finished", "gave_up", "wrong_tool", "flaked"] = dspy.OutputField()
+    step: int = dspy.OutputField(desc="the step number that justifies the verdict")
+    evidence: str = dspy.OutputField(desc="the line from the log, quoted")
 
 
-class TriageRun(dspy.Module):
-    def __init__(self):
-        self.triage = dspy.Predict(Triage)
-
-    def forward(self, log):
-        return self.triage(log=log)
+triage = dspy.Predict(Triage)
+result = triage(log=run_log)
+result.verdict  # one of the four strings
+result.step     # an int
 ```
 
-That's the Signature doing its one job: saying where you want to land. Typed fields, a closed set, no prompt folklore.
+The prompt, the format instructions and the parsing all come from the class. The `Literal` limits the verdict to four values and `step` comes back as a real `int`, so the cleanup code at the bottom of the first snippet goes away. A bad reply also stops being silent. The hand-rolled version turns anything it can't parse into `"flaked"`, which looks like a real answer in your metrics. DSPy raises `AdapterParseError` when the reply doesn't parse into those types, including a verdict outside the four allowed values, so you see the failure where it happened.
 
-Now the steering wheel. DSPy has two ways to put a check in the middle, and they do different jobs. `dspy.Refine` is the taxi's window: run the module, score the result, try again if the score is low. GEPA is the garage: it uses your failures to rewrite the instructions.
+A field can also be a Pydantic model, which helps when the output is a nested record:
 
 ```python
-def cites_a_step(args, pred):
-    """Refine's reward_fn: no step number, no credit."""
-    return 1.0 if re.search(r"step\s*\d+", pred.evidence.lower()) else 0.0
+from pydantic import BaseModel
 
 
-def metric(gold, pred, trace=None, pred_name=None, pred_trace=None):
-    """GEPA's metric: a score, and a sentence about why."""
-    ok = pred.verdict == gold.verdict
-    why = "right verdict" if ok else f"said {pred.verdict!r}; the log says {gold.verdict!r}. Quote the step."
-    return dspy.Prediction(score=float(ok), feedback=why)
+class Invoice(BaseModel):
+    vendor: str
+    total: float
+    currency: Literal["USD", "EUR", "PKR"]
+    line_items: list[str]
 
 
-guarded = dspy.Refine(module=TriageRun(), N=3, reward_fn=cites_a_step, threshold=1.0)
-optimizer = dspy.GEPA(metric=metric, auto="light", reflection_lm=dspy.LM("<your reflection model>"))
-# optimizer.compile(TriageRun(), trainset=train, valset=val)
+class ExtractInvoice(dspy.Signature):
+    """Pull the invoice details out of a vendor email."""
+
+    email_body: str = dspy.InputField()
+    invoice: Invoice = dspy.OutputField()
 ```
 
-Two things are worth noticing. The reward function is boring on purpose: a regex. It can't be talked into anything. And the GEPA metric returns a *sentence*, not just a number. The score says how bad it was. The sentence tells the optimizer what to do about it.
-
-I ran the pieces of this against a fake LM, `dspy.utils.DummyLM`, on DSPy 3.5.0. The first try said `sabotage` with the evidence "it just felt deliberate" and scored 0.0. The second quoted `step 37: called search() instead of run_tests()` and scored 1.0. `Refine` and `GEPA` I only constructed. I haven't pointed this at a real model or a real pile of logs, so I have no accuracy to brag about. It's a shape, not a result.
-
-(One small footgun for anyone who tries to script `Refine` offline: it makes its own advice call to the model between tries, so a fake LM with a fixed script of answers drifts out of step. Test the reward function and the metric directly. They're plain functions.)
+`dspy.Predict(ExtractInvoice)(email_body=...).invoice` is an `Invoice` instance with `total` as a float.
 
 ---
 
-## Omar's other joke, which is also a checkpoint
+## 2. The retry loop that appends "try again" to the prompt
 
-A few weeks earlier Omar [wrote](https://x.com/lateinteraction/status/2120310190654316934):
+What people write:
 
-> AI progress this month is crazy man, claude now writes 100% of my weight edits but ofc i still review the diffs
+```python
+for attempt in range(3):
+    result = classify(log, prompt)
+    if result["evidence"] in log:
+        break
+    prompt += "\nYour evidence must be copied exactly from the log. Try again."
+else:
+    result = {"verdict": "flaked", "step": -1, "evidence": ""}
+```
 
-Same idea, wearing a party hat. The author of the library whose whole pitch is "stop hand-tuning prompts" is describing a workflow where the machine does all the typing and a human still looks at the diff. That's not a contradiction. That's the taxi.
+The DSPy version:
+
+```python
+def quotes_the_log(args, pred):
+    return 1.0 if pred.evidence and pred.evidence in args["log"] else 0.0
+
+
+careful_triage = dspy.Refine(
+    module=dspy.Predict(Triage), N=3, reward_fn=quotes_the_log, threshold=1.0
+)
+result = careful_triage(log=run_log)
+```
+
+`dspy.Refine` runs the module up to `N` times at temperature 1.0 and returns the first prediction that reaches the threshold, or the best one if none does. When an attempt scores low, Refine writes its own feedback for the next attempt, which replaces the hand-written "try again" line. If you want independent samples without that feedback step, `dspy.BestOfN` takes the same arguments. The reward function is a plain Python function, so you test it with ordinary unit tests and no model at all.
+
+If you used `dspy.Assert` or `dspy.Suggest` in older DSPy code, they are not in 3.5.0. `Refine` and `BestOfN` are what replaced them.
 
 ---
 
-## The week DSPy got 85% smaller
+## 3. Few-shot examples pasted into the prompt
 
-Which brings me to the second catapult, and it's a polite one.
+What people write:
 
-On November 10, Isaac Miller [announced](https://x.com/isaacbmiller1/status/2120192241138541053) DSPy 3.5:
+```python
+EXAMPLES = """
+Log: step 12: wrote fix. step 13: said "done" without running tests.
+Answer: {"verdict": "gave_up", "step": 13, "evidence": "step 13: said \\"done\\" without running tests"}
 
-> DSPy is now 85% smaller!
->
-> We just released DSPy 3.5 which makes DSPy lighter, faster, and a more reliable experience out of the box.
+Log: step 4: called search() instead of run_tests()
+Answer: {"verdict": "wrong_tool", "step": 4, "evidence": "step 4: called search() instead of run_tests()"}
+"""
+# picked by hand in March, nobody remembers why these two
 
-Omar's [quote of it](https://x.com/lateinteraction/status/2120195760234844603) added: "DSPy 3.5 (and efforts for DSPy 4 underway…)". The [release notes](https://github.com/stanfordnlp/dspy/releases/tag/3.5.0) have the receipts, with the usual caveat that these are the project's own measurements of a 3.5 development snapshot against 3.3.0:
+prompt = EXAMPLES + "\n\nLog: " + log + "\nAnswer:"
+```
 
-| Measured default install | 3.3.0 | 3.5 dev snapshot |
+The DSPy version:
+
+```python
+trainset = [
+    dspy.Example(log=log, verdict=verdict, step=step, evidence=evidence).with_inputs("log")
+    for log, verdict, step, evidence in labelled_runs
+]
+
+
+def same_verdict(example, pred, trace=None):
+    return example.verdict == pred.verdict
+
+
+optimizer = dspy.BootstrapFewShot(metric=same_verdict, max_bootstrapped_demos=4)
+compiled = optimizer.compile(dspy.Predict(Triage), trainset=trainset)
+compiled.save("triage_v1.json")
+```
+
+You keep labelled data instead of a string. `BootstrapFewShot` runs your program over the training set, keeps the runs that pass your metric as examples in the prompt and fills any remaining slots with your labelled data. When the data changes you run `compile` again, and nobody has to guess which examples to swap. The output is a JSON file that you load with `program.load("triage_v1.json")`, review in a diff and version next to the code.
+
+`dspy.MIPROv2(metric=same_verdict, auto="light")` goes a step further and rewrites the instruction as well as picking examples. It makes a lot more model calls, so check the cost on a small set first. Hamel Husain's [post on intercepting the prompts frameworks send](https://hamel.dev/blog/posts/prompt/) describes a DSPy quick-start in February 2024 that took more than 30 minutes and hundreds of OpenAI calls. That was an older version, but the habit of checking still applies.
+
+Chapter 4 of my book, [DSPy: The Mostly Harmless Guide](https://harmlessdspy.com), covers LabeledFewShot, BootstrapFewShot, MIPROv2 and SIMBA on a ticket classifier, along with how to decide which one to use.
+
+---
+
+## 4. One prompt file per model
+
+What people write:
+
+```python
+PROMPTS = {
+    "gpt-4o": open("prompts/triage_gpt4o.txt").read(),
+    "claude": open("prompts/triage_claude.txt").read(),  # wants XML tags
+    "llama-70b": open("prompts/triage_llama.txt").read(),  # added "ONE WORD ONLY" in caps
+}
+prompt = PROMPTS[model_name].format(log=log)
+```
+
+The DSPy version:
+
+```python
+devset = load_labelled_runs("dev.jsonl")
+evaluate = dspy.Evaluate(devset=devset, metric=same_verdict, num_threads=8)
+
+program = dspy.Predict(Triage)
+program.load("triage_v1.json")
+
+for model in ["openai/gpt-4o-mini", "anthropic/claude-sonnet-5"]:
+    with dspy.context(lm=dspy.LM(model)):
+        print(model, evaluate(program).score)
+```
+
+There is one `Triage` class and the model is a setting. `dspy.context` switches it for a block of code, and `dspy.Evaluate` gives you a number per model on the same dev set. When one model needs a different prompt, compile once per model and save `triage_gpt4o.json` and `triage_claude.json`. The optimizer tunes those files from data, so nobody hand-edits them.
+
+The same loop matters when you upgrade DSPy itself. The [3.5.0 release notes](https://github.com/stanfordnlp/dspy/releases/tag/3.5.0) say XMLAdapter is now the default adapter, which changes the prompt the model sees even when your Signature stays the same. They also tell you to re-evaluate optimized programs. With an `Evaluate` loop in place that check takes one run. If the old format scores better on your data, `dspy.configure(adapter=dspy.ChatAdapter())` switches back.
+
+---
+
+## 5. A home-made agent loop
+
+What people write:
+
+```python
+TOOLS = {"run_tests": run_tests, "read_file": read_file}
+history = SYSTEM_PROMPT + f"\nTask: {task}\n"
+
+for _ in range(8):
+    reply = llm(history)
+    history += reply
+    if "Final Answer:" in reply:
+        answer = reply.split("Final Answer:")[-1].strip()
+        break
+    m = re.search(r"Action: (\w+)\[(.*?)\]", reply)
+    if not m or m.group(1) not in TOOLS:
+        history += "\nObservation: invalid action, use the format Action: tool[arg]\n"
+        continue
+    history += f"\nObservation: {TOOLS[m.group(1)](m.group(2))}\n"
+```
+
+The DSPy version:
+
+```python
+def run_tests(path: str) -> str:
+    """Run pytest on a path and return the summary line."""
+    ...
+
+
+def read_file(path: str) -> str:
+    """Return the contents of a file."""
+    ...
+
+
+agent = dspy.ReAct("task -> answer", tools=[run_tests, read_file], max_iters=8)
+result = agent(task="Why is CI red on main?")
+result.answer
+result.termination_reason  # "submit" when the model finished on its own
+```
+
+The tool descriptions come from the function names, type hints and docstrings, so the `SYSTEM_PROMPT` that lists the tools disappears along with the `Action:` regex. ReAct keeps the history, enforces `max_iters` and records why the loop stopped, which is the first thing you want to know when an agent run goes wrong. `result.history` has every tool call and its output, so you can feed it straight into the `Triage` classifier from the first section.
+
+---
+
+## 6. Printing prompts to see what went out
+
+What people write:
+
+```python
+print("=" * 80)
+print(prompt)
+print("-" * 80)
+print(raw)
+```
+
+The DSPy version:
+
+```python
+dspy.inspect_history(n=1)
+```
+
+This prints the last call: the system message DSPy built from your Signature, the input, any examples the optimizer added and the raw reply. When a result looks wrong, this is the first thing to run. Hamel's post above makes the case for always looking at the final prompt, and he checked that `inspect_history` matched the requests he captured with mitmproxy.
+
+---
+
+## What you get to delete
+
+| Hand-built pattern | DSPy feature | What you delete |
 | --- | --- | --- |
-| Installed package files, incl. bytecode | 206.7 MiB | 30.9 MiB |
-| Dependencies, excluding DSPy | 65 | 25 |
-| Fresh-process import, best of ten | 1.01 s | 0.49 s |
+| "Respond ONLY with JSON" plus a regex and `json.loads` | Signature with typed fields (`Literal`, `int`, Pydantic models) | Format instructions, the regex, the cleanup and default values |
+| Retry loop that appends "try again" | `dspy.Refine` or `dspy.BestOfN` with a `reward_fn` | The loop, the appended text and the fallback dict |
+| Few-shot examples in a string constant | `dspy.Example` training set and `BootstrapFewShot` or `MIPROv2` | The constant and the guesswork about which examples to keep |
+| A prompt file per model | One program, `dspy.context(lm=...)`, `dspy.Evaluate`, a saved JSON per model | The `prompts/` folder and the per-model edits |
+| `while` loop that parses `Action:` lines | `dspy.ReAct` with plain Python functions as tools | The tool list in the system prompt, the regex and the step counter |
+| `print(prompt)` | `dspy.inspect_history` | The print statements |
 
-206.7 down to 30.9 is where the 85% comes from. LiteLLM and the OpenAI library became optional, and `dspy.RLM`, `dspy.Flex` and `dspy.GEPA` graduated from experimental. That's all good news.
+If you have one of these in your code, start with the first row. Moving a prompt into a Signature removes the most code, and it gives you a program that `Evaluate` and the optimizers can work with later.
 
-The announcement also says something I found honest and rather charming. In a screenshot that came with it:
-
-> Since its introduction in 2023, DSPy's Signature interface hasn't changed even as AI accelerated dramatically, and many 2022 programs still work on today's language models.
-
-and, a paragraph later, "It isn't our flashiest release and contains a few breaking changes."
-
-The Signature stayed put. The prompt didn't. From the release notes:
-
-> XMLAdapter now formats and parses predictor calls by default, changing prompts and the output contract even when your Signature stays the same.
-
-and, at the top of the page, "This release changes prompts, defaults and APIs. [...] re-evaluate optimized programs."
-
-If you've spent a week compiling a program with GEPA, you didn't optimize a Signature. You optimized a prompt, against a particular rendering of that Signature, with a particular model. That's a catapult, pre-aimed. Change the adapter, and somebody nudged the launcher.
-
-Here's what the model actually sees for the same `Triage` signature, same input, in both adapters. I rendered this with `adapter.format(...)` on DSPy 3.5.0:
-
-![Two dark panels side by side. Left, ChatAdapter: double-bracket field markers around the log, then an instruction to respond starting with the verdict field. Right, XMLAdapter: log in XML tags, then an output format block with verdict tags]({{ "/images/catapult-taxi-adapters.png" | relative_url }})
-*Same Signature, same input. Different thing for the model to read.*
-
-The cheap defence is the same defence as everywhere else in this post. Put a check at the hop. Load what you saved, run your eval under each adapter, and look at the number before you trust the upgrade:
-
-```python
-def exact(gold, pred, trace=None):
-    return pred.verdict == gold.verdict
-
-program = TriageRun()
-program.load("triage_optimized.json")  # what your optimizer wrote before the upgrade
-
-evaluate = dspy.Evaluate(devset=devset, metric=exact, num_threads=8)
-
-for name, adapter in [("ChatAdapter", dspy.ChatAdapter()), ("XMLAdapter", dspy.XMLAdapter())]:
-    with dspy.context(adapter=adapter):
-        print(name, evaluate(program).score)
-```
-
-If the old one wins on your data, pin it in your app's setup, and re-optimize when you have time:
-
-```python
-dspy.configure(adapter=dspy.ChatAdapter())
-```
-
-I tried both snippets with the dummy LM, so the scores they printed were meaningless. The point is that the line exists. I haven't yet run this comparison on one of our own optimized programs.
-
----
-
-## What I'd take from the thread
-
-Three small things, none of them heroic.
-
-1. **Make the verdict quote its evidence.** A model that has to say "step 37" can be checked. A model that can say "it felt deliberate" can't.
-2. **Treat an optimized prompt as a build artifact.** It was compiled against something: a model, an adapter, a version. Re-run the eval when any of those change. The release notes literally say to.
-3. **Run the control task.** @tao_an_hpu's version is the one I'd want to try first. Same agent, a non-ML job of similar length with the same number of checkable steps. If it derails at the same rate, you don't have a saboteur. You have a catapult.
-
-Omar's right that the models are still disappointing at long, unverifiable work. The part I like is that his sentence has a fix hidden inside it: the less verifiable the middle, the worse it goes. So make the middle more verifiable. That's not a theory about models. It's a to-do list, and for once it's short.
-
-I haven't run this judge on real traces yet. That's the next experiment. I'll write it up when it exists.
-
----
-
-## Resources
-
-- Omar Khattab: [the sabotage post](https://x.com/lateinteraction/status/2126057001964704241), [the reply](https://x.com/lateinteraction/status/2126058515756392685), [the taxi and catapult analogy](https://x.com/lateinteraction/status/2101433590248837568)
-- [DSPy 3.5.0 release notes](https://github.com/stanfordnlp/dspy/releases/tag/3.5.0)
-- [Isaac Miller's 3.5 announcement](https://x.com/isaacbmiller1/status/2120192241138541053)
-- My earlier DSPy writeup: [DSPy: The Framework for Programming LLMs (Not Prompting Them)](https://aliirz.com/dspy-the-framework-for-programming-llms), and [Harmless DSPy](https://harmlessdspy.com)
+[My book](https://harmlessdspy.com) goes further on the optimizers, ReAct agents and saving compiled programs, with runnable code for every chapter. Chapter 1 is free to read on the site, and the code is on [GitHub](https://github.com/aliirz/dspy-mostly-harmless-code).
