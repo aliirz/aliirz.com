@@ -548,19 +548,38 @@ pre {
 }
 
 .kudos {
-  position: relative;
+  position: fixed;
+  z-index: 8;
+  right: max(0.75rem, env(safe-area-inset-right, 0px));
+  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
-  margin-top: 1.75rem;
-  padding: 0.2rem 0;
-  border: 0;
-  background: none;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--fg);
+  border-radius: 999px;
+  background: var(--bg);
   color: inherit;
   font: inherit;
   cursor: pointer;
   touch-action: none;
   user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  transition: bottom 180ms ease, background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.kudos-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .kudos-ring {
@@ -609,7 +628,67 @@ pre {
   100% { transform: scale(1); }
 }
 
+.kudos-count {
+  font-variant-numeric: tabular-nums;
+}
+
 .kudos-count:empty { display: none; }
+
+.kudos.is-near-footer {
+  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px), var(--kudos-footer-lift, 4.25rem));
+}
+
+@media (min-width: 54rem) {
+  .kudos {
+    left: calc(50% + 320px + 0.85rem);
+    right: auto;
+    bottom: 22vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .kudos-label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
+  .kudos.is-near-footer {
+    bottom: 22vh;
+  }
+}
+
+@media print {
+  .kudos {
+    position: static;
+    margin-top: 1.75rem;
+    padding: 0.2rem 0;
+    border: 0;
+    background: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .kudos-label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
 
 .kudos-count.is-spoken {
   position: absolute;
@@ -639,6 +718,7 @@ pre {
   body,
   a,
   .theme-glyph,
+  .kudos,
   .kudos-ring,
   .kudos-fill {
     transition: none;

@@ -184,4 +184,28 @@
     if (event.key === " " || event.key === "Enter") cancel();
   });
   kudos.addEventListener("blur", cancel);
+  kudos.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+
+  var footer = document.querySelector(".colophon");
+
+  function dodgeFooter() {
+    if (!footer) return;
+    var rect = footer.getBoundingClientRect();
+    var visible = rect.top < window.innerHeight && rect.bottom > 0;
+    kudos.classList.toggle("is-near-footer", visible);
+    if (visible) {
+      kudos.style.setProperty(
+        "--kudos-footer-lift",
+        Math.max(0, window.innerHeight - rect.top + 12) + "px"
+      );
+    } else {
+      kudos.style.removeProperty("--kudos-footer-lift");
+    }
+  }
+
+  dodgeFooter();
+  window.addEventListener("scroll", dodgeFooter, { passive: true });
+  window.addEventListener("resize", dodgeFooter);
 })();
