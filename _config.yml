@@ -22,7 +22,7 @@ social:
 hero:
   hero__title: Hey, I am Ali.
   hero__description: I build software in Istanbul, and I write about what I actually learned building it.
-  hero__image: "/images/743962.jpeg"
+  hero__image: "/images/og-default.png"
 
 #-------------------------------
 # Newsletter (_includes/footer-widgets/widget-subscribe.html)
