@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="475.2pt" viewBox="0 0 864 475.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-27T12:54:51.383435</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 475.2 
+L 864 475.2 
+L 864 0 
+L 0 0 
+z
+" style="fill: #f0f0f0"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 30.24 424.8 
+L 416.16 424.8 
+Q 424.8 424.8 424.8 416.16 
+L 424.8 95.04 
+Q 424.8 86.4 416.16 86.4 
+L 30.24 86.4 
+Q 21.6 86.4 21.6 95.04 
+L 21.6 416.16 
+Q 21.6 424.8 30.24 424.8 
+z
+" clip-path="url(#pbfc5577224)" style="fill: #1e2740; stroke: #1e2740; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 21.6 115.2 
+L 424.8 115.2 
+L 424.8 86.4 
+L 21.6 86.4 
+z
+" clip-path="url(#pbfc5577224)" style="fill: #6a6d76; stroke: #6a6d76; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 447.84 424.8 
+L 833.76 424.8 
+Q 842.4 424.8 842.4 416.16 
+L 842.4 95.04 
+Q 842.4 86.4 833.76 86.4 
+L 447.84 86.4 
+Q 439.2 86.4 439.2 95.04 
+L 439.2 416.16 
+Q 439.2 424.8 447.84 424.8 
+z
+" clip-path="url(#pbfc5577224)" style="fill: #1e2740; stroke: #1e2740; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 439.2 115.2 
+L 842.4 115.2 
+L 842.4 86.4 
+L 439.2 86.4 
+z
+" clip-path="url(#pbfc5577224)" style="fill: #533feb; stroke: #533feb; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 18px; font-family: 'Work Sans'; text-anchor: start; fill: #1e2740" x="21.6" y="34.983" transform="rotate(-0 21.6 34.983)">Same Signature. Same input. Different prompt.</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 500; font-size: 12.5px; font-family: 'Work Sans'; text-anchor: start; fill: #6a6d76" x="21.6" y="63.33375" transform="rotate(-0 21.6 63.33375)">The user message DSPy builds for Triage, rendered in DSPy 3.5.0 with each adapter</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'Work Sans'; text-anchor: start; fill: #ffffff" x="36" y="105.09375" transform="rotate(-0 36 105.09375)">ChatAdapter</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 500; font-size: 11px; font-family: 'Work Sans'; text-anchor: end; fill: #ffffff" x="410.4" y="104.5785" transform="rotate(-0 410.4 104.5785)">pinned by you</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="139.319625" transform="rotate(-0 39.6 139.319625)">[[ ## log ## ]]</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="159.839625" transform="rotate(-0 39.6 159.839625)">step 37: called search() instead of</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="180.33375" transform="rotate(-0 39.6 180.33375)">run_tests()</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="221.374125" transform="rotate(-0 39.6 221.374125)">Respond with the corresponding output</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="241.919625" transform="rotate(-0 39.6 241.919625)">fields, starting with the field</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="262.606125" transform="rotate(-0 39.6 262.606125)">`[[ ## verdict ## ]]`, and then ending</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="282.934125" transform="rotate(-0 39.6 282.934125)">with the marker for</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="39.6" y="303.646125" transform="rotate(-0 39.6 303.646125)">`[[ ## completed ## ]]`.</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 12.5px; font-family: 'Work Sans'; text-anchor: start; fill: #ffffff" x="453.6" y="105.09375" transform="rotate(-0 453.6 105.09375)">XMLAdapter</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 500; font-size: 11px; font-family: 'Work Sans'; text-anchor: end; fill: #ffffff" x="828" y="104.5785" transform="rotate(-0 828 104.5785)">the 3.5 default</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="139.319625" transform="rotate(-0 457.2 139.319625)">&lt;log&gt;</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="159.839625" transform="rotate(-0 457.2 159.839625)">step 37: called search() instead of</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="180.33375" transform="rotate(-0 457.2 180.33375)">run_tests()</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="200.879625" transform="rotate(-0 457.2 200.879625)">&lt;/log&gt;</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="241.919625" transform="rotate(-0 457.2 241.919625)">Output format (replace placeholders):</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="262.414125" transform="rotate(-0 457.2 262.414125)">&lt;verdict&gt;</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="282.934125" transform="rotate(-0 457.2 282.934125)">{verdict}</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="303.454125" transform="rotate(-0 457.2 303.454125)">&lt;/verdict&gt;</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="344.494125" transform="rotate(-0 457.2 344.494125)">Use this format for text outputs. Put</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="365.039625" transform="rotate(-0 457.2 365.039625)">field tags on separate lines. Write</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="385.559625" transform="rotate(-0 457.2 385.559625)">string values literally, without XML</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.6px; font-family: 'DejaVu Sans Mono'; text-anchor: start; fill: #ffffff" x="457.2" y="406.054125" transform="rotate(-0 457.2 406.054125)">or JSON escaping.</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 11px; font-family: 'Work Sans'; text-anchor: start; fill: #6a6d76" x="21.6" y="457.3785" transform="rotate(-0 21.6 457.3785)">Source: dspy 3.5.0 on the box, adapter.format(Triage, demos=[], inputs=...). Your Signature never changed. Your optimized prompt just got re-aimed.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pbfc5577224">
+   <rect x="0" y="0" width="864" height="475.2"/>
+  </clipPath>
+ </defs>
+</svg>
